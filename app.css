@@ -1,17 +1,39 @@
-body {
-    background-color: red;
+.body-wrapper {
+  height: 100%;
+  display: flex;
 }
-.intro{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.body-wrapper a {
+  color: #e82d00;
+  text-decoration: "none";
 }
+.body-wrapper .nav-wrapper {
+  padding: 20px;
+  height: 80%;
+  position: fixed;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.body-wrapper .section-wrapper {
+  height: 100%;
+  flex: 3;
+}
+.body-wrapper .section-wrapper .intro {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 .education {
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
+
+/*# sourceMappingURL=app.css.map */
