@@ -71,6 +71,11 @@ body {
   display: grid;
   row-gap: 10px;
 }
+.drawer-menu-wrapper .drawer-menu .menu-grid a {
+  color: white;
+  font-weight: bolder;
+  font-size: 20pt;
+}
 
 @media screen and (min-width: 600px) {
   .menu-bar-wrapper {

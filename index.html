@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <div id="menu-bar" class="menu-bar-wrapper">
+    <div id="menu-bar-wrapper" class="menu-bar-wrapper">
         <div class="menu-bar">
             <i id="menu-open" class="fa-solid fa-bars"></i>
         </div>
@@ -21,7 +21,7 @@
             <div class="mobile-nav-item">
                 <a href="#intro">Hola</a>
             </div>
-            <div class="mobilenav-item">
+            <div class="mobile-nav-item">
                 <a href="#education">Education</a>
             </div>
             <div class="mobile-nav-item">
@@ -67,6 +67,7 @@
         let menuBar = document.querySelector('#menu-bar-wrapper')
         let drawer = document.querySelector('#drawer')
         let body = document.querySelector('#body-wrapper')
+        let links = document.querySelectorAll('.mobile-nav-item')
 
         function onDrawerToggled(isClosed = true) {
             if (isClosed) {
@@ -90,6 +91,11 @@
             onDrawerToggled(true)
         })
 
+        links.forEach(link=>{
+            link.addEventListener("click",function(){
+                onDrawerToggled(true)
+            })
+        })
     </script>
 </body>
 
