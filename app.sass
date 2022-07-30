@@ -7,12 +7,24 @@ $icons-color: white
     font-family: WorkSans
     src: url("webfonts/WorkSans-Regular.ttf")
 
-body 
+body
     font-family: WorkSans
 
 a
     text-decoration: none
-
+.color-text 
+    color: $color-link
+.bold
+    font-weight: bold
+.section-card
+    padding: 20px
+    height: 100%
+    display: flex
+.nav
+    a
+        color: white
+        font-weight: bolder
+        font-size: 20pt
 .none
     display: none
 .block
@@ -65,10 +77,6 @@ body
         .menu-grid
             display: grid
             row-gap: 10px
-            a
-                color: white
-                font-weight: bolder
-                font-size: 20pt
 
 @media screen and (min-width: $breakpoint-phone)
     .menu-bar-wrapper
@@ -93,14 +101,15 @@ body
             display: flex
             flex-flow: column
             justify-content: center
+        p
+            max-width: 30%
 
     .section-wrapper
         height: 100%
         flex: 3
 
         .intro
-            height: 100%
-            display: flex
+            @extend .section-card
             flex-flow: column
             align-items: center
             justify-content: center
@@ -109,10 +118,24 @@ body
                 margin: 0
             h6
                 margin: 10px
+            p
+                border: 1px solid $color-link
+                border-radius: 5px
+                padding: 20px
 
         .education
-            height: 100%
-            display: flex
+            @extend .section-card
+            flex-flow: column
+            align-items: center
+            justify-content: center
+        .experience
+            @extend .section-card
+            flex-flow: column
+            align-items: center
+            justify-content: center
+
+        .personal
+            @extend .section-card
             flex-flow: column
             align-items: center
             justify-content: center

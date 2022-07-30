@@ -10,6 +10,26 @@ a {
   text-decoration: none;
 }
 
+.color-text {
+  color: #e82d00;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.section-card, .body-wrapper .section-wrapper .personal, .body-wrapper .section-wrapper .experience, .body-wrapper .section-wrapper .education, .body-wrapper .section-wrapper .intro {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+}
+
+.nav a {
+  color: white;
+  font-weight: bolder;
+  font-size: 20pt;
+}
+
 .none {
   display: none;
 }
@@ -71,11 +91,6 @@ body {
   display: grid;
   row-gap: 10px;
 }
-.drawer-menu-wrapper .drawer-menu .menu-grid a {
-  color: white;
-  font-weight: bolder;
-  font-size: 20pt;
-}
 
 @media screen and (min-width: 600px) {
   .menu-bar-wrapper {
@@ -105,14 +120,15 @@ body {
     flex-flow: column;
     justify-content: center;
   }
+  .body-wrapper p {
+    max-width: 30%;
+  }
 }
 .body-wrapper .section-wrapper {
   height: 100%;
   flex: 3;
 }
 .body-wrapper .section-wrapper .intro {
-  height: 100%;
-  display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
@@ -124,9 +140,22 @@ body {
 .body-wrapper .section-wrapper .intro h6 {
   margin: 10px;
 }
+.body-wrapper .section-wrapper .intro p {
+  border: 1px solid #e82d00;
+  border-radius: 5px;
+  padding: 20px;
+}
 .body-wrapper .section-wrapper .education {
-  height: 100%;
-  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.body-wrapper .section-wrapper .experience {
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.body-wrapper .section-wrapper .personal {
   flex-flow: column;
   align-items: center;
   justify-content: center;
