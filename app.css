@@ -1,9 +1,28 @@
+@font-face {
+  font-family: WorkSans;
+  src: url("webfonts/WorkSans-Regular.ttf");
+}
+body {
+  font-family: WorkSans;
+}
+
+a {
+  text-decoration: none;
+}
+
 .none {
   display: none;
 }
 
 .block {
   display: block;
+}
+
+i {
+  margin-top: 30px;
+  margin-right: 30px;
+  color: #e82d00;
+  font-size: 30px;
 }
 
 body {
@@ -23,10 +42,6 @@ body {
   display: flex;
   justify-content: flex-end;
 }
-.menu-bar-wrapper .menu-bar i {
-  margin-right: 20px;
-  color: #e82d00;
-}
 
 .drawer-menu-wrapper {
   width: 100%;
@@ -41,17 +56,20 @@ body {
   background-color: #e82d00;
 }
 .drawer-menu-wrapper .button-wrapper i {
-  margin-right: 20px;
   color: white;
 }
 .drawer-menu-wrapper .drawer-menu {
+  position: fixed;
   display: flex;
-  flex-flow: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   background-color: #e82d00;
+}
+.drawer-menu-wrapper .drawer-menu .menu-grid {
+  display: grid;
+  row-gap: 10px;
 }
 
 @media screen and (min-width: 600px) {
@@ -95,8 +113,13 @@ body {
   justify-content: center;
   height: 100%;
 }
-
-.education {
+.body-wrapper .section-wrapper .intro h1 {
+  margin: 0;
+}
+.body-wrapper .section-wrapper .intro h6 {
+  margin: 10px;
+}
+.body-wrapper .section-wrapper .education {
   height: 100%;
   display: flex;
   flex-flow: column;

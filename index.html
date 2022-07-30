@@ -2,7 +2,7 @@
 
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="stylesheet" href="all.css"/>
+    <link rel="stylesheet" href="all.css" />
     <link rel="stylesheet" href="app.css">
 </head>
 
@@ -17,6 +17,7 @@
             <i id="menu-close" class="fa-solid fa-xmark"></i>
         </div>
         <div class="drawer-menu">
+           <div class="menu-grid">
             <div class="mobile-nav-item">
                 <a href="#intro">Hola</a>
             </div>
@@ -29,9 +30,10 @@
             <div class="mobile-nav-item">
                 <a href="#personal">Projects</a>
             </div>
+           </div>
         </div>
     </div>
-    <div class="body-wrapper">
+    <div id="body-wrapper" class="body-wrapper">
         <div class="nav-wrapper">
             <nav>
                 <div class="nav-item">
@@ -51,7 +53,7 @@
         <div class="section-wrapper">
             <section id="intro" class="intro">
                 <h1>Lwin Moe Hein</h1>
-                <h3>Full Stack Developer</h3>
+                <h6>Full Stack Developer</h6>
             </section>
             <section id="education" class="education">
                 <h3>Education here</h3>
@@ -59,20 +61,33 @@
         </div>
     </div>
     <script>
+        'use strict'
         let menuOpen = document.querySelector('#menu-open')
         let menuClose = document.querySelector('#menu-close')
-        let menuBar = document.querySelector('#menu-bar')
+        let menuBar = document.querySelector('#menu-bar-wrapper')
         let drawer = document.querySelector('#drawer')
-        
-        menuOpen.addEventListener("click",function(){
-           drawer.style.display = "block"
-           menuBar.style.display = "none"
+        let body = document.querySelector('#body-wrapper')
+
+        function onDrawerToggled(isClosed = true) {
+            if (isClosed) {
+                drawer.style.display = "none"
+                menuBar.style.display = "block"
+                body.style.display = "block"
+            } else {
+                drawer.style.display = "block"
+                menuBar.style.display = "none"
+                body.style.display = "none"
+            }
+        }
+
+
+        menuOpen.addEventListener("click", function () {
+            onDrawerToggled(false)
         })
 
-         
-        menuClose.addEventListener("click",function(){
-           drawer.style.display = "none"
-           menuBar.style.display = "block"
+
+        menuClose.addEventListener("click", function () {
+            onDrawerToggled(true)
         })
 
     </script>
