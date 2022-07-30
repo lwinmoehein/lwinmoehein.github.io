@@ -10,8 +10,14 @@ $icons-color: white
 body
     font-family: WorkSans
 
+.active-nav
+    background-color: green
+    a
+        color: white !important
+
 a
     text-decoration: none
+    padding: 10px
 .color-text
     color: $primary-color
 .bold
@@ -42,7 +48,6 @@ i
     margin-right: 30px
     color: $primary-color
     font-size: 30px
-
 
 body
     padding: 0
@@ -102,6 +107,7 @@ body
         .menu-grid
             display: grid
             row-gap: 10px
+            margin-bottom: 50%
 
 @media screen and (min-width: $breakpoint-phone)
     .menu-bar-wrapper
@@ -124,6 +130,7 @@ body
 
     a
         color: $primary-color
+
     .nav-wrapper
         display: none
     @media screen and (min-width: $breakpoint-phone)
@@ -135,8 +142,11 @@ body
             display: flex
             flex-flow: column
             justify-content: center
-        p
-            max-width: 30%
+            .nav-item
+                margin-bottom: 10px
+        .section-wrapper
+            p
+                max-width: 30%
 
     .section-wrapper
         height: 100%

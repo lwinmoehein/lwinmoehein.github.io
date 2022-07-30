@@ -25,7 +25,7 @@
             </div>
             <div class="drawer-menu">
                 <div class="menu-grid">
-                    <div class="mobile-nav-item nav">
+                    <div class="mobile-nav-item nav active-nav">
                         <a href="#intro">Hola</a>
                     </div>
                     <div class="mobile-nav-item nav">
@@ -43,7 +43,7 @@
         <div id="body-wrapper" class="body-wrapper">
             <div class="nav-wrapper">
                 <nav>
-                    <div class="nav-item nav">
+                    <div class="nav-item nav active-nav">
                         <a href="#intro">Hola</a>
                     </div>
                     <div class="nav-item nav">
@@ -99,6 +99,7 @@
         let mainContent = document.querySelector('#content-wrapper')
         let scroller = document.querySelector("#scroller")
         let scrollIcon = document.querySelector("#scroll-icon")
+        let navItems = document.querySelectorAll('.nav')
 
         let intro
 
@@ -128,7 +129,7 @@
                 drawer.style.visibility = "visible"
                 drawer.style.opacity = 1
                 menuBar.style.display = "none"
-                body.style.display = "none"
+                body.style.display = "hidden"
             }
         }
 
@@ -154,22 +155,21 @@
         })
 
         scroller.addEventListener("click", function () {
-    
-            let currentLocation = sections.filter(s => s.href === "#" + location.href.split('#')[1])[0]
-            if(currentLocation.href=="#experience"){
+            let currentLocation = sections.filter(s => s.href === location.hash || (location.hash=="" && s.href=="#intro"))[0]
+            if (currentLocation.href == "#experience") {
                 scrollIcon.classList.remove("fa-arrow-down")
                 scrollIcon.classList.add("fa-arrow-up")
-            }else{
+            } else {
                 scrollIcon.classList.remove("fa-arrow-up")
                 scrollIcon.classList.add("fa-arrow-down")
             }
-            if(currentLocation==="#personal"){
+            if (currentLocation === "#personal") {
                 window.location.href = personal.next.href
                 return;
             }
             window.location.href = currentLocation ? currentLocation.next ? currentLocation.next.href : "#personal" : "#personal"
         })
-
+        //scrollbar timeout
         let timeOutId
         document.addEventListener('scroll', function (e) {
             scroller.style.display = "none"
@@ -178,6 +178,26 @@
                 scroller.style.display = "flex"
             }, 1000)
         });
+
+        //active link
+        function locationHashChanged(e) {
+            let matchedLink
+            navItems.forEach(nav => {
+                let linkElement = nav.lastElementChild
+                if (linkElement.hash === location.hash) {
+                    matchedLink = linkElement
+                }
+            })
+            navItems.forEach(nav=>{
+                if(matchedLink.hash!=nav.lastElementChild.hash){
+                    nav.classList.remove('active-nav')
+                }else{
+                    nav.classList.add('active-nav')
+                }
+            })
+        }
+
+        window.onhashchange = locationHashChanged;
     </script>
 </body>
 

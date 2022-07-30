@@ -6,8 +6,16 @@ body {
   font-family: WorkSans;
 }
 
+.active-nav {
+  background-color: green;
+}
+.active-nav a {
+  color: white !important;
+}
+
 a {
   text-decoration: none;
+  padding: 10px;
 }
 
 .color-text {
@@ -118,6 +126,7 @@ body {
 .drawer-menu-wrapper .drawer-menu .menu-grid {
   display: grid;
   row-gap: 10px;
+  margin-bottom: 50%;
 }
 
 @media screen and (min-width: 600px) {
@@ -159,7 +168,10 @@ body {
     flex-flow: column;
     justify-content: center;
   }
-  .body-wrapper p {
+  .body-wrapper .nav-wrapper .nav-item {
+    margin-bottom: 10px;
+  }
+  .body-wrapper .section-wrapper p {
     max-width: 30%;
   }
 }
