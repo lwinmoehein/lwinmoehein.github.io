@@ -53,10 +53,6 @@ i {
   font-size: 30px;
 }
 
-i::hover {
-  color: green;
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -88,7 +84,7 @@ body {
   border-radius: 100%;
 }
 
-.go-down i:hover {
+.go-down i:active {
   background-color: #e82d00;
   color: white;
 }
