@@ -113,8 +113,8 @@
                 }
             }
         }
-       
-       
+
+
         let sections = [personal.next, personal.next.next, personal.next.next.next, personal]
 
         function onDrawerToggled(isClosed = true) {
@@ -153,9 +153,14 @@
         })
 
         scroller.addEventListener("click", function () {
-            // let currentLocation = sections.filter(s => s.href === "#" + location.href.split('#')[1])[0]
-            // window.location.href = currentLocation.next?currentLocation.next.href:"#personal"
-            window.location.href = "#personal"
+            try {
+                let currentLocation = sections.filter(s => s.href === "#" + location.href.split('#')[1])[0]
+                window.location.href = currentLocation.next ? currentLocation.next.href : "#personal"
+            } catch (e) {
+                alert(e)
+            }
+
+
         })
 
         let timeOutId
