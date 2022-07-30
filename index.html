@@ -159,10 +159,10 @@
 
         let timeOutId
         document.addEventListener('scroll', function (e) {
-            scroller.style.display = "hidden"
+            scroller.style.display = "none"
             clearTimeout(timeOutId)
             timeOutId = setTimeout(() => {
-                scroller.style.display = "block"
+                scroller.style.display = "flex"
             }, 1000)
         });
     </script>
