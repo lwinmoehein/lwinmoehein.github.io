@@ -152,7 +152,7 @@ body {
 @media screen and (min-width: 600px) {
   .body-wrapper .nav-wrapper {
     padding: 20px;
-    height: 80%;
+    height: 100%;
     position: fixed;
     flex: 1;
     display: flex;

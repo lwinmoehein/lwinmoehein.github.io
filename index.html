@@ -59,7 +59,7 @@
             </div>
             <div class="section-wrapper">
                 <div id="scroller" class="go-down">
-                    <i class="fa-solid fa-arrow-down"></i>
+                    <i id="scroll-icon" class="fa-solid fa-arrow-down"></i>
                 </div>
                 <section id="intro" class="intro">
                     <img width="140px" height="140px" src="images/lwinmoehein.jpg" alt="Lwin Moe Hein ( Developer )">
@@ -98,6 +98,7 @@
         let loadingStatus = document.querySelector('#loading-status-wrapper')
         let mainContent = document.querySelector('#content-wrapper')
         let scroller = document.querySelector("#scroller")
+        let scrollIcon = document.querySelector("#scroll-icon")
 
         let intro
 
@@ -153,14 +154,20 @@
         })
 
         scroller.addEventListener("click", function () {
-            try {
-                let currentLocation = sections.filter(s => s.href === "#" + location.href.split('#')[1])[0]
-                window.location.href = currentLocation ? currentLocation.next ? currentLocation.next.href : "#personal":"#personal"
-            } catch (e) {
-                alert(e)
+    
+            let currentLocation = sections.filter(s => s.href === "#" + location.href.split('#')[1])[0]
+            if(currentLocation.href=="#experience"){
+                scrollIcon.classList.remove("fa-arrow-down")
+                scrollIcon.classList.add("fa-arrow-up")
+            }else{
+                scrollIcon.classList.remove("fa-arrow-up")
+                scrollIcon.classList.add("fa-arrow-down")
             }
-
-
+            if(currentLocation==="#personal"){
+                window.location.href = personal.next.href
+                return;
+            }
+            window.location.href = currentLocation ? currentLocation.next ? currentLocation.next.href : "#personal" : "#personal"
         })
 
         let timeOutId
