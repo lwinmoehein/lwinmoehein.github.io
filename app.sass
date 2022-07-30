@@ -1,22 +1,24 @@
 
-$color-link:#e82d00
+$color-link: #e82d00
+$breakpoint-phone: 600px
+
 .body-wrapper
     height: 100%
     display: flex
 
-    a 
-        color:$color-link
-        text-decoration:'none'
-    
-
+    a
+        color: $color-link
     .nav-wrapper
-        padding: 20px
-        height: 80%
-        position: fixed
-        flex: 1
-        display: flex
-        flex-flow: column
-        justify-content: center
+            display: 'none'
+    @media screen and (min-width: $breakpoint-phone) 
+        .nav-wrapper
+            padding: 20px
+            height: 80%
+            position: fixed
+            flex: 1
+            display: flex
+            flex-flow: column
+            justify-content: center
 
     .section-wrapper
         height: 100%

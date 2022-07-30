@@ -4,16 +4,20 @@
 }
 .body-wrapper a {
   color: #e82d00;
-  text-decoration: "none";
 }
 .body-wrapper .nav-wrapper {
-  padding: 20px;
-  height: 80%;
-  position: fixed;
-  flex: 1;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
+  display: "none";
+}
+@media screen and (min-width: 600px) {
+  .body-wrapper .nav-wrapper {
+    padding: 20px;
+    height: 80%;
+    position: fixed;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
 }
 .body-wrapper .section-wrapper {
   height: 100%;
