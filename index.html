@@ -1,34 +1,83 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="app.css">
-    </head>
-    <body>
-       <div class="body-wrapper">
-            <div class="nav-wrapper">
-                <nav>
-                    <div class="nav-item">
-                        <a href="#intro">Hola</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#education">Education</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#experience">Experience</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#personal">Projects</a>
-                    </div>
-                </nav>
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div id="menu-bar" class="menu-bar-wrapper">
+        <div class="menu-bar">
+            <i id="menu-open" class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div id="drawer" class="drawer-menu-wrapper">
+        <div class="button-wrapper">
+            <i id="menu-close" class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="drawer-menu">
+            <div class="mobile-nav-item">
+                <a href="#intro">Hola</a>
             </div>
-            <div class="section-wrapper">
-                <section id="intro" class="intro">
-                    <h1>Lwin Moe Hein</h1>
-                    <h3>Full Stack Developer</h3>
-                </section>
-                <section id="education" class="education">
-                    <h3>Education here</h3>
-                </section>
+            <div class="mobilenav-item">
+                <a href="#education">Education</a>
             </div>
-       </div>
-    </body>
+            <div class="mobile-nav-item">
+                <a href="#experience">Experience</a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#personal">Projects</a>
+            </div>
+        </div>
+    </div>
+    <div class="body-wrapper">
+        <div class="nav-wrapper">
+            <nav>
+                <div class="nav-item">
+                    <a href="#intro">Hola</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#education">Education</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#experience">Experience</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#personal">Projects</a>
+                </div>
+            </nav>
+        </div>
+        <div class="section-wrapper">
+            <section id="intro" class="intro">
+                <h1>Lwin Moe Hein</h1>
+                <h3>Full Stack Developer</h3>
+            </section>
+            <section id="education" class="education">
+                <h3>Education here</h3>
+            </section>
+        </div>
+    </div>
+    <script>
+        let menuOpen = document.querySelector('#menu-open')
+        let menuClose = document.querySelector('#menu-close')
+        let menuBar = document.querySelector('#menu-bar')
+        let drawer = document.querySelector('#drawer')
+        
+        menuOpen.addEventListener("click",function(){
+           drawer.style.display = "block"
+           menuBar.style.display = "none"
+        })
+
+         
+        menuClose.addEventListener("click",function(){
+           drawer.style.display = "none"
+           menuBar.style.display = "block"
+        })
+
+    </script>
+</body>
+
 </html>

@@ -1,6 +1,60 @@
 
 $color-link: #e82d00
 $breakpoint-phone: 600px
+$icons-color: white
+
+.none
+    display: none
+.block
+    display: block
+
+body
+    padding: 0
+    margin: 0
+.menu-bar-wrapper
+    width: 100%
+    display: flex
+    height: fit-content
+    justify-content: center
+    position: fixed
+
+    .menu-bar
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        i
+            margin-right: 20px
+            color: $color-link
+.drawer-menu-wrapper
+    width: 100%
+    height: 100%
+    position: fixed
+    display: none
+
+    .button-wrapper
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        background-color: $color-link
+
+        i
+            margin-right: 20px
+            color: white
+
+    .drawer-menu
+        display: flex
+        flex-flow: column
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100%
+        background-color: $color-link
+
+@media screen and (min-width: $breakpoint-phone)
+    .menu-bar-wrapper
+        display: none
+    .drawer-menu
+        display: none
 
 .body-wrapper
     height: 100%
@@ -9,8 +63,8 @@ $breakpoint-phone: 600px
     a
         color: $color-link
     .nav-wrapper
-            display: 'none'
-    @media screen and (min-width: $breakpoint-phone) 
+        display: none
+    @media screen and (min-width: $breakpoint-phone)
         .nav-wrapper
             padding: 20px
             height: 80%
