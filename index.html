@@ -154,7 +154,8 @@
 
         scroller.addEventListener("click", function () {
             let currentLocation = sections.filter(s => s.href === "#" + location.href.split('#')[1])[0]
-            location.href = currentLocation.next?currentLocation.next.href:"#personal"
+            window.location.href = currentLocation.next?currentLocation.next.href:"#personal"
+            return false
         })
 
         let timeOutId
