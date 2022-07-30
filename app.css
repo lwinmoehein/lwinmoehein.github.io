@@ -75,6 +75,24 @@ body {
   justify-content: flex-end;
 }
 
+.go-down {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.go-down i {
+  margin: 0;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+.go-down i:hover {
+  background-color: #e82d00;
+  color: white;
+}
+
 .drawer-menu-wrapper {
   width: 100%;
   height: 100%;
@@ -118,6 +136,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: row;
+  }
+  .go-down {
+    justify-content: flex-end;
+    margin-right: 200px;
   }
 }
 .body-wrapper {

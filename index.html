@@ -7,12 +7,12 @@
 </head>
 
 <body>
-    <div id="loading-status-wrapper" >
+    <div id="loading-status-wrapper">
         <div class="fa-3x">
             <i class="fas fa-spinner fa-pulse"></i>
         </div>
     </div>
-    
+
     <div id="content-wrapper" style="visibility: hidden;transition: visibility 0s, opacity 0.5s linear;opacity: 0">
         <div id="menu-bar-wrapper" class="menu-bar-wrapper">
             <div class="menu-bar">
@@ -58,15 +58,19 @@
                 </nav>
             </div>
             <div class="section-wrapper">
+                <div id="scroller" class="go-down">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
                 <section id="intro" class="intro">
                     <img width="140px" height="140px" src="images/lwinmoehein.jpg" alt="Lwin Moe Hein ( Developer )">
                     <div class="about">
                         <h1>Lwin Moe Hein</h1>
-    
-    
+
+
                         <h6>Full Stack Developer</h6>
                         <p>I'm a Full Stack Developer mainly focused on <span class="color-text bold">Laravel</span>
-                            Framework.I am confident to work with <span class="color-text bold">Javascript</span> and PHP
+                            Framework.I am confident to work with <span class="color-text bold">Javascript</span> and
+                            PHP
                             langauges.</p>
                     </div>
                 </section>
@@ -84,6 +88,7 @@
     </div>
     <script>
         'use strict'
+
         let menuOpen = document.querySelector('#menu-open')
         let menuClose = document.querySelector('#menu-close')
         let menuBar = document.querySelector('#menu-bar-wrapper')
@@ -92,6 +97,25 @@
         let links = document.querySelectorAll('.mobile-nav-item')
         let loadingStatus = document.querySelector('#loading-status-wrapper')
         let mainContent = document.querySelector('#content-wrapper')
+        let scroller = document.querySelector("#scroller")
+
+        let intro
+
+        let personal = {
+            href: "#personal",
+            next: {
+                href: "#intro",
+                next: {
+                    href: "#education",
+                    next: {
+                        href: "#experience",
+                    }
+                }
+            }
+        }
+       
+       
+        let sections = [personal.next, personal.next.next, personal.next.next.next, personal]
 
         function onDrawerToggled(isClosed = true) {
             if (isClosed) {
@@ -127,6 +151,20 @@
             mainContent.style.visibility = "visible"
             mainContent.style.opacity = "1"
         })
+
+        scroller.addEventListener("click", function () {
+            let currentLocation = sections.filter(s => s.href === "#" + location.href.split('#')[1])[0]
+            location.href = currentLocation.next?currentLocation.next.href:"#personal"
+        })
+
+        let timeOutId
+        document.addEventListener('scroll', function (e) {
+            scroller.style.display = "hidden"
+            clearTimeout(timeOutId)
+            timeOutId = setTimeout(() => {
+                scroller.style.display = "block"
+            }, 1000)
+        });
     </script>
 </body>
 
