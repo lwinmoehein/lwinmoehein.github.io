@@ -7,67 +7,79 @@
 </head>
 
 <body>
-    <div id="menu-bar-wrapper" class="menu-bar-wrapper">
-        <div class="menu-bar">
-            <i id="menu-open" class="fa-solid fa-bars"></i>
+    <div id="loading-status-wrapper" >
+        <div class="fa-3x">
+            <i class="fas fa-spinner fa-pulse"></i>
         </div>
     </div>
-    <div id="drawer" class="drawer-menu-wrapper">
-        <div class="button-wrapper">
-            <i id="menu-close" class="fa-solid fa-xmark"></i>
+    
+    <div id="content-wrapper">
+        <div id="menu-bar-wrapper" class="menu-bar-wrapper">
+            <div class="menu-bar">
+                <i id="menu-open" class="fa-solid fa-bars"></i>
+            </div>
         </div>
-        <div class="drawer-menu">
-           <div class="menu-grid">
-            <div class="mobile-nav-item nav">
-                <a href="#intro">Hola</a>
+        <div id="drawer" class="drawer-menu-wrapper">
+            <div class="button-wrapper">
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
             </div>
-            <div class="mobile-nav-item nav">
-                <a href="#education">Education</a>
+            <div class="drawer-menu">
+                <div class="menu-grid">
+                    <div class="mobile-nav-item nav">
+                        <a href="#intro">Hola</a>
+                    </div>
+                    <div class="mobile-nav-item nav">
+                        <a href="#education">Education</a>
+                    </div>
+                    <div class="mobile-nav-item nav">
+                        <a href="#experience">Experience</a>
+                    </div>
+                    <div class="mobile-nav-item nav">
+                        <a href="#personal">Projects</a>
+                    </div>
+                </div>
             </div>
-            <div class="mobile-nav-item nav">
-                <a href="#experience">Experience</a>
-            </div>
-            <div class="mobile-nav-item nav">
-                <a href="#personal">Projects</a>
-            </div>
-           </div>
         </div>
-    </div>
-    <div id="body-wrapper" class="body-wrapper">
-        <div class="nav-wrapper">
-            <nav>
-                <div class="nav-item nav">
-                    <a href="#intro">Hola</a>
-                </div>
-                <div class="nav-item nav">
-                    <a href="#education">Education</a>
-                </div>
-                <div class="nav-item nav">
-                    <a href="#experience">Experience</a>
-                </div>
-                <div class="nav-item nav">
-                    <a href="#personal">Projects</a>
-                </div>
-            </nav>
-        </div>
-        <div class="section-wrapper">
-            <section id="intro" class="intro">
-                <img width="140px" height="140px" src="images/lwinmoehein.jpg" alt="Lwin Moe Hein ( Developer )">
-                <div class="about">
-                    <h1>Lwin Moe Hein</h1>
-                    <h6>Full Stack Developer</h6>
-                    <p>I'm a Full Stack Developer mainly focused on <span class="color-text bold">Laravel</span> Framework.I am confident to work with <span class="color-text bold">Javascript</span> and PHP langauges.</p>
-                </div>
-            </section>
-            <section id="education" class="education">
-                <h3>Education here</h3>
-            </section>
-            <section id="experience" class="experience">
-                <h3>Experience</h3>
-            </section>
-            <section id="personal" class="personal">
-                <h3>Personal Projects</h3>
-            </section>
+        <div id="body-wrapper" class="body-wrapper">
+            <div class="nav-wrapper">
+                <nav>
+                    <div class="nav-item nav">
+                        <a href="#intro">Hola</a>
+                    </div>
+                    <div class="nav-item nav">
+                        <a href="#education">Education</a>
+                    </div>
+                    <div class="nav-item nav">
+                        <a href="#experience">Experience</a>
+                    </div>
+                    <div class="nav-item nav">
+                        <a href="#personal">Projects</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="section-wrapper">
+                <section id="intro" class="intro">
+                    <img width="140px" height="140px" src="images/lwinmoehein.jpg" alt="Lwin Moe Hein ( Developer )">
+                    <div class="about">
+                        <h1>Lwin Moe Hein</h1>
+    
+    
+                        <h6>Full Stack Developer</h6>
+                        <p>I'm a Full Stack Developer mainly focused on <span class="color-text bold">Laravel</span>
+                            Framework.I am confident to work with <span class="color-text bold">Javascript</span> and PHP
+                            langauges.</p>
+                    </div>
+                </section>
+                <section id="education" class="education">
+                    <h3>Education here</h3>
+                </section>
+                <section id="experience" class="experience">
+                    <h3>Experience</h3>
+                </section>
+                <section id="personal" class="personal">
+                    <h3>Personal Projects</h3>
+                </section>
+            </div>
         </div>
     </div>
     <script>
@@ -78,14 +90,18 @@
         let drawer = document.querySelector('#drawer')
         let body = document.querySelector('#body-wrapper')
         let links = document.querySelectorAll('.mobile-nav-item')
+        let loadingStatus = document.querySelector('#loading-status-wrapper')
+        let mainContent = document.querySelector('#content-wrapper')
 
         function onDrawerToggled(isClosed = true) {
             if (isClosed) {
-                drawer.style.display = "none"
+                drawer.style.visibility = "hidden"
+                drawer.style.opacity = 0
                 menuBar.style.display = "block"
                 body.style.display = "block"
             } else {
-                drawer.style.display = "block"
+                drawer.style.visibility = "visible"
+                drawer.style.opacity = 1
                 menuBar.style.display = "none"
                 body.style.display = "none"
             }
@@ -101,10 +117,14 @@
             onDrawerToggled(true)
         })
 
-        links.forEach(link=>{
-            link.addEventListener("click",function(){
+        links.forEach(link => {
+            link.addEventListener("click", function () {
                 onDrawerToggled(true)
             })
+        })
+        window.addEventListener("load", function () {
+            loadingStatus.style.display = "none"
+            mainContent.style.display = "block"
         })
     </script>
 </body>
