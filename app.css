@@ -99,6 +99,12 @@ body {
   .drawer-menu {
     display: none;
   }
+  .intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+  }
 }
 .body-wrapper {
   height: 100%;
@@ -134,16 +140,26 @@ body {
   justify-content: center;
   height: 100%;
 }
-.body-wrapper .section-wrapper .intro h1 {
+.body-wrapper .section-wrapper .intro .about {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.body-wrapper .section-wrapper .intro .about h1 {
   margin: 0;
 }
-.body-wrapper .section-wrapper .intro h6 {
+.body-wrapper .section-wrapper .intro .about h6 {
   margin: 10px;
 }
-.body-wrapper .section-wrapper .intro p {
+.body-wrapper .section-wrapper .intro .about p {
   border: 1px solid #e82d00;
   border-radius: 5px;
   padding: 20px;
+}
+.body-wrapper .section-wrapper .intro img {
+  border-radius: 5px;
+  object-fit: fill;
+  margin-bottom: 10px;
 }
 .body-wrapper .section-wrapper .education {
   flex-flow: column;

@@ -12,7 +12,7 @@ body
 
 a
     text-decoration: none
-.color-text 
+.color-text
     color: $color-link
 .bold
     font-weight: bold
@@ -83,6 +83,11 @@ body
         display: none
     .drawer-menu
         display: none
+    .intro
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-flow: row
 
 .body-wrapper
     height: 100%
@@ -114,14 +119,24 @@ body
             align-items: center
             justify-content: center
             height: 100%
-            h1
-                margin: 0
-            h6
-                margin: 10px
-            p
-                border: 1px solid $color-link
+
+            .about
+                display: flex
+                flex-flow: column
+                align-items: center
+                h1
+                    margin: 0
+                h6
+                    margin: 10px
+                p
+                    border: 1px solid $color-link
+                    border-radius: 5px
+                    padding: 20px
+
+            img
                 border-radius: 5px
-                padding: 20px
+                object-fit: fill
+                margin-bottom: 10px
 
         .education
             @extend .section-card
