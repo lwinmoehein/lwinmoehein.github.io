@@ -155,7 +155,7 @@
         scroller.addEventListener("click", function () {
             try {
                 let currentLocation = sections.filter(s => s.href === "#" + location.href.split('#')[1])[0]
-                window.location.href = currentLocation.next ? currentLocation.next.href : "#personal"
+                window.location.href = currentLocation ? currentLocation.next.href : "#personal"
             } catch (e) {
                 alert(e)
             }
