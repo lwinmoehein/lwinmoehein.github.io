@@ -62,7 +62,7 @@
                     <i id="scroll-icon" class="fa-solid fa-arrow-down"></i>
                 </div>
                 <section id="intro">
-                    <h3 class="section-title"><span class="bottom-bar">A</span>bout me</h3>
+                    <h3 class="section-title" data-hash="#intro"><span class="bottom-bar">A</span>bout me</h3>
                     <div class="intro">
                         <img width="140px" height="140px" src="images/lwinmoehein.jpg"
                             alt="Lwin Moe Hein ( Developer )">
@@ -80,19 +80,20 @@
                     </div>
                 </section>
                 <section id="education">
-                    <h3 class="section-title"><span class="bottom-bar">E</span>ducation</h3>
+                    <h3 class="section-title" data-hash="#education"><span class="bottom-bar">E</span>ducation</h3>
                     <div class="education">
                         <h3>Education here</h3>
                     </div>
                 </section>
                 <section id="experience">
-                    <h3 class="section-title"><span class="bottom-bar">E</span>xperience</h3>
+                    <h3 class="section-title" data-hash="#experience"><span class="bottom-bar">E</span>xperience</h3>
                     <div class="experience">
                         <h3>Experience</h3>
                     </div>
                 </section>
                 <section id="personal">
-                    <h3 class="section-title"><span class="bottom-bar">Personal</span> Projects</h3>
+                    <h3 class="section-title" data-hash="#personal"><span class="bottom-bar">Personal</span> Projects
+                    </h3>
                     <div class="personal">
                         <h3>Personal Projects</h3>
                     </div>
@@ -102,6 +103,34 @@
     </div>
     <script>
         'use strict'
+
+        window.throttle = function (f, ms) {
+            let isThrottled, lastThis, lastArgs
+            return function wrapper() {
+                if (isThrottled) {
+                    lastThis = this
+                    lastArgs = arguments
+                    return;
+                }
+                f.apply(this, arguments)
+                isThrottled = true
+                setTimeout(() => {
+                    isThrottled = false
+                    if (lastArgs != null) {
+                        wrapper.apply(lastThis, lastArgs)
+                        lastThis = lastArgs = null
+                    }
+                }, ms)
+            }
+        }
+
+        window.bounce = function (f, ms) {
+            let timeOutId
+            return function () {
+                clearTimeout(timeOutId)
+                timeOutId = setTimeout(() => f.apply(this, arguments), ms)
+            }
+        }
 
         let menuOpen = document.querySelector('#menu-open')
         let menuClose = document.querySelector('#menu-close')
@@ -115,6 +144,9 @@
         let scrollIcon = document.querySelector("#scroll-icon")
         let navItems = document.querySelectorAll('.nav')
         let sectionElements = document.querySelectorAll('section')
+        let sectionTitles = document.querySelectorAll('.section-title')
+
+
 
         let intro
 
@@ -170,37 +202,30 @@
         })
 
         scroller.addEventListener("click", function () {
-            let currentLocation = sections.filter(s => s.href === location.hash || (location.hash == "" && s.href == "#intro"))[0]
-            if (currentLocation.href == "#experience") {
-                scrollIcon.classList.remove("fa-arrow-down")
-                scrollIcon.classList.add("fa-arrow-up")
-            } else {
-                scrollIcon.classList.remove("fa-arrow-up")
-                scrollIcon.classList.add("fa-arrow-down")
-            }
-            if (currentLocation === "#personal") {
-                window.location.href = personal.next.href
-                return;
-            }
-            window.location.href = currentLocation ? currentLocation.next ? currentLocation.next.href : "#personal" : "#personal"
+            updateScrollFloatingButtonStatus()
         })
         //scrollbar timeout
-        let scrollShowTimeout
-        let hashUpdateTimeout
+        let setScrollerVisible = bounce(() => {
+            scroller.style.display = "flex"
+        }, 500)
+        let updateCurrentHash = throttle(() => {
+            sectionTitles.forEach(t => {
+                if (isScrolledIntoView(t)) {
+                    setTimeout(() => {
+                        history.pushState({}, '', t.getAttribute('data-hash'))
+                        locationHashChanged()
+                        updateScrollFloatingButtonStatus(true)
+                    }, 0)
+                }
+            })
+
+        }, 1000)
 
         document.addEventListener('scroll', function (e) {
-            //update hash
-            clearTimeout(hashUpdateTimeout)
-            hashUpdateTimeout = setTimeout(() => {
-
-            }, 100)
-
-
+            updateCurrentHash()
+            //update scroll arrow visibility
             scroller.style.display = "none"
-            clearTimeout(scrollShowTimeout)
-            scrollShowTimeout = setTimeout(() => {
-                scroller.style.display = "flex"
-            }, 500)
+            setScrollerVisible()
         });
 
         //active link
@@ -221,7 +246,40 @@
             })
         }
 
+        function updateScrollFloatingButtonStatus(updateUiOnly = false) {
+            console.log('cloc'+location.hash);
+            let currentLocation = sections.filter(s => s.href === location.hash || (location.hash == "" && s.href == "#intro"))[0]
+            if (currentLocation.href == "#personal") {
+                scrollIcon.classList.remove("fa-arrow-down")
+                scrollIcon.classList.add("fa-arrow-up")
+            } else {
+                scrollIcon.classList.remove("fa-arrow-up")
+                scrollIcon.classList.add("fa-arrow-down")
+            }
+
+            if(updateUiOnly) return;
+
+            if (currentLocation === "#personal") {
+                window.location.href = personal.next.href
+                return;
+            }
+            window.location.href = currentLocation ? currentLocation.next ? currentLocation.next.href : "#personal" : "#personal"
+        }
+
         window.onhashchange = locationHashChanged
+
+        function isScrolledIntoView(el) {
+            var rect = el.getBoundingClientRect();
+            var elemTop = rect.top;
+            var elemBottom = rect.bottom;
+
+            // Only completely visible elements return true:
+            var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+            // Partially visible elements return true:
+            //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+            return isVisible;
+        }
+
 
 
 
