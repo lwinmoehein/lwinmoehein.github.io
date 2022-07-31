@@ -291,15 +291,37 @@ body {
   align-items: center;
   justify-content: center;
 }
-.body-wrapper .section-wrapper .education .path-row .item .indicator {
-  flex: 1;
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  background-color: #2274A5;
+.body-wrapper .section-wrapper .education .edu-path {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-.body-wrapper .section-wrapper .education .path-row .item .content {
-  flex: 5;
+.body-wrapper .section-wrapper .education .edu-path .item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.body-wrapper .section-wrapper .education .edu-path .item .indicator {
+  display: flex;
+  flex-flow: column;
+}
+.body-wrapper .section-wrapper .education .edu-path .item .indicator .fa-graduation-cap, .body-wrapper .section-wrapper .education .edu-path .item .indicator .fa-question {
+  font-size: 15pt;
+  transform: none;
+  margin-top: 0;
+}
+.body-wrapper .section-wrapper .education .edu-path .item .indicator i {
+  font-size: 7pt;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transform: rotate(90deg);
+}
+.body-wrapper .section-wrapper .education .edu-path .item .content {
+  margin-left: 30px;
+  padding: 10px;
+  border: 1px dashed #2274A5;
+  border-radius: 5px;
 }
 .body-wrapper .section-wrapper .experience {
   flex-flow: column;

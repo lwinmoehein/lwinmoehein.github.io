@@ -1,15 +1,15 @@
 
 $primary-color: #2274A5
 $breakpoint-phone: 600px
-$active-nav-color:#131B23
+$active-nav-color: #131B23
 $icons-color: white
-$intro-clor:#E7DFC6
-$education-color:#E9F1F7
-$experience-color:#816C61
-$projects-color:#131B23
-$laravel-color:#f72c1f
-$js-color:#efd81d
-$php-color:#4d588e
+$intro-clor: #E7DFC6
+$education-color: #E9F1F7
+$experience-color: #816C61
+$projects-color: #131B23
+$laravel-color: #f72c1f
+$js-color: #efd81d
+$php-color: #4d588e
 
 @font-face
     font-family: WorkSans
@@ -23,11 +23,11 @@ body
     a
         color: white !important
 .js
-    color:$js-color
+    color: $js-color
 .laravel
-    color:$laravel-color
+    color: $laravel-color
 .php
-    color:$php-color
+    color: $php-color
 
 a
     text-decoration: none
@@ -48,7 +48,7 @@ a
     color: $primary-color
     font-weight: bold
     z-index: 99
-    margin:0
+    margin: 0
 
 .nav
     a
@@ -60,14 +60,12 @@ a
 .block
     display: block
 
-.bottom-bar 
-    width:10px
+.bottom-bar
+    width: 10px
     height: 10px
     background-color: $primary-color
     display: inline
     color: white
-
-  
 
 #loading-status-wrapper
     width: 100%
@@ -103,7 +101,6 @@ body
         display: flex
         padding-right: 20px
         padding-top: 20px
-    
 
 .go-down
     position: fixed
@@ -183,7 +180,6 @@ body
         .bottom-bar
             background-color: transparent
             color: $primary-color
-            
 
 .body-wrapper
     height: 100%
@@ -216,17 +212,16 @@ body
         height: 100%
         flex: 3
 
-        section 
-            padding:20px
+        section
+            padding: 20px
         #intro
-            background-color:$intro-clor
+            background-color: $intro-clor
         #education
-            background-color:$education-color
+            background-color: $education-color
         #experience
-            background-color:$intro-clor
+            background-color: $intro-clor
         #personal
-            background-color:$education-color
-        
+            background-color: $education-color
 
         .intro
             @extend .section-card
@@ -259,23 +254,34 @@ body
             align-items: center
             justify-content: center
 
-            .path-row
-                display:flex
-                flex-flow:column
-                justify-content:center
-                align-items:center
+            .edu-path
+                display: flex
+                flex-flow: column
+                justify-content: flex-start
+                align-items: flex-start
 
-                .item 
-                    display:flex
+                .item
+                    display: flex
+                    align-items: flex-start
+                    justify-content: center
                     .indicator
-                        flex:1
-                        width:30px
-                        height:30px
-                        border-radius:30px
-                        background-color:$primary-color
-                        
-                    .content
-                        flex:5
+                        display: flex
+                        flex-flow: column
+                        .fa-graduation-cap,.fa-question
+                            font-size: 15pt
+                            transform: none
+                            margin-top: 0
+                        i
+                            font-size: 7pt
+                            margin-bottom: 10px
+                            margin-top: 10px
+                            transform: rotate(90deg)
+                    .content 
+                        margin-left: 30px
+                        padding: 10px
+                        border: 1px dashed $primary-color
+                        border-radius: 5px
+
         .experience
             @extend .section-card
             flex-flow: column
