@@ -441,7 +441,6 @@
         }
 
         function updateScrollFloatingButtonStatus(updateUiOnly = false) {
-            console.log('cloc' + location.hash);
             let currentLocation = sections.filter(s => s.href === location.hash || (location.hash == "" && s.href == "#intro"))[0]
             if (currentLocation.href == "#personal") {
                 scrollIcon.classList.remove("fa-arrow-down")
