@@ -285,11 +285,13 @@
         });
 
         function disableWindowScroll() {
+            document.body.style.overflow = 'hidden';
             winX = window.scrollX;
             winY = window.scrollY;
         }
 
         function enableWindowScroll() {
+            document.body.style.overflow = 'visible';
             winX = null;
             winY = null;
         }
