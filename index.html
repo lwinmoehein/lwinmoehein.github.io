@@ -189,7 +189,6 @@
         let hashUpdateTimeout
 
         document.addEventListener('scroll', function (e) {
-            console.log("map:", Math.min(...elementHeights.values()))
             //update hash
             clearTimeout(hashUpdateTimeout)
             hashUpdateTimeout = setTimeout(() => {
