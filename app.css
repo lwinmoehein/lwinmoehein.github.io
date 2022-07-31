@@ -62,7 +62,7 @@ a {
   height: 10px;
   background-color: #e82d00;
   display: inline;
-  margin: 10px;
+  color: white;
 }
 
 #loading-status-wrapper {
@@ -94,6 +94,8 @@ body {
   position: fixed;
   z-index: 99;
   width: 100%;
+  padding-bottom: 20px;
+  background-color: black;
 }
 .menu-bar-wrapper .menu-bar {
   width: fit-content;
@@ -182,6 +184,15 @@ body {
   .go-down i:hover {
     background-color: #e82d00;
     color: white;
+  }
+  .section-title {
+    left: 20%;
+    border-bottom: 3px solid #e82d00;
+    padding-bottom: 3px;
+  }
+  .section-title .bottom-bar {
+    background-color: transparent;
+    color: #e82d00;
   }
 }
 .body-wrapper {
