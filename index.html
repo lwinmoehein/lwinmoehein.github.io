@@ -61,27 +61,41 @@
                 <div id="scroller" class="go-down">
                     <i id="scroll-icon" class="fa-solid fa-arrow-down"></i>
                 </div>
-                <section id="intro" class="intro">
-                    <img width="140px" height="140px" src="images/lwinmoehein.jpg" alt="Lwin Moe Hein ( Developer )">
-                    <div class="about">
-                        <h1>Lwin Moe Hein</h1>
+                <section id="intro">
+                    <h3 class="section-title"><span class="bottom-bar">s</span> About me</h3>
+                    <div class="intro">
+                        <img width="140px" height="140px" src="images/lwinmoehein.jpg"
+                            alt="Lwin Moe Hein ( Developer )">
+                        <div class="about">
+                            <h1>Lwin Moe Hein</h1>
 
 
-                        <h6>Full Stack Developer</h6>
-                        <p>I'm a Full Stack Developer mainly focused on <span class="color-text bold">Laravel</span>
-                            Framework.I am confident to work with <span class="color-text bold">Javascript</span> and
-                            PHP
-                            langauges.</p>
+                            <h6 class="color-text">Full Stack Developer</h6>
+                            <p>I'm a Full Stack Developer mainly focused on <span class="color-text bold">Laravel</span>
+                                Framework.I am confident to work with <span class="color-text bold">Javascript</span>
+                                and
+                                PHP
+                                langauges.</p>
+                        </div>
                     </div>
                 </section>
-                <section id="education" class="education">
-                    <h3>Education here</h3>
+                <section id="education">
+                    <h3 class="section-title"><span class="bottom-bar">s</span>Education</h3>
+                    <div class="education">
+                        <h3>Education here</h3>
+                    </div>
                 </section>
-                <section id="experience" class="experience">
-                    <h3>Experience</h3>
+                <section id="experience">
+                    <h3 class="section-title"><span class="bottom-bar">s</span>Experience</h3>
+                    <div class="experience">
+                        <h3>Experience</h3>
+                    </div>
                 </section>
-                <section id="personal" class="personal">
-                    <h3>Personal Projects</h3>
+                <section id="personal">
+                    <h3 class="section-title"><span class="bottom-bar">s</span>Personal Projects</h3>
+                    <div class="personal">
+                        <h3>Personal Projects</h3>
+                    </div>
                 </section>
             </div>
         </div>
@@ -124,12 +138,12 @@
             if (isClosed) {
                 drawer.style.visibility = "hidden"
                 drawer.style.opacity = 0
-                menuBar.style.display = "block"
+                menuBar.style.visibility = "visible"
                 body.style.display = "block"
             } else {
                 drawer.style.visibility = "visible"
                 drawer.style.opacity = 1
-                menuBar.style.display = "none"
+                menuBar.style.visibility = "invisible"
                 body.style.display = "hidden"
             }
         }
@@ -173,20 +187,21 @@
         //scrollbar timeout
         let scrollShowTimeout
         let hashUpdateTimeout
+
         document.addEventListener('scroll', function (e) {
+            console.log("map:", Math.min(...elementHeights.values()))
             //update hash
             clearTimeout(hashUpdateTimeout)
-            sectionElements.forEach(sec => {
-                if (isInViewport(sec)) {
-                    location.href = "#" + sec.id
-                }
-                console.log(isInViewport(sec))
-            })
+            hashUpdateTimeout = setTimeout(() => {
+
+            }, 100)
+
+
             scroller.style.display = "none"
             clearTimeout(scrollShowTimeout)
             scrollShowTimeout = setTimeout(() => {
                 scroller.style.display = "flex"
-            }, 1000)
+            }, 500)
         });
 
         //active link
@@ -207,17 +222,8 @@
             })
         }
 
-        window.onhashchange = locationHashChanged;
+        window.onhashchange = locationHashChanged
 
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
 
 
     </script>
