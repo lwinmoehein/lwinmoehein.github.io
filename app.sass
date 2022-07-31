@@ -1,7 +1,12 @@
 
-$primary-color: #e82d00
+$primary-color: #2274A5
 $breakpoint-phone: 600px
+$active-nav-color:#131B23
 $icons-color: white
+$intro-clor:#E7DFC6
+$education-color:#E9F1F7
+$experience-color:#816C61
+$projects-color:#131B23
 
 @font-face
     font-family: WorkSans
@@ -11,7 +16,7 @@ body
     font-family: WorkSans
 
 .active-nav
-    background-color: green
+    background-color: $active-nav-color
     a
         color: white !important
 
@@ -26,7 +31,6 @@ a
     padding: 20px
     height: 100%
     display: flex
-
 .section-title
     top: 22px
     left: 20px
@@ -196,13 +200,24 @@ body
                 margin-bottom: 10px
         .section-wrapper
             margin-left: 240px
-            padding: 10px
             p
                 max-width: 30%
 
     .section-wrapper
         height: 100%
         flex: 3
+
+        section 
+            padding:20px
+        #intro
+            background-color:$intro-clor
+        #education
+            background-color:$education-color
+        #experience
+            background-color:$intro-clor
+        #personal
+            background-color:$education-color
+        
 
         .intro
             @extend .section-card

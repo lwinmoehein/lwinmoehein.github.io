@@ -7,7 +7,7 @@ body {
 }
 
 .active-nav {
-  background-color: green;
+  background-color: #131B23;
 }
 .active-nav a {
   color: white !important;
@@ -19,7 +19,7 @@ a {
 }
 
 .color-text {
-  color: #e82d00;
+  color: #2274A5;
 }
 
 .bold {
@@ -37,7 +37,7 @@ a {
   left: 20px;
   width: fit-content;
   position: sticky;
-  color: #e82d00;
+  color: #2274A5;
   font-weight: bold;
   z-index: 99;
   margin: 0;
@@ -60,7 +60,7 @@ a {
 .bottom-bar {
   width: 10px;
   height: 10px;
-  background-color: #e82d00;
+  background-color: #2274A5;
   display: inline;
   color: white;
 }
@@ -75,7 +75,7 @@ a {
 }
 
 i {
-  color: #e82d00;
+  color: #2274A5;
   font-size: 30px;
   display: flex;
   justify-content: center;
@@ -123,7 +123,7 @@ body {
 }
 
 .go-down i:active {
-  background-color: #e82d00;
+  background-color: #2274A5;
   color: white;
 }
 
@@ -140,7 +140,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: #e82d00;
+  background-color: #2274A5;
 }
 .drawer-menu-wrapper .button-wrapper i {
   color: white;
@@ -154,7 +154,7 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #e82d00;
+  background-color: #2274A5;
 }
 .drawer-menu-wrapper .drawer-menu .menu-grid {
   display: grid;
@@ -183,17 +183,17 @@ body {
     position: fixed;
   }
   .go-down i:hover {
-    background-color: #e82d00;
+    background-color: #2274A5;
     color: white;
   }
   .section-title {
     left: 20%;
-    border-bottom: 3px solid #e82d00;
+    border-bottom: 3px solid #2274A5;
     padding-bottom: 3px;
   }
   .section-title .bottom-bar {
     background-color: transparent;
-    color: #e82d00;
+    color: #2274A5;
   }
 }
 .body-wrapper {
@@ -201,7 +201,7 @@ body {
   display: flex;
 }
 .body-wrapper a {
-  color: #e82d00;
+  color: #2274A5;
 }
 .body-wrapper .nav-wrapper {
   display: none;
@@ -223,7 +223,6 @@ body {
   }
   .body-wrapper .section-wrapper {
     margin-left: 240px;
-    padding: 10px;
   }
   .body-wrapper .section-wrapper p {
     max-width: 30%;
@@ -232,6 +231,21 @@ body {
 .body-wrapper .section-wrapper {
   height: 100%;
   flex: 3;
+}
+.body-wrapper .section-wrapper section {
+  padding: 20px;
+}
+.body-wrapper .section-wrapper #intro {
+  background-color: #E7DFC6;
+}
+.body-wrapper .section-wrapper #education {
+  background-color: #E9F1F7;
+}
+.body-wrapper .section-wrapper #experience {
+  background-color: #E7DFC6;
+}
+.body-wrapper .section-wrapper #personal {
+  background-color: #E9F1F7;
 }
 .body-wrapper .section-wrapper .intro {
   flex-flow: column;
@@ -251,7 +265,7 @@ body {
   margin: 10px;
 }
 .body-wrapper .section-wrapper .intro .about p {
-  border: 1px solid #e82d00;
+  border: 1px solid #2274A5;
   border-radius: 5px;
   padding: 20px;
 }

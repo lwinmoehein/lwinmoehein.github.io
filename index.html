@@ -81,12 +81,14 @@
                 </section>
                 <section id="education">
                     <h3 class="section-title" data-hash="#education"><span class="bottom-bar">E</span>ducation</h3>
+
                     <div class="education">
                         <h3>Education here</h3>
                     </div>
                 </section>
                 <section id="experience">
                     <h3 class="section-title" data-hash="#experience"><span class="bottom-bar">E</span>xperience</h3>
+
                     <div class="experience">
                         <h3>Experience</h3>
                     </div>
@@ -94,6 +96,7 @@
                 <section id="personal">
                     <h3 class="section-title" data-hash="#personal"><span class="bottom-bar">Personal</span> Projects
                     </h3>
+
                     <div class="personal">
                         <h3>Personal Projects</h3>
                     </div>
@@ -247,7 +250,7 @@
         }
 
         function updateScrollFloatingButtonStatus(updateUiOnly = false) {
-            console.log('cloc'+location.hash);
+            console.log('cloc' + location.hash);
             let currentLocation = sections.filter(s => s.href === location.hash || (location.hash == "" && s.href == "#intro"))[0]
             if (currentLocation.href == "#personal") {
                 scrollIcon.classList.remove("fa-arrow-down")
@@ -257,7 +260,7 @@
                 scrollIcon.classList.add("fa-arrow-down")
             }
 
-            if(updateUiOnly) return;
+            if (updateUiOnly) return;
 
             if (currentLocation === "#personal") {
                 window.location.href = personal.next.href
