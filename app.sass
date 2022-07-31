@@ -34,7 +34,7 @@ a
     position: sticky
     color: $primary-color
     font-weight: bold
-    z-index: 101
+    z-index: 99
     margin:0
 
 .nav
@@ -156,11 +156,10 @@ body
         flex-flow: row
     .go-down
         display: flex
-        justify-content: flex-end
-
-        i
-            margin-right: 50px
-      
+        justify-content: center
+        width: fit-content
+        right: 50px
+        position: fixed
         i:hover
             background-color: $primary-color
             color: white
@@ -185,15 +184,19 @@ body
     @media screen and (min-width: $breakpoint-phone)
         .nav-wrapper
             padding: 20px
+            width: 200px
             height: 100%
             position: fixed
             flex: 1
             display: flex
             flex-flow: column
             justify-content: center
+            background-color: black
             .nav-item
                 margin-bottom: 10px
         .section-wrapper
+            margin-left: 240px
+            padding: 10px
             p
                 max-width: 30%
 

@@ -39,7 +39,7 @@ a {
   position: sticky;
   color: #e82d00;
   font-weight: bold;
-  z-index: 101;
+  z-index: 99;
   margin: 0;
 }
 
@@ -177,10 +177,10 @@ body {
   }
   .go-down {
     display: flex;
-    justify-content: flex-end;
-  }
-  .go-down i {
-    margin-right: 50px;
+    justify-content: center;
+    width: fit-content;
+    right: 50px;
+    position: fixed;
   }
   .go-down i:hover {
     background-color: #e82d00;
@@ -209,15 +209,21 @@ body {
 @media screen and (min-width: 600px) {
   .body-wrapper .nav-wrapper {
     padding: 20px;
+    width: 200px;
     height: 100%;
     position: fixed;
     flex: 1;
     display: flex;
     flex-flow: column;
     justify-content: center;
+    background-color: black;
   }
   .body-wrapper .nav-wrapper .nav-item {
     margin-bottom: 10px;
+  }
+  .body-wrapper .section-wrapper {
+    margin-left: 240px;
+    padding: 10px;
   }
   .body-wrapper .section-wrapper p {
     max-width: 30%;
