@@ -100,6 +100,7 @@
         let scroller = document.querySelector("#scroller")
         let scrollIcon = document.querySelector("#scroll-icon")
         let navItems = document.querySelectorAll('.nav')
+        let sectionElements = document.querySelectorAll('section')
 
         let intro
 
@@ -155,7 +156,7 @@
         })
 
         scroller.addEventListener("click", function () {
-            let currentLocation = sections.filter(s => s.href === location.hash || (location.hash=="" && s.href=="#intro"))[0]
+            let currentLocation = sections.filter(s => s.href === location.hash || (location.hash == "" && s.href == "#intro"))[0]
             if (currentLocation.href == "#experience") {
                 scrollIcon.classList.remove("fa-arrow-down")
                 scrollIcon.classList.add("fa-arrow-up")
@@ -170,11 +171,20 @@
             window.location.href = currentLocation ? currentLocation.next ? currentLocation.next.href : "#personal" : "#personal"
         })
         //scrollbar timeout
-        let timeOutId
+        let scrollShowTimeout
+        let hashUpdateTimeout
         document.addEventListener('scroll', function (e) {
+            //update hash
+            clearTimeout(hashUpdateTimeout)
+            sectionElements.forEach(sec => {
+                if (isInViewport(sec)) {
+                    location.href = "#" + sec.id
+                }
+                console.log(isInViewport(sec))
+            })
             scroller.style.display = "none"
-            clearTimeout(timeOutId)
-            timeOutId = setTimeout(() => {
+            clearTimeout(scrollShowTimeout)
+            scrollShowTimeout = setTimeout(() => {
                 scroller.style.display = "flex"
             }, 1000)
         });
@@ -188,16 +198,28 @@
                     matchedLink = linkElement
                 }
             })
-            navItems.forEach(nav=>{
-                if(matchedLink.hash!=nav.lastElementChild.hash){
+            navItems.forEach(nav => {
+                if (matchedLink.hash != nav.lastElementChild.hash) {
                     nav.classList.remove('active-nav')
-                }else{
+                } else {
                     nav.classList.add('active-nav')
                 }
             })
         }
 
         window.onhashchange = locationHashChanged;
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+
     </script>
 </body>
 
