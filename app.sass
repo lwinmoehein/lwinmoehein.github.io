@@ -7,6 +7,9 @@ $intro-clor:#E7DFC6
 $education-color:#E9F1F7
 $experience-color:#816C61
 $projects-color:#131B23
+$laravel-color:#f72c1f
+$js-color:#efd81d
+$php-color:#4d588e
 
 @font-face
     font-family: WorkSans
@@ -19,6 +22,12 @@ body
     background-color: $active-nav-color
     a
         color: white !important
+.js
+    color:$js-color
+.laravel
+    color:$laravel-color
+.php
+    color:$php-color
 
 a
     text-decoration: none
@@ -249,6 +258,24 @@ body
             flex-flow: column
             align-items: center
             justify-content: center
+
+            .path-row
+                display:flex
+                flex-flow:column
+                justify-content:center
+                align-items:center
+
+                .item 
+                    display:flex
+                    .indicator
+                        flex:1
+                        width:30px
+                        height:30px
+                        border-radius:30px
+                        background-color:$primary-color
+                        
+                    .content
+                        flex:5
         .experience
             @extend .section-card
             flex-flow: column
