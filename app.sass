@@ -290,8 +290,52 @@ i
             align-items: center
             justify-content: center
 
+            .edu-path
+                display: flex
+                flex-flow: column
+                justify-content: flex-start
+                align-items: flex-start
+
+                .item
+                    display: flex
+                    align-items: flex-start
+                    justify-content: center
+                    .indicator
+                        display: flex
+                        flex-flow: column
+                        .fa-graduation-cap,.fa-question
+                            font-size: 15pt
+                            transform: none
+                            margin-top: 0
+                        i
+                            font-size: 7pt
+                            margin-bottom: 10px
+                            margin-top: 10px
+                            transform: rotate(90deg)
+                    .content 
+                        margin-left: 30px
+                        padding: 10px
+                        border: 1px dashed $primary-color
+                        border-radius: 5px
+
+
         .personal
             @extend .section-card
+            padding:0px
+            padding-top: 30px
+            
             flex-flow: column
-            align-items: center
-            justify-content: center
+
+            .projects-wrapper
+                display: flex
+                flex-flow: column
+                width: auto
+                .project
+                    padding: 10px 
+                    background-color:$primary-color
+                    height:100px
+                    margin-bottom: 10px
+                    border: 1px solid $primary-color
+                    border-radius: 5px
+                    color: white
+

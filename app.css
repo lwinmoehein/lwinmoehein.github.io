@@ -327,10 +327,56 @@ i {
   align-items: center;
   justify-content: center;
 }
-.body-wrapper .section-wrapper .personal {
+.body-wrapper .section-wrapper .experience .edu-path {
+  display: flex;
   flex-flow: column;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.body-wrapper .section-wrapper .experience .edu-path .item {
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
+}
+.body-wrapper .section-wrapper .experience .edu-path .item .indicator {
+  display: flex;
+  flex-flow: column;
+}
+.body-wrapper .section-wrapper .experience .edu-path .item .indicator .fa-graduation-cap, .body-wrapper .section-wrapper .experience .edu-path .item .indicator .fa-question {
+  font-size: 15pt;
+  transform: none;
+  margin-top: 0;
+}
+.body-wrapper .section-wrapper .experience .edu-path .item .indicator i {
+  font-size: 7pt;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transform: rotate(90deg);
+}
+.body-wrapper .section-wrapper .experience .edu-path .item .content {
+  margin-left: 30px;
+  padding: 10px;
+  border: 1px dashed #2274A5;
+  border-radius: 5px;
+}
+.body-wrapper .section-wrapper .personal {
+  padding: 0px;
+  padding-top: 30px;
+  flex-flow: column;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper {
+  display: flex;
+  flex-flow: column;
+  width: auto;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project {
+  padding: 10px;
+  background-color: #2274A5;
+  height: 100px;
+  margin-bottom: 10px;
+  border: 1px solid #2274A5;
+  border-radius: 5px;
+  color: white;
 }
 
 /*# sourceMappingURL=app.css.map */
