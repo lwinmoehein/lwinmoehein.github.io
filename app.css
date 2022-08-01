@@ -244,7 +244,7 @@ i {
   flex: 3;
 }
 .body-wrapper .section-wrapper section {
-  padding: 20px;
+  padding: 10px;
 }
 .body-wrapper .section-wrapper #intro {
   background-color: #E7DFC6;
@@ -421,13 +421,13 @@ i {
 .body-wrapper .section-wrapper .social {
   flex-flow: column;
   align-items: center;
-  justify-content: center;
 }
 .body-wrapper .section-wrapper .social .edu-path {
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-top: 50px;
 }
 .body-wrapper .section-wrapper .social .edu-path .item {
   display: flex;
@@ -438,7 +438,7 @@ i {
   display: flex;
   flex-flow: column;
 }
-.body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-graduation-cap, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-question {
+.body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-arrow-right, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-address-book, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-envelope, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-phone {
   font-size: 15pt;
   transform: none;
   margin-top: 0;
@@ -455,10 +455,19 @@ i {
   border: 1px dashed #2274A5;
   border-radius: 5px;
 }
+.body-wrapper .section-wrapper .social .edu-path .item .content .title {
+  color: #2274A5;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.body-wrapper .section-wrapper .social .edu-path .item .content a {
+  padding: 0;
+}
 .body-wrapper .section-wrapper .social .edu-path .item .content img, .body-wrapper .section-wrapper .social .edu-path .item .content a {
-  width: 200px;
-  height: 100px;
   object-fit: contain;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (min-width: 600px) {
   .body-wrapper .section-wrapper .personal .projects-wrapper {
@@ -478,6 +487,9 @@ i {
     background-color: #E7DFC6;
     border: 1px dashed #E7DFC6;
     border-object-fit: cover;
+  }
+  .body-wrapper .section-wrapper .social .edu-path {
+    margin-top: 0px;
   }
 }
 

@@ -212,7 +212,7 @@ i
         flex: 3
 
         section
-            padding: 20px
+            padding: 10px
         #intro
             background-color: $intro-clor
         #education
@@ -373,13 +373,13 @@ i
             @extend .section-card
             flex-flow: column
             align-items: center
-            justify-content: center
 
             .edu-path
                 display: flex
                 flex-flow: column
                 justify-content: flex-start
                 align-items: flex-start
+                margin-top: 50px
 
                 .item
                     display: flex
@@ -388,7 +388,7 @@ i
                     .indicator
                         display: flex
                         flex-flow: column
-                        .fa-graduation-cap,.fa-question
+                        .fa-arrow-right,.fa-address-book,.fa-envelope,.fa-phone
                             font-size: 15pt
                             transform: none
                             margin-top: 0
@@ -402,10 +402,19 @@ i
                         padding: 10px
                         border: 1px dashed $primary-color
                         border-radius: 5px
+
+                        .title
+                            color: $primary-color
+                            font-weight: bolder
+                            margin-bottom: 10px
+                        a
+                            padding: 0
                         img,a
-                            width: 200px
-                            height: 100px
+                          
                             object-fit: contain
+                            display: block
+                            width: 100%
+                            height: 100%
 
             
         @media screen and (min-width: $breakpoint-phone)
@@ -428,3 +437,6 @@ i
                         border: 1px dashed $intro-clor
                        
                             object-fit: cover
+                .social
+                    .edu-path
+                        margin-top: 0px
