@@ -375,6 +375,38 @@ i
             align-items: center
             justify-content: center
 
+            .edu-path
+                display: flex
+                flex-flow: column
+                justify-content: flex-start
+                align-items: flex-start
+
+                .item
+                    display: flex
+                    align-items: flex-start
+                    justify-content: center
+                    .indicator
+                        display: flex
+                        flex-flow: column
+                        .fa-graduation-cap,.fa-question
+                            font-size: 15pt
+                            transform: none
+                            margin-top: 0
+                        i
+                            font-size: 7pt
+                            margin-bottom: 10px
+                            margin-top: 10px
+                            transform: rotate(90deg)
+                    .content
+                        margin-left: 30px
+                        padding: 10px
+                        border: 1px dashed $primary-color
+                        border-radius: 5px
+                        img,a
+                            width: 200px
+                            height: 100px
+                            object-fit: contain
+
             
         @media screen and (min-width: $breakpoint-phone)
                 .personal
