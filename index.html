@@ -165,6 +165,9 @@
                     <div class="mobile-nav-item nav">
                         <a href="#personal">Projects</a>
                     </div>
+                    <div class="mobile-nav-item nav">
+                        <a href="#social">Socials</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -182,6 +185,9 @@
                     </div>
                     <div class="nav-item nav">
                         <a href="#personal">Projects</a>
+                    </div>
+                    <div class="nav-item nav">
+                        <a href="#social">Socials</a>
                     </div>
                 </nav>
             </div>
@@ -205,6 +211,7 @@
                                 <span class="php bold">PHP</span>
                                 langauges.
                             </p>
+
                         </div>
                     </div>
                 </section>
@@ -267,7 +274,7 @@
                             <div class="item">
                                 <div class="indicator">
                                     <div class="dot"></div>
-                                    <i class="fa-solid f fa-graduation-cap"></i>
+                                    <i class="fa-solid  fa-briefcase"></i>
                                     <i class="fa-solid fa-shoe-prints"></i>
                                     <i class="fa-solid fa-shoe-prints"></i>
                                     <i class="fa-solid fa-shoe-prints"></i>
@@ -284,7 +291,7 @@
                             </div>
                             <div class="item">
                                 <div class="indicator">
-                                    <i class="fa-solid  fa-graduation-cap"></i>
+                                    <i class="fa-solid  fa-briefcase"></i>
                                     <i class="fa-solid fa-shoe-prints"></i>
                                     <i class="fa-solid fa-shoe-prints"></i>
                                     <i class="fa-solid fa-shoe-prints"></i>
@@ -319,7 +326,7 @@
                             <div class="project">
                                 <div class="content-wrapper">
                                     <div class="content">
-                                        <div class="title">Movie Reviews</div>
+                                        <div class="title">Movie Reviews <span class="type">Website</span></div>
                                         <div class="used-techs">
                                             <span>Laravel</span>
                                             <span>MYSQL</span>
@@ -332,11 +339,10 @@
                             <div class="project">
                                 <div class="content-wrapper">
                                     <div class="content">
-                                        <div class="title">Movie Reviews</div>
+                                        <div class="title">M Knowledge <span class="type">Android App</span></div>
                                         <div class="used-techs">
-                                            <span>Laravel</span>
-                                            <span>MYSQL</span>
-                                            <span>SASS</span>
+                                            <span>Kotlin</span>
+                                            <span>MVVM</span>
                                         </div>
                                     </div>
                                 </div>
@@ -345,11 +351,10 @@
                             <div class="project">
                                 <div class="content-wrapper">
                                     <div class="content">
-                                        <div class="title">Movie Reviews</div>
+                                        <div class="title">M Knowledge</div>
                                         <div class="used-techs">
-                                            <span>Laravel</span>
-                                            <span>MYSQL</span>
-                                            <span>SASS</span>
+                                            <span>Kotlin</span>
+                                            <span>MVVM</span>
                                         </div>
                                     </div>
                                 </div>
@@ -369,6 +374,14 @@
                                 <img src="images/movies-admin.png" alt="" loading="lazy">
                             </div>
                         </div>
+                    </div>
+                </section>
+                <section id="social">
+                    <h3 class="section-title" data-hash="#social"><span class="bottom-bar">S</span> ocials
+                    </h3>
+
+                    <div class="social">
+                        Socials
                     </div>
                 </section>
             </div>
@@ -445,21 +458,24 @@
 
         let intro
 
-        let personal = {
-            href: "#personal",
+        let social = {
+            href: "#social",
             next: {
-                href: "#intro",
+                href: "#personal",
                 next: {
-                    href: "#education",
+                    href: "#intro",
                     next: {
-                        href: "#experience",
+                        href: "#education",
+                        next: {
+                            href: "#experience",
+                        }
                     }
                 }
             }
         }
 
 
-        let sections = [personal.next, personal.next.next, personal.next.next.next, personal]
+        let sections = [social.next, social.next.next, social.next.next.next, social.next.next.next.next, social]
 
         function onDrawerToggled(isClosed = true) {
             if (isClosed) {
@@ -544,7 +560,7 @@
 
         function updateScrollFloatingButtonStatus(updateUiOnly = false) {
             let currentLocation = sections.filter(s => s.href === location.hash || (location.hash == "" && s.href == "#intro"))[0]
-            if (currentLocation.href == "#personal") {
+            if (currentLocation.href == "#social") {
                 scrollIcon.classList.remove("fa-arrow-down")
                 scrollIcon.classList.add("fa-arrow-up")
             } else {
@@ -554,11 +570,11 @@
 
             if (updateUiOnly) return;
 
-            if (currentLocation === "#personal") {
-                window.location.href = personal.next.href
+            if (currentLocation === "#social") {
+                window.location.href = social.next.href
                 return;
             }
-            window.location.href = currentLocation ? currentLocation.next ? currentLocation.next.href : "#personal" : "#personal"
+            window.location.href = currentLocation ? currentLocation.next ? currentLocation.next.href : "#social" : "#social"
         }
 
         window.onhashchange = locationHashChanged
