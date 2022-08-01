@@ -321,47 +321,7 @@ i
                         padding: 10px
                         border: 1px dashed $primary-color
                         border-radius: 5px
-        .project
-            position: relative
-            margin-bottom: 10px
-            color: white
-            border: none
-            background-color: $primary-color
-            min-height: 150px
-            .content-wrapper
-                z-index: 1
-                position: absolute
-                top: 0
-                left: 0
-                background-color: rgba(0, 0, 0, 0.5)
-                display: block
-                width: 100%
-                height: 100%
-                .content
-                    padding: 10px
-
-                    .title
-                        font-weight: bolder
-                        .type
-                            padding: 2px
-                            border-radius: 5px
-                            background:$primary-color
-                            font-size: x-small
-                    .used-techs
-                        margin-top: 20px
-                        span
-                            padding: 5px
-                            background-color: $projects-color
-            img
-                position: absolute
-                top: 0
-                right: 0
-                height: 150px
-                object-fit: cover
-                display: block
-                width: 100%
-
-
+       
         .personal
             @extend .section-card
             padding: 0px
@@ -373,6 +333,30 @@ i
                 display: flex
                 flex-flow: column
                 width: auto
+                .project:nth-child(odd)
+                        border: 1px solid $projects-color
+                        
+                .project:nth-child(even)
+                    border: 1px solid $primary-color
+                .project
+                    margin-bottom: 10px
+                    color: white
+                    border: none
+                    min-height: 150px
+                    .content
+                        padding: 10px
+                        .title
+                            font-weight: bolder
+                            .type
+                                padding: 2px
+                                border-radius: 5px
+                                background:$primary-color
+                                font-size: x-small
+                        .used-techs
+                            margin-top: 20px
+                            span
+                                padding: 5px
+                                background-color: $projects-color
         .skills
             @extend .section-card
             flex-flow: column
@@ -489,15 +473,6 @@ i
                             span
                                 background-color: $primary-color
                        
-                    .project:nth-child(odd)
-                        background-color: $projects-color
-                        border: 1px dashed $projects-color
-                        
-                    .project:nth-child(even)
-                        background-color:$intro-clor
-                        border: 1px dashed $intro-clor
-                       
-                            object-fit: cover
                 .social
                     .edu-path
                         margin-top: 0px

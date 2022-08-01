@@ -368,52 +368,6 @@ i {
   border: 1px dashed #2274A5;
   border-radius: 5px;
 }
-.body-wrapper .section-wrapper .project {
-  position: relative;
-  margin-bottom: 10px;
-  color: white;
-  border: none;
-  background-color: #2274A5;
-  min-height: 150px;
-}
-.body-wrapper .section-wrapper .project .content-wrapper {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.body-wrapper .section-wrapper .project .content-wrapper .content {
-  padding: 10px;
-}
-.body-wrapper .section-wrapper .project .content-wrapper .content .title {
-  font-weight: bolder;
-}
-.body-wrapper .section-wrapper .project .content-wrapper .content .title .type {
-  padding: 2px;
-  border-radius: 5px;
-  background: #2274A5;
-  font-size: x-small;
-}
-.body-wrapper .section-wrapper .project .content-wrapper .content .used-techs {
-  margin-top: 20px;
-}
-.body-wrapper .section-wrapper .project .content-wrapper .content .used-techs span {
-  padding: 5px;
-  background-color: #131B23;
-}
-.body-wrapper .section-wrapper .project img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 150px;
-  object-fit: cover;
-  display: block;
-  width: 100%;
-}
 .body-wrapper .section-wrapper .personal {
   padding: 0px;
   padding-top: 100px;
@@ -423,6 +377,37 @@ i {
   display: flex;
   flex-flow: column;
   width: auto;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project:nth-child(odd) {
+  border: 1px solid #131B23;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project:nth-child(even) {
+  border: 1px solid #2274A5;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project {
+  margin-bottom: 10px;
+  color: white;
+  border: none;
+  min-height: 150px;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project .content {
+  padding: 10px;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project .content .title {
+  font-weight: bolder;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project .content .title .type {
+  padding: 2px;
+  border-radius: 5px;
+  background: #2274A5;
+  font-size: x-small;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project .content .used-techs {
+  margin-top: 20px;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project .content .used-techs span {
+  padding: 5px;
+  background-color: #131B23;
 }
 .body-wrapper .section-wrapper .skills {
   flex-flow: column;
@@ -548,15 +533,6 @@ i {
   }
   .body-wrapper .section-wrapper .personal .projects-wrapper .used-techs span {
     background-color: #2274A5;
-  }
-  .body-wrapper .section-wrapper .personal .project:nth-child(odd) {
-    background-color: #131B23;
-    border: 1px dashed #131B23;
-  }
-  .body-wrapper .section-wrapper .personal .project:nth-child(even) {
-    background-color: #E7DFC6;
-    border: 1px dashed #E7DFC6;
-    border-object-fit: cover;
   }
   .body-wrapper .section-wrapper .social .edu-path {
     margin-top: 0px;
