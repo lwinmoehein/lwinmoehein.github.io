@@ -282,7 +282,7 @@ i {
   margin: 10px;
 }
 .body-wrapper .section-wrapper .intro .about p {
-  border: 1px solid #2274A5;
+  border: 1px dashed #2274A5;
   border-radius: 5px;
   padding: 20px;
 }
@@ -422,9 +422,61 @@ i {
   width: auto;
 }
 .body-wrapper .section-wrapper .skills {
-  padding: 0px;
-  padding-top: 100px;
   flex-flow: column;
+  margin-top: 20px;
+}
+.body-wrapper .section-wrapper .skills .skills-intro {
+  text-decoration: underline;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #2274A5;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper {
+  display: flex;
+  flex-flow: column;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list {
+  margin-top: 10px;
+  border: 1px solid #2274A5;
+  padding: 20px;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list .title {
+  font-weight: bold;
+  color: #2274A5;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list {
+  display: flex;
+  flex-flow: column;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list .item {
+  padding: 10px;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list .item .level-wrapper {
+  position: relative;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list .item .level-wrapper .level {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 5px;
+  background-color: #2274A5;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list .item .level-wrapper .level-90 {
+  width: 90%;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list .item .level-wrapper .level-70 {
+  width: 70%;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list .item .level-wrapper .level-background {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 5px;
+  background-color: black;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 .body-wrapper .section-wrapper .social {
   flex-flow: column;
@@ -505,6 +557,24 @@ i {
   }
   .body-wrapper .section-wrapper .social .edu-path {
     margin-top: 0px;
+  }
+  .body-wrapper .section-wrapper .skills .skills-intro {
+    margin-bottom: 50px;
+    padding: 30px;
+    margin: 30px;
+    background-color: #2274A5;
+    color: white;
+    text-decoration: none;
+  }
+  .body-wrapper .section-wrapper .skills .list-wrapper {
+    padding: 30px;
+    flex-flow: row;
+  }
+  .body-wrapper .section-wrapper .skills .list-wrapper .skill-list {
+    flex: 1;
+  }
+  .body-wrapper .section-wrapper .skills .list-wrapper .skill-list:nth-child(odd) {
+    margin-right: 20px;
   }
 }
 

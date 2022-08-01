@@ -242,7 +242,7 @@ i
                 h6
                     margin: 10px
                 p
-                    border: 1px solid $primary-color
+                    border: 1px dashed $primary-color
                     border-radius: 5px
                     padding: 20px
 
@@ -372,10 +372,51 @@ i
                 width: auto
         .skills
             @extend .section-card
-            padding: 0px
-            padding-top: 100px
-
             flex-flow: column
+            margin-top: 20px
+            .skills-intro
+               text-decoration: underline
+               margin-top: 30px
+               margin-bottom: 30px
+               color: $primary-color
+            .list-wrapper
+                display: flex
+                flex-flow: column
+                .skill-list
+                    margin-top: 10px
+                    border:1px solid $primary-color
+                    padding: 20px
+                    .title
+                        font-weight: bold
+                        color: $primary-color
+                    .list
+                        display: flex
+                        flex-flow: column
+                        .item
+                            padding: 10px
+                            .level-wrapper
+                                position: relative
+                                .level
+                                    margin-top: 10px
+                                    margin-bottom: 10px
+                                    height: 5px
+                                    background-color: $primary-color
+                                    left: 0
+                                    position: absolute
+                                    z-index: 1
+                                .level-90
+                                    width: 90%
+                                .level-70
+                                    width: 70%
+                                .level-background
+                                    margin-top: 10px
+                                    margin-bottom: 10px
+                                    height: 5px
+                                    background-color: black
+                                    left: 0
+                                    position: absolute
+                                    width: 100%
+                    
 
             
 
@@ -457,3 +498,21 @@ i
                 .social
                     .edu-path
                         margin-top: 0px
+                .skills
+                    .skills-intro
+                        margin-bottom: 50px
+                        padding: 30px
+                        margin:30px
+                        background-color: $primary-color
+                        color: white
+                        text-decoration: none
+                      
+                       
+                    .list-wrapper
+                       
+                        padding: 30px
+                        flex-flow: row
+                        .skill-list
+                            flex: 1
+                        .skill-list:nth-child(odd)
+                            margin-right: 20px
