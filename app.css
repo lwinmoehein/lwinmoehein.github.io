@@ -136,6 +136,11 @@ i {
   color: white;
 }
 
+.go-down i:active {
+  width: 55px;
+  height: 55px;
+}
+
 .drawer-menu-wrapper {
   z-index: 100;
   width: 100%;
