@@ -347,11 +347,13 @@ i
                         padding: 10px
                         .title
                             font-weight: bolder
+                            color: $primary-color
                             .type
                                 padding: 2px
                                 border-radius: 5px
                                 background:$primary-color
                                 font-size: x-small
+                                color: white
                         .used-techs
                             margin-top: 20px
                             span
@@ -369,10 +371,10 @@ i
             .list-wrapper
                 display: flex
                 flex-flow: column
+                
                 .skill-list
-                    margin-top: 10px
-                    border:1px solid $primary-color
-                    padding: 20px
+                    margin-top: 30px
+                   
                     .title
                         font-weight: bold
                         color: $primary-color
@@ -403,6 +405,27 @@ i
                                     left: 0
                                     position: absolute
                                     width: 100%
+            .other-skills
+                    margin-top: 30px
+                    .title
+                        font-weight: bold
+                        color: $primary-color
+                    .tags
+                        padding: 10px
+                        display: flex
+                        flex-flow: row
+                        flex-wrap: wrap
+                        div
+                            background-color: $primary-color
+                            max-width: fit-content
+                            color: white
+                            padding: 2px
+                            margin:3px
+                          
+                    .tags:nth-child(odd)
+                        margin-left: 5px
+                    .tags:nth-child(even)
+                        margin-right: 5px
                     
 
             
@@ -463,6 +486,15 @@ i
 
             
         @media screen and (min-width: $breakpoint-phone)
+                .section-title
+                    color: white
+                    background-color: $primary-color
+                    padding: 5px 10px 5px 10px
+                    span
+                        color:white
+                    .bottom-bar
+                        color: white
+                    
                 .personal
                     .projects-wrapper
                         display: grid
@@ -477,6 +509,7 @@ i
                     .edu-path
                         margin-top: 0px
                 .skills
+                   
                     .skills-intro
                         margin-bottom: 50px
                         padding: 30px
@@ -487,10 +520,10 @@ i
                       
                        
                     .list-wrapper
-                       
-                        padding: 30px
                         flex-flow: row
                         .skill-list
                             flex: 1
+                            border: 1px solid $primary-color
+                            padding: 30px
                         .skill-list:nth-child(odd)
                             margin-right: 20px

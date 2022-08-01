@@ -395,12 +395,14 @@ i {
 }
 .body-wrapper .section-wrapper .personal .projects-wrapper .project .content .title {
   font-weight: bolder;
+  color: #2274A5;
 }
 .body-wrapper .section-wrapper .personal .projects-wrapper .project .content .title .type {
   padding: 2px;
   border-radius: 5px;
   background: #2274A5;
   font-size: x-small;
+  color: white;
 }
 .body-wrapper .section-wrapper .personal .projects-wrapper .project .content .used-techs {
   margin-top: 20px;
@@ -424,9 +426,7 @@ i {
   flex-flow: column;
 }
 .body-wrapper .section-wrapper .skills .list-wrapper .skill-list {
-  margin-top: 10px;
-  border: 1px solid #2274A5;
-  padding: 20px;
+  margin-top: 30px;
 }
 .body-wrapper .section-wrapper .skills .list-wrapper .skill-list .title {
   font-weight: bold;
@@ -465,6 +465,32 @@ i {
   left: 0;
   position: absolute;
   width: 100%;
+}
+.body-wrapper .section-wrapper .skills .other-skills {
+  margin-top: 30px;
+}
+.body-wrapper .section-wrapper .skills .other-skills .title {
+  font-weight: bold;
+  color: #2274A5;
+}
+.body-wrapper .section-wrapper .skills .other-skills .tags {
+  padding: 10px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+.body-wrapper .section-wrapper .skills .other-skills .tags div {
+  background-color: #2274A5;
+  max-width: fit-content;
+  color: white;
+  padding: 2px;
+  margin: 3px;
+}
+.body-wrapper .section-wrapper .skills .other-skills .tags:nth-child(odd) {
+  margin-left: 5px;
+}
+.body-wrapper .section-wrapper .skills .other-skills .tags:nth-child(even) {
+  margin-right: 5px;
 }
 .body-wrapper .section-wrapper .social {
   flex-flow: column;
@@ -525,6 +551,14 @@ i {
   height: 100%;
 }
 @media screen and (min-width: 600px) {
+  .body-wrapper .section-wrapper .section-title {
+    color: white;
+    background-color: #2274A5;
+    padding: 5px 10px 5px 10px;
+  }
+  .body-wrapper .section-wrapper .section-title .bottom-bar {
+    color: white;
+  }
   .body-wrapper .section-wrapper .personal .projects-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -546,11 +580,12 @@ i {
     text-decoration: none;
   }
   .body-wrapper .section-wrapper .skills .list-wrapper {
-    padding: 30px;
     flex-flow: row;
   }
   .body-wrapper .section-wrapper .skills .list-wrapper .skill-list {
     flex: 1;
+    border: 1px solid #2274A5;
+    padding: 30px;
   }
   .body-wrapper .section-wrapper .skills .list-wrapper .skill-list:nth-child(odd) {
     margin-right: 20px;
