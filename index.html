@@ -166,6 +166,9 @@
                         <a href="#personal">Projects</a>
                     </div>
                     <div class="mobile-nav-item nav">
+                        <a href="#skills">Languages</a>
+                    </div>
+                    <div class="mobile-nav-item nav">
                         <a href="#social">Socials</a>
                     </div>
                 </div>
@@ -185,6 +188,9 @@
                     </div>
                     <div class="nav-item nav">
                         <a href="#personal">Projects</a>
+                    </div>
+                    <div class="nav-item nav">
+                        <a href="#skills">Languages</a>
                     </div>
                     <div class="nav-item nav">
                         <a href="#social">Socials</a>
@@ -376,8 +382,16 @@
                         </div>
                     </div>
                 </section>
+                <section id="skills">
+                    <h3 class="section-title" data-hash="#skills"><span class="bottom-bar">Language &</span> Frameworks
+                    </h3>
+
+                    <div class="skills">
+                        
+                    </div>
+                </section>
                 <section id="social">
-                    <h3 class="section-title" data-hash="#social"><span class="bottom-bar">S</span> ocials
+                    <h3 class="section-title" data-hash="#social"><span class="bottom-bar">S</span>ocials
                     </h3>
 
                     <div class="social">
@@ -386,10 +400,10 @@
                                 <div class="indicator">
                                     <div class="dot"></div>
                                     <i class="fa-solid  fa-arrow-right"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
+                                    <i ></i>
+                                    <i ></i>
+                                    <i></i>
+                                    <i ></i>
 
                                 </div>
                                 <div class="content">
@@ -406,12 +420,10 @@
                             <div class="item">
                                 <div class="indicator">
                                     <i class="fa-solid  fa-arrow-right"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
-
+                                    <i ></i>
+                                    <i ></i>
+                                    <i></i>
+                                    <i ></i>
                                 </div>
 
                                 <div class="content">
@@ -422,8 +434,8 @@
                             <div class="item">
                                 <div class="indicator">
                                     <i class="fa-solid  fa-envelope"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
+                                    <i></i>
+                                    <i ></i>
 
                                 </div>
                                 <div class="content">
@@ -434,8 +446,7 @@
                             <div class="item">
                                 <div class="indicator">
                                     <i class="fa-solid  fa-phone"></i>
-                                    <i class="fa-solid fa-shoe-prints"></i>
-
+                                    <i ></i>
                                 </div>
                                 <div class="content">
                                     <div class="title"><a href="tel:+959440813572">09440813572</a></div>
@@ -527,7 +538,13 @@
                     next: {
                         href: "#experience",
                         next:{
-                            href:"#personal"
+                            href:"#personal",
+                            next:{
+                                href:"#skills",
+                                next:{
+                                    href:"#social"
+                                }
+                            }
                         }
                     }
                 }
@@ -536,7 +553,7 @@
         }
 
 
-        let sections = [social.next, social.next.next, social.next.next.next, social.next.next.next.next, social]
+        let sections = [social.next, social.next.next, social.next.next.next, social.next.next.next.next, social.next.next.next.next.next, social]
 
         function onDrawerToggled(isClosed = true) {
             if (isClosed) {

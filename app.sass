@@ -221,8 +221,10 @@ i
             background-color: $intro-clor
         #personal
             background-color: $education-color
-        #social
+        #skills
             background-color: $intro-clor
+        #social
+            background-color: $education-color
 
         .intro
             @extend .section-card
@@ -368,6 +370,14 @@ i
                 display: flex
                 flex-flow: column
                 width: auto
+        .skills
+            @extend .section-card
+            padding: 0px
+            padding-top: 100px
+
+            flex-flow: column
+
+            
 
         .social
             @extend .section-card
@@ -385,6 +395,7 @@ i
                     display: flex
                     align-items: flex-start
                     justify-content: center
+                    margin-top: 20px
                     .indicator
                         display: flex
                         flex-flow: column
@@ -392,6 +403,12 @@ i
                             font-size: 15pt
                             transform: none
                             margin-top: 0
+                        
+                        .fa-ellipsis-v
+                            font-size: 15pt
+                            transform: rotate(180deg)
+                            margin-top: 1px
+                            margin-bottom: 1px
                         i
                             font-size: 7pt
                             margin-bottom: 10px

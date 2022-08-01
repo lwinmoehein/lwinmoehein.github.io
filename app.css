@@ -51,7 +51,7 @@ a {
   font-weight: bold;
 }
 
-.section-card, .body-wrapper .section-wrapper .social, .body-wrapper .section-wrapper .personal, .body-wrapper .section-wrapper .experience, .body-wrapper .section-wrapper .education, .body-wrapper .section-wrapper .intro {
+.section-card, .body-wrapper .section-wrapper .social, .body-wrapper .section-wrapper .skills, .body-wrapper .section-wrapper .personal, .body-wrapper .section-wrapper .experience, .body-wrapper .section-wrapper .education, .body-wrapper .section-wrapper .intro {
   padding: 20px;
   height: 100%;
   display: flex;
@@ -258,8 +258,11 @@ i {
 .body-wrapper .section-wrapper #personal {
   background-color: #E9F1F7;
 }
-.body-wrapper .section-wrapper #social {
+.body-wrapper .section-wrapper #skills {
   background-color: #E7DFC6;
+}
+.body-wrapper .section-wrapper #social {
+  background-color: #E9F1F7;
 }
 .body-wrapper .section-wrapper .intro {
   flex-flow: column;
@@ -418,6 +421,11 @@ i {
   flex-flow: column;
   width: auto;
 }
+.body-wrapper .section-wrapper .skills {
+  padding: 0px;
+  padding-top: 100px;
+  flex-flow: column;
+}
 .body-wrapper .section-wrapper .social {
   flex-flow: column;
   align-items: center;
@@ -433,6 +441,7 @@ i {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  margin-top: 20px;
 }
 .body-wrapper .section-wrapper .social .edu-path .item .indicator {
   display: flex;
@@ -442,6 +451,12 @@ i {
   font-size: 15pt;
   transform: none;
   margin-top: 0;
+}
+.body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-ellipsis-v {
+  font-size: 15pt;
+  transform: rotate(180deg);
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 .body-wrapper .section-wrapper .social .edu-path .item .indicator i {
   font-size: 7pt;
