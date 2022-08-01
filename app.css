@@ -131,9 +131,7 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.go-down i:active {
+  z-index: 100;
   background-color: #2274A5;
   color: white;
 }
