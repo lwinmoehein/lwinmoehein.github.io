@@ -345,7 +345,7 @@ i {
   display: flex;
   flex-flow: column;
 }
-.body-wrapper .section-wrapper .experience .edu-path .item .indicator .fa-graduation-cap, .body-wrapper .section-wrapper .experience .edu-path .item .indicator .fa-question {
+.body-wrapper .section-wrapper .experience .edu-path .item .indicator .fa-briefcase, .body-wrapper .section-wrapper .experience .edu-path .item .indicator .fa-question {
   font-size: 15pt;
   transform: none;
   margin-top: 0;
