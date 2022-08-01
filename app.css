@@ -131,7 +131,7 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 200;
   background-color: #2274A5;
   color: white;
 }
