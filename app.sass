@@ -15,16 +15,15 @@ $php-color: #4d588e
     font-family: WorkSans
     src: url("webfonts/WorkSans-Regular.ttf")
 
-body::-webkit-scrollbar 
-  width: 0.3em
- 
-body::-webkit-scrollbar-track 
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
- 
-body::-webkit-scrollbar-thumb 
-  background-color: $primary-color
-  outline: 1px solid $primary-color
+body::-webkit-scrollbar
+    width: 0.3em
 
+body::-webkit-scrollbar-track
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+
+body::-webkit-scrollbar-thumb
+    background-color: $primary-color
+    outline: 1px solid $primary-color
 
 body
     font-family: WorkSans
@@ -77,8 +76,6 @@ a
     background-color: $primary-color
     display: inline
     color: white
-
-
 
 i
     color: $primary-color
@@ -278,7 +275,7 @@ i
                             margin-bottom: 10px
                             margin-top: 10px
                             transform: rotate(90deg)
-                    .content 
+                    .content
                         margin-left: 30px
                         padding: 10px
                         border: 1px dashed $primary-color
@@ -312,30 +309,78 @@ i
                             margin-bottom: 10px
                             margin-top: 10px
                             transform: rotate(90deg)
-                    .content 
+                    .content
                         margin-left: 30px
                         padding: 10px
                         border: 1px dashed $primary-color
                         border-radius: 5px
+        .project
+            position: relative
+            margin-bottom: 10px
+            color: white
+            border: none
+            background-color: $primary-color
+            min-height: 150px
+            .content-wrapper
+                z-index: 1
+                position: absolute
+                top: 0
+                left: 0
+                background-color: rgba(0, 0, 0, 0.5)
+                display: block
+                width: 100%
+                height: 100%
+                .content
+                    padding: 10px
+
+                    .title
+                        font-weight: bolder
+                    .used-techs
+                        margin-top: 20px
+                        span
+                            padding: 5px
+                            background-color: $projects-color
+            img
+                position: absolute
+                top: 0
+                right: 0
+                height: 150px
+                object-fit: cover
+                display: block
+                width: 100%
 
 
         .personal
             @extend .section-card
-            padding:0px
-            padding-top: 30px
-            
+            padding: 0px
+            padding-top: 100px
+
             flex-flow: column
 
             .projects-wrapper
                 display: flex
                 flex-flow: column
                 width: auto
-                .project
-                    padding: 10px 
-                    background-color:$primary-color
-                    height:100px
-                    margin-bottom: 10px
-                    border: 1px solid $primary-color
-                    border-radius: 5px
-                    color: white
-
+               
+        @media screen and (min-width: $breakpoint-phone)
+                .personal
+                    .projects-wrapper
+                        display: grid
+                        grid-template-columns: 1fr 1fr 1fr
+                        column-gap: 20px
+                        row-gap: 20px
+                        .used-techs
+                            span
+                                background-color: $primary-color
+                       
+                    .project:nth-child(odd)
+                        background-color: $projects-color
+                        border: 1px dashed $projects-color
+                        
+                    .project:nth-child(even)
+                        background-color:$intro-clor
+                        border: 1px dashed $intro-clor
+                        .title
+                            color: $primary-color
+                        img
+                            object-fit: cover
