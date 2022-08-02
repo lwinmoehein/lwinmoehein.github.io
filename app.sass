@@ -101,6 +101,18 @@ i
         padding-right: 20px
         padding-top: 20px
 
+#project-detail
+    background-color: $primary-color
+    width: 100%
+    height: 100vh
+
+    display: none
+    .wrapper
+        display: flex
+        flex-flow: column
+
+    
+    
 .go-down
     position: fixed
     bottom: 50px
@@ -385,6 +397,7 @@ i
                             padding: 10px
                             .level-wrapper
                                 position: relative
+                                display: block
                                 .level
                                     margin-top: 10px
                                     margin-bottom: 10px
@@ -405,6 +418,30 @@ i
                                     left: 0
                                     position: absolute
                                     width: 100%
+                              
+                                .level-90-animation 
+                                    animation-duration: 3s
+                                    animation-name: slide90
+                                    animation-iteration-count: 1
+                                
+                                @keyframes slide90 
+                                    from 
+                                        width:0%
+                                    to 
+                                        width:90%
+                                .level-70-animation 
+                                    animation-duration: 3s
+                                    animation-name: slide70
+                                    animation-iteration-count: 1
+                                
+                                @keyframes slide70 
+                                    from 
+                                        width:0%
+                                    to 
+                                        width:70%
+                                
+                                
+
             .other-skills
                     margin-top: 30px
                     .title
@@ -491,7 +528,7 @@ i
                     background-color: $primary-color
                     padding: 5px 10px 5px 10px
                     span
-                        color:white
+                        color: white
                     .bottom-bar
                         color: white
                     

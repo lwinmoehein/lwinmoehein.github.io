@@ -116,6 +116,17 @@ i {
   padding-top: 20px;
 }
 
+#project-detail {
+  background-color: #2274A5;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+#project-detail .wrapper {
+  display: flex;
+  flex-flow: column;
+}
+
 .go-down {
   position: fixed;
   bottom: 50px;
@@ -441,6 +452,7 @@ i {
 }
 .body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list .item .level-wrapper {
   position: relative;
+  display: block;
 }
 .body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list .item .level-wrapper .level {
   margin-top: 10px;
@@ -465,6 +477,32 @@ i {
   left: 0;
   position: absolute;
   width: 100%;
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list .item .level-wrapper .level-90-animation {
+  animation-duration: 3s;
+  animation-name: slide90;
+  animation-iteration-count: 1;
+}
+@keyframes slide90 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+.body-wrapper .section-wrapper .skills .list-wrapper .skill-list .list .item .level-wrapper .level-70-animation {
+  animation-duration: 3s;
+  animation-name: slide70;
+  animation-iteration-count: 1;
+}
+@keyframes slide70 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
 }
 .body-wrapper .section-wrapper .skills .other-skills {
   margin-top: 30px;
@@ -555,6 +593,9 @@ i {
     color: white;
     background-color: #2274A5;
     padding: 5px 10px 5px 10px;
+  }
+  .body-wrapper .section-wrapper .section-title span {
+    color: white;
   }
   .body-wrapper .section-wrapper .section-title .bottom-bar {
     color: white;
