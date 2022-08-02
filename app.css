@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: WorkSans;
   src: url("webfonts/WorkSans-Regular.ttf");
@@ -114,17 +118,6 @@ i {
   display: flex;
   padding-right: 20px;
   padding-top: 20px;
-}
-
-#project-detail {
-  background-color: #2274A5;
-  width: 100%;
-  height: 100vh;
-  display: none;
-}
-#project-detail .wrapper {
-  display: flex;
-  flex-flow: column;
 }
 
 .go-down {
@@ -257,26 +250,29 @@ i {
   height: 100%;
   flex: 3;
 }
-.body-wrapper .section-wrapper section {
-  padding: 10px;
-}
 .body-wrapper .section-wrapper #intro {
   background-color: #E7DFC6;
+  padding: 10px;
 }
 .body-wrapper .section-wrapper #education {
   background-color: #E9F1F7;
+  padding: 10px;
 }
 .body-wrapper .section-wrapper #experience {
   background-color: #E7DFC6;
+  padding: 10px;
 }
 .body-wrapper .section-wrapper #personal {
   background-color: #E9F1F7;
+  padding: 0px;
 }
 .body-wrapper .section-wrapper #skills {
   background-color: #E7DFC6;
+  padding: 10px;
 }
 .body-wrapper .section-wrapper #social {
   background-color: #E9F1F7;
+  padding: 10px;
 }
 .body-wrapper .section-wrapper .intro {
   flex-flow: column;
@@ -381,45 +377,75 @@ i {
 }
 .body-wrapper .section-wrapper .personal {
   padding: 0px;
-  padding-top: 100px;
+  display: flex;
   flex-flow: column;
 }
 .body-wrapper .section-wrapper .personal .projects-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+@keyframes slider {
+  from {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .slide-wrapper {
+  position: absolute;
+  left: 0;
+  height: 100vh;
   display: flex;
-  flex-flow: column;
-  width: auto;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  animation-duration: 3s;
+  animation-name: slider;
+  animation-iteration-count: infinite;
 }
-.body-wrapper .section-wrapper .personal .projects-wrapper .project:nth-child(odd) {
-  border: 1px solid #131B23;
+.body-wrapper .section-wrapper .personal .projects-wrapper .slide-wrapper .project {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 80px;
 }
-.body-wrapper .section-wrapper .personal .projects-wrapper .project:nth-child(even) {
-  border: 1px solid #2274A5;
-}
-.body-wrapper .section-wrapper .personal .projects-wrapper .project {
-  margin-bottom: 10px;
+.body-wrapper .section-wrapper .personal .projects-wrapper .slide-wrapper .project .content .title {
   color: white;
-  border: none;
-  min-height: 150px;
+  font-weight: bolder;
 }
-.body-wrapper .section-wrapper .personal .projects-wrapper .project .content {
+.body-wrapper .section-wrapper .personal .projects-wrapper .slide-left {
+  position: fixed;
+  left: 0;
+  top: 50%;
   padding: 10px;
 }
-.body-wrapper .section-wrapper .personal .projects-wrapper .project .content .title {
-  font-weight: bolder;
-  color: #2274A5;
-}
-.body-wrapper .section-wrapper .personal .projects-wrapper .project .content .title .type {
-  padding: 2px;
-  border-radius: 5px;
-  background: #2274A5;
-  font-size: x-small;
+.body-wrapper .section-wrapper .personal .projects-wrapper .slide-left i {
   color: white;
 }
-.body-wrapper .section-wrapper .personal .projects-wrapper .project .content .used-techs {
-  margin-top: 20px;
+.body-wrapper .section-wrapper .personal .projects-wrapper .slide-right {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  padding: 10px;
 }
-.body-wrapper .section-wrapper .personal .projects-wrapper .project .content .used-techs span {
-  padding: 5px;
+.body-wrapper .section-wrapper .personal .projects-wrapper .slide-right i {
+  color: white;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project:nth-child(odd) {
+  background-color: #2274A5;
+}
+.body-wrapper .section-wrapper .personal .projects-wrapper .project:nth-child(even) {
   background-color: #131B23;
 }
 .body-wrapper .section-wrapper .skills {
@@ -599,15 +625,6 @@ i {
   }
   .body-wrapper .section-wrapper .section-title .bottom-bar {
     color: white;
-  }
-  .body-wrapper .section-wrapper .personal .projects-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
-  }
-  .body-wrapper .section-wrapper .personal .projects-wrapper .used-techs span {
-    background-color: #2274A5;
   }
   .body-wrapper .section-wrapper .social .edu-path {
     margin-top: 0px;

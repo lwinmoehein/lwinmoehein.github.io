@@ -11,6 +11,9 @@ $laravel-color: #f72c1f
 $js-color: #efd81d
 $php-color: #4d588e
 
+html
+    scroll-behavior: smooth
+
 @font-face
     font-family: WorkSans
     src: url("webfonts/WorkSans-Regular.ttf")
@@ -100,18 +103,6 @@ i
         display: flex
         padding-right: 20px
         padding-top: 20px
-
-#project-detail
-    background-color: $primary-color
-    width: 100%
-    height: 100vh
-
-    display: none
-    .wrapper
-        display: flex
-        flex-flow: column
-
-    
     
 .go-down
     position: fixed
@@ -226,20 +217,25 @@ i
         height: 100%
         flex: 3
 
-        section
-            padding: 10px
+
         #intro
             background-color: $intro-clor
+            padding: 10px
         #education
             background-color: $education-color
+            padding: 10px
         #experience
             background-color: $intro-clor
+            padding: 10px
         #personal
             background-color: $education-color
+            padding: 0px
         #skills
             background-color: $intro-clor
+            padding: 10px
         #social
             background-color: $education-color
+            padding: 10px
 
         .intro
             @extend .section-card
@@ -336,41 +332,70 @@ i
        
         .personal
             @extend .section-card
-            padding: 0px
-            padding-top: 100px
-
+            padding: 0px 
+            display: flex
             flex-flow: column
-
+            
             .projects-wrapper
-                display: flex
-                flex-flow: column
-                width: auto
-                .project:nth-child(odd)
-                        border: 1px solid $projects-color
-                        
-                .project:nth-child(even)
-                    border: 1px solid $primary-color
-                .project
-                    margin-bottom: 10px
-                    color: white
-                    border: none
-                    min-height: 150px
-                    .content
-                        padding: 10px
-                        .title
-                            font-weight: bolder
-                            color: $primary-color
-                            .type
-                                padding: 2px
-                                border-radius: 5px
-                                background:$primary-color
-                                font-size: x-small
+                position: relative
+                width: 100%
+                height: 100%
+                overflow: scroll
+
+              
+                
+                @keyframes slider
+                        from 
+                            width:0%
+                        25%
+                            width: 25%
+                        50%
+                            width: 50%
+                        75%
+                            width: 75%
+                        to 
+                            width:100%
+                .slide-wrapper
+                    position: absolute
+                    left: 0
+                    height: 100vh
+                    display: flex
+                    flex-flow: row
+                    flex-wrap: nowrap
+                    overflow: scroll
+                    animation-duration: 3s
+                    animation-name: slider
+                    animation-iteration-count: infinite
+                    .project
+                        width: 100vw
+                        height: 100vh
+                        padding-top: 80px
+                        .content
+                            .title
                                 color: white
-                        .used-techs
-                            margin-top: 20px
-                            span
-                                padding: 5px
-                                background-color: $projects-color
+                                font-weight: bolder
+                .slide-left
+                    position: fixed  
+                    left: 0
+                    top: 50%
+                    padding: 10px
+                    i 
+                        color: white
+                    
+                .slide-right
+                    position: fixed  
+                    right: 0
+                    top: 50%
+                    padding: 10px
+                    i
+                        color: white
+                .project:nth-child(odd)
+                    background-color: $primary-color
+                .project:nth-child(even)
+                    background-color: $projects-color
+
+
+           
         .skills
             @extend .section-card
             flex-flow: column
@@ -434,7 +459,7 @@ i
                                     animation-name: slide70
                                     animation-iteration-count: 1
                                 
-                                @keyframes slide70 
+                                @keyframes slide70
                                     from 
                                         width:0%
                                     to 
@@ -532,15 +557,7 @@ i
                     .bottom-bar
                         color: white
                     
-                .personal
-                    .projects-wrapper
-                        display: grid
-                        grid-template-columns: 1fr 1fr 1fr
-                        column-gap: 20px
-                        row-gap: 20px
-                        .used-techs
-                            span
-                                background-color: $primary-color
+                 
                        
                 .social
                     .edu-path

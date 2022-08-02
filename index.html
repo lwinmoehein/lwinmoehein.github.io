@@ -147,6 +147,7 @@
                 <i id="menu-open" class="fa-solid fa-bars"></i>
             </div>
         </div>
+
         <div id="drawer" class="drawer-menu-wrapper">
             <div class="button-wrapper">
                 <i id="menu-close" class="fa-solid fa-xmark"></i>
@@ -172,12 +173,6 @@
                         <a href="#social">Socials</a>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div id="project-detail">
-            <div class="wrapper">
-                <span>sdfs</span>
             </div>
         </div>
 
@@ -336,43 +331,33 @@
 
                     <div class="personal">
                         <div class="projects-wrapper">
-                            <div class="project">
-                                <div class="content">
-                                    <div class="title">Movie Reviews <span class="type">Website</span></div>
-                                    <div class="used-techs">
-                                        <span>Laravel</span>
-                                        <span>MYSQL</span>
-                                        <span>SASS</span>
+                            <div class="slide-wrapper">
+                                <div class="project">
+                                    <div class="content">
+                                        <div class="title">One</div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <div class="content">
+                                        <div class="title">Two</div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <div class="content">
+                                        <div class="title">Three</div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <div class="content">
+                                        <div class="title">Four</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="project">
-                                <div class="content">
-                                    <div class="title">M Knowledge <span class="type">Android App</span></div>
-                                    <div class="used-techs">
-                                        <span>Kotlin</span>
-                                        <span>MVVM</span>
-                                    </div>
-                                </div>
+                            <div class="slide-left">
+                                <i class="fa-solid  fa-arrow-left"></i>
                             </div>
-                            <div class="project">
-                                <div class="content">
-                                    <div class="title">M Knowledge</div>
-                                    <div class="used-techs">
-                                        <span>Kotlin</span>
-                                        <span>MVVM</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <div class="content">
-                                    <div class="title">Movie Reviews</div>
-                                    <div class="used-techs">
-                                        <span>Laravel</span>
-                                        <span>MYSQL</span>
-                                        <span>SASS</span>
-                                    </div>
-                                </div>
+                            <div class="slide-right">
+                                <i class="fa-solid  fa-arrow-right"></i>
                             </div>
                         </div>
                     </div>
@@ -611,7 +596,6 @@
         let sectionElements = document.querySelectorAll('section')
         let sectionTitles = document.querySelectorAll('.section-title')
         let projectItems = document.querySelectorAll('.project')
-        let projectDetailModal = document.querySelector('#project-detail')
 
 
         let intro
@@ -676,20 +660,6 @@
 
         scroller.addEventListener("click", function () {
             updateScrollFloatingButtonStatus()
-        })
-
-        projectItems.forEach(project => {
-            project.addEventListener("click", function () {
-                projectDetailModal.style.display = "block"
-                menuBar.style.opacity = 0
-                body.style.opacity = 0
-            })
-        })
-
-        projectDetailModal.addEventListener("click", function () {
-            projectDetailModal.style.display = "none"
-            menuBar.style.display = "block"
-            body.style.display = "block"
         })
 
 
@@ -770,31 +740,31 @@
 
         function observeScrollAndRunAnimations() {
             let animatedSelectorQuery = ".level-90,.level-70"
-            let classesToBeAnimated = ["level-90","level-70"]
+            let classesToBeAnimated = ["level-90", "level-70"]
 
             const observer = new IntersectionObserver(entries => {
                 // Loop over the entries
                 entries.forEach(entry => {
                     // If the element is visible
-                    let currentAnimateClasses =classesToBeAnimated.filter(c=>entry.target.classList.value.includes(c))
-                    console.log("ele:"+entry.target.classList)
-                    console.log("clas:"+classesToBeAnimated)
-                    console.log("current:"+currentAnimateClasses)
+                    let currentAnimateClasses = classesToBeAnimated.filter(c => entry.target.classList.value.includes(c))
+                    console.log("ele:" + entry.target.classList)
+                    console.log("clas:" + classesToBeAnimated)
+                    console.log("current:" + currentAnimateClasses)
 
                     if (entry.isIntersecting) {
-                       currentAnimateClasses.forEach(ac=>{
-                            entry.target.classList.add(ac+"-animation")
-                       })
-                       return;
+                        currentAnimateClasses.forEach(ac => {
+                            entry.target.classList.add(ac + "-animation")
+                        })
+                        return;
                     }
-                    currentAnimateClasses.forEach(ac=>{
-                            entry.target.classList.remove(ac+"-animation")
+                    currentAnimateClasses.forEach(ac => {
+                        entry.target.classList.remove(ac + "-animation")
                     })
                 });
             });
 
             let animatedElements = document.querySelectorAll(animatedSelectorQuery)
-            animatedElements.forEach(element=>observer.observe(element))
+            animatedElements.forEach(element => observer.observe(element))
         }
 
 
