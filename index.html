@@ -151,9 +151,17 @@
         <div id="project-detail-modal-1" class="project-detail">
             <div class="button-wrapper">
                 <div class="title">Movie Reviews</div>
-                <i id="detail-close" class="fa-solid fa-xmark"></i>
+                <i class="close-detail fa-solid fa-xmark"></i>
             </div>
             <div class="content">
+                <div class="images">
+                    <div class="image">
+                        <div class="caption">
+
+                        </div>
+                        <img src="" alt="">
+                    </div>
+                </div>
                 <div class="about">
                     <p>Movie Reviews is a website for movie lovers where admins of the site can post
                         reviews and users can check out the movies and add wishlists.</p>
@@ -629,6 +637,8 @@
         let sectionTitles = document.querySelectorAll('.section-title')
         let projectItems = document.querySelectorAll('.project')
         let projectModal1 = document.querySelector('#project-detail-modal-1')
+        let projectDetails = document.querySelectorAll('.project-detail')
+        let projectDetailCloseButtons = document.querySelectorAll('.close-detail')
 
 
         let intro
@@ -684,6 +694,14 @@
                 onDrawerToggled(true)
             })
         })
+        projectDetailCloseButtons.forEach(closeButton => {
+            closeButton.addEventListener("click", function () {
+                projectDetails.forEach(detail => {
+                    detail.style.visibility = "hidden"
+                    detail.style.opacity = 0
+                })
+            })
+        })
         window.addEventListener("load", function () {
             loadingStatus.style.display = "none"
             mainContent.style.visibility = "visible"
@@ -694,6 +712,7 @@
         scroller.addEventListener("click", function () {
             updateScrollFloatingButtonStatus()
         })
+
 
 
         //scrollbar timeout
@@ -721,8 +740,8 @@
         });
 
 
-        projectItems.forEach(project=>{
-            project.addEventListener("click",function(){
+        projectItems.forEach(project => {
+            project.addEventListener("click", function () {
                 projectModal1.style.visibility = "visible"
                 projectModal1.style.opacity = 1
             })

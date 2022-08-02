@@ -210,7 +210,20 @@ i {
   position: fixed;
   display: flex;
   flex-flow: column;
+  align-items: center;
   height: 100%;
+}
+.project-detail .content .images {
+  width: 100%;
+  background-color: red;
+}
+.project-detail .content .images .image .caption {
+  font-weight: bold;
+}
+.project-detail .content .images .image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 600px) {
