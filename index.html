@@ -148,6 +148,19 @@
             </div>
         </div>
 
+        <div id="project-detail-modal-1" class="project-detail">
+            <div class="button-wrapper">
+                <div class="title">Movie Reviews</div>
+                <i id="detail-close" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="content">
+                <div class="about">
+                    <p>Movie Reviews is a website for movie lovers where admins of the site can post
+                        reviews and users can check out the movies and add wishlists.</p>
+                </div>
+            </div>
+        </div>
+
         <div id="drawer" class="drawer-menu-wrapper">
             <div class="button-wrapper">
                 <i id="menu-close" class="fa-solid fa-xmark"></i>
@@ -615,6 +628,7 @@
         let sectionElements = document.querySelectorAll('section')
         let sectionTitles = document.querySelectorAll('.section-title')
         let projectItems = document.querySelectorAll('.project')
+        let projectModal1 = document.querySelector('#project-detail-modal-1')
 
 
         let intro
@@ -705,6 +719,14 @@
             scroller.style.display = "none"
             setScrollerVisible()
         });
+
+
+        projectItems.forEach(project=>{
+            project.addEventListener("click",function(){
+                projectModal1.style.visibility = "visible"
+                projectModal1.style.opacity = 1
+            })
+        })
 
         //active link
         function locationHashChanged(e) {
