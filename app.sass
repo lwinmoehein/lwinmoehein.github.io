@@ -221,6 +221,7 @@ i
         #intro
             background-color: $intro-clor
             padding: 10px
+
         #education
             background-color: $education-color
             padding: 10px
@@ -233,6 +234,27 @@ i
         #skills
             background-color: $intro-clor
             padding: 10px
+
+        #skills:target
+            .level-90
+                animation-duration: 3s
+                animation-name: slide90
+                animation-iteration-count: 1
+            @keyframes slide90 
+                from 
+                    width:0%
+                to 
+                    width:90%
+            .level-70
+                animation-duration: 3s
+                animation-name: slide70
+                animation-iteration-count: 1
+            @keyframes slide70
+                from 
+                    width:0%
+                to 
+                    width:70%
+            
         #social
             background-color: $education-color
             padding: 10px
@@ -444,26 +466,7 @@ i
                                     position: absolute
                                     width: 100%
                               
-                                .level-90-animation 
-                                    animation-duration: 3s
-                                    animation-name: slide90
-                                    animation-iteration-count: 1
-                                
-                                @keyframes slide90 
-                                    from 
-                                        width:0%
-                                    to 
-                                        width:90%
-                                .level-70-animation 
-                                    animation-duration: 3s
-                                    animation-name: slide70
-                                    animation-iteration-count: 1
-                                
-                                @keyframes slide70
-                                    from 
-                                        width:0%
-                                    to 
-                                        width:70%
+                           
                                 
                                 
 

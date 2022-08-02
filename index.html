@@ -551,7 +551,6 @@
             winY = null;
         }
         disableWindowScroll()
-        observeScrollAndRunAnimations()
 
 
         window.throttle = function (f, ms) {
@@ -738,39 +737,7 @@
             return isVisible;
         }
 
-        function observeScrollAndRunAnimations() {
-            let animatedSelectorQuery = ".level-90,.level-70"
-            let classesToBeAnimated = ["level-90", "level-70"]
-
-            const observer = new IntersectionObserver(entries => {
-                // Loop over the entries
-                entries.forEach(entry => {
-                    // If the element is visible
-                    let currentAnimateClasses = classesToBeAnimated.filter(c => entry.target.classList.value.includes(c))
-                    console.log("ele:" + entry.target.classList)
-                    console.log("clas:" + classesToBeAnimated)
-                    console.log("current:" + currentAnimateClasses)
-
-                    if (entry.isIntersecting) {
-                        currentAnimateClasses.forEach(ac => {
-                            entry.target.classList.add(ac + "-animation")
-                        })
-                        return;
-                    }
-                    currentAnimateClasses.forEach(ac => {
-                        entry.target.classList.remove(ac + "-animation")
-                    })
-                });
-            });
-
-            let animatedElements = document.querySelectorAll(animatedSelectorQuery)
-            animatedElements.forEach(element => observer.observe(element))
-        }
-
-
-
-
-
+    
     </script>
 </body>
 
