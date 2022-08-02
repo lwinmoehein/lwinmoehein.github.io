@@ -356,34 +356,37 @@ i
             @extend .section-card
             display: flex
             flex-flow: column
-            margin-top: 100px
-            .project
-                margin-top: 10px
-                padding: 10px
-                background-color: $primary-color
-                color: white
-                .title-wrapper
-                    display: flex
-                    flex-flow: row
-                    justify-content: space-between
-                    .title
-                        font-weight: bolder
-                        border-bottom: 2px solid $projects-color
-                    .type
-                        background-color: $projects-color
-                        border-radius: 5px
-                        padding: 5px
-                        padding: 5px
-                        font-size: smaller
-                .about
-                    p
-                        border:1px solid $primary-color
-                .techs
-                    display: flex
-                    span
-                        border:1px solid $intro-clor
-                        padding: 5px
-                        margin: 2px
+            .project-wrapper
+                display: flex
+                flex-flow: column
+                margin-top: 100px
+                .project
+                    margin-top: 10px
+                    padding: 10px
+                    background-color: $primary-color
+                    color: white
+                    .title-wrapper
+                        display: flex
+                        flex-flow: row
+                        justify-content: space-between
+                        .title
+                            font-weight: bolder
+                            border-bottom: 2px solid $projects-color
+                        .type
+                            background-color: $projects-color
+                            border-radius: 5px
+                            padding: 5px
+                            padding: 5px
+                            font-size: smaller
+                    .about
+                        p
+                            border:1px solid $primary-color
+                    .techs
+                        display: flex
+                        span
+                            border:1px solid $intro-clor
+                            padding: 5px
+                            margin: 2px
 
 
         
@@ -529,7 +532,20 @@ i
                     .bottom-bar
                         color: white
                     
-                 
+                .personal-projects
+                    .project-wrapper
+                        display: flex
+                        flex-flow: row
+                        flex-wrap: wrap
+                        margin-top: 50px !important
+                
+                        .project
+                            width: 400px
+                            margin: 20px
+                            height: fit-content
+                            .about
+                                p
+                                    max-width: 100%
                        
                 .social
                     .edu-path
