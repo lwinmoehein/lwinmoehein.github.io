@@ -1,5 +1,70 @@
+.project-detail {
+  z-index: 100;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-detail .detail {
+  display: flex;
+  flex-flow: column;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+}
+.project-detail .detail .button-wrapper {
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.project-detail .detail .button-wrapper .title {
+  font-weight: bolder;
+  color: white;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+.project-detail .detail .button-wrapper i {
+  color: white;
+}
+.project-detail .detail .content {
+  padding: 20px;
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+}
+.project-detail .detail .content .images {
+  width: 100%;
+  background-color: red;
+}
+.project-detail .detail .content .images .image .caption {
+  font-weight: bold;
+}
+.project-detail .detail .content .images .image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 600px) {
+  .project-detail .detail {
+    width: 95%;
+    height: 90%;
+  }
+}
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: #2274A5 !important;
 }
 
 @font-face {
@@ -178,52 +243,6 @@ i {
   display: grid;
   row-gap: 10px;
   margin-bottom: 50%;
-}
-
-.project-detail {
-  z-index: 100;
-  width: 100vw;
-  height: 100%;
-  position: fixed;
-  visibility: hidden;
-  transition: visibility 0s, opacity 0.5s linear;
-  opacity: 0;
-  background-color: #2274A5;
-}
-.project-detail .button-wrapper {
-  padding: 20px;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-.project-detail .button-wrapper .title {
-  font-weight: bolder;
-  color: white;
-  padding-bottom: 5px;
-  border-bottom: 2px solid black;
-}
-.project-detail .button-wrapper i {
-  color: white;
-}
-.project-detail .content {
-  padding: 20px;
-  position: fixed;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  height: 100%;
-}
-.project-detail .content .images {
-  width: 100%;
-  background-color: red;
-}
-.project-detail .content .images .image .caption {
-  font-weight: bold;
-}
-.project-detail .content .images .image img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
 }
 
 @media screen and (min-width: 600px) {
@@ -450,6 +469,7 @@ i {
 .body-wrapper .section-wrapper .personal-projects {
   display: flex;
   flex-flow: column;
+  padding: 10px;
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper {
   display: flex;
@@ -461,6 +481,7 @@ i {
   padding: 10px;
   background-color: #2274A5;
   color: white;
+  min-height: 200px;
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper {
   display: flex;

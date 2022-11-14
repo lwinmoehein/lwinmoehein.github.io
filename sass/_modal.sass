@@ -1,0 +1,66 @@
+$primary-color: #2274A5
+$breakpoint-phone: 600px
+$active-nav-color: #131B23
+$icons-color: white
+$intro-clor: #E7DFC6
+$education-color: #E9F1F7
+$experience-color: #816C61
+$projects-color: #131B23
+$laravel-color: #f72c1f
+$js-color: #efd81d
+$php-color: #4d588e
+
+.project-detail
+    z-index: 100
+    width: 100vw
+    height: 100%
+    position: fixed
+    visibility: hidden
+    transition: visibility 0s, opacity 0.5s linear
+    opacity: 0
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .detail
+        display: flex
+        flex-flow: column
+        background-color: green
+        width:100%
+        height:100%
+        .button-wrapper
+            padding: 20px
+            align-items: center
+            display: flex
+            justify-content: space-between
+            .title
+                font-weight: bolder
+                color: white
+                padding-bottom: 5px
+                border-bottom:2px solid black
+            i
+                color: white
+          
+
+        .content
+            padding: 20px
+            position: fixed
+            display: flex
+            flex-flow: column
+            align-items: center
+            height: 100%
+            .images
+                width: 100%
+                background-color: red
+                .image
+                    .caption
+                        font-weight: bold
+                    img
+                        width: 100%
+                        height: 250px
+                        object-fit: cover
+@media screen and (min-width: $breakpoint-phone)
+    .project-detail
+        .detail
+            width: 95%
+            height: 90%
