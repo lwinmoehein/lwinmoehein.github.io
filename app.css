@@ -30,6 +30,7 @@
   background-color: #131B23;
   border-radius: 5px;
   margin-right: 30px;
+  cursor: pointer;
 }
 .project-detail .detail .button-wrapper .button-end {
   display: flex;
@@ -66,7 +67,7 @@
   width: 100%;
   display: flex;
   flex-flow: row;
-  height: 400px;
+  height: 500px;
 }
 .project-detail .detail .content .caption {
   margin-bottom: 20px;
@@ -88,8 +89,8 @@
   font-weight: bold;
 }
 .project-detail .detail .content .feature-images .image img {
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 400px;
   object-fit: cover;
 }
 .project-detail .detail .content .feature-about {
@@ -97,6 +98,16 @@
 }
 .project-detail .detail .content .about {
   width: 100%;
+  display: flex;
+}
+.project-detail .detail .content .about > div {
+  flex: 1;
+}
+.project-detail .detail .content .about > div span {
+  padding: 5px;
+  background-color: #131B23;
+  border-radius: 5px;
+  margin: 5px;
 }
 
 @media screen and (min-width: 600px) {
@@ -214,6 +225,18 @@ i {
   align-items: center;
 }
 
+.hithere {
+  animation: hithere 3s ease infinite;
+}
+
+@keyframes hithere {
+  30% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .menu-bar-wrapper {
   display: flex;
   height: fit-content;
