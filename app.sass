@@ -13,7 +13,6 @@ $php-color: #4d588e
 
 @use 'sass/_modal'
 
-
 html
     scroll-behavior: smooth
 
@@ -91,16 +90,19 @@ i
     display: flex
     justify-content: center
     align-items: center
-.hithere 
+.hithere
     animation: hithere 3s ease infinite
 
-@keyframes hithere 
+@keyframes hithere
     30%
-          transform: scale(1.2)
-    100% 
-         transform: scale(1)
+        transform: scale(1.2)
+    100%
+        transform: scale(1)
 
-
+.me
+    width: 100vw
+    height: 100vw
+    object-fit: cover
 
 .menu-bar-wrapper
     display: flex
@@ -118,7 +120,7 @@ i
         display: flex
         padding-right: 20px
         padding-top: 20px
-    
+
 .go-down
     position: fixed
     bottom: 50px
@@ -174,7 +176,6 @@ i
             row-gap: 10px
             margin-bottom: 50%
 
-
 @media screen and (min-width: $breakpoint-phone)
     .menu-bar-wrapper
         display: none
@@ -201,7 +202,6 @@ i
         .bottom-bar
             background-color: transparent
             color: $primary-color
-   
 
 .body-wrapper
     height: 100%
@@ -229,17 +229,17 @@ i
             margin-left: 240px
             p
                 max-width: 30%
-  
 
     .section-wrapper
         height: 100%
         flex: 3
 
-
         #intro
-            background-color: $intro-clor
             padding: 10px
-
+            background-size: cover
+            background-image: url('images/currentme.jpg')
+            background-attachment: fixed
+            background-position: 0px 0px, right 3em bottom 2em
         #education
             background-color: $education-color
             padding: 10px
@@ -258,21 +258,21 @@ i
                 animation-duration: 3s
                 animation-name: slide90
                 animation-iteration-count: 1
-            @keyframes slide90 
-                from 
-                    width:0%
-                to 
-                    width:90%
+            @keyframes slide90
+                from
+                    width: 0%
+                to
+                    width: 90%
             .level-70
                 animation-duration: 3s
                 animation-name: slide70
                 animation-iteration-count: 1
             @keyframes slide70
-                from 
-                    width:0%
-                to 
-                    width:70%
-            
+                from
+                    width: 0%
+                to
+                    width: 70%
+
         #social
             background-color: $education-color
             padding: 10px
@@ -288,14 +288,22 @@ i
                 display: flex
                 flex-flow: column
                 align-items: center
+                font-weight: bolder
                 h1
                     margin: 0
+                    color: $primary-color
+                    font-size: 2.5rem
+
                 h6
                     margin: 10px
+                    color:white
                 p
-                    border: 1px dashed $primary-color
+                    color: white
+                    border: 1px solid $primary-color
                     border-radius: 5px
                     padding: 20px
+                p:hover
+                    border: 1px solid white
 
             img
                 border-radius: 5px
@@ -369,7 +377,7 @@ i
                         padding: 10px
                         border: 1px dashed $primary-color
                         border-radius: 5px
-       
+
         .personal-projects
             @extend .section-card
             display: flex
@@ -400,32 +408,30 @@ i
                             font-size: smaller
                     .about
                         p
-                            border:1px solid $primary-color
+                            border: 1px solid $primary-color
                     .techs
                         display: flex
                         span
-                            border:1px solid $intro-clor
+                            border: 1px solid $intro-clor
                             padding: 5px
                             margin: 2px
 
-
-        
         .skills
             @extend .section-card
             flex-flow: column
             margin-top: 20px
             .skills-intro
-               text-decoration: underline
-               margin-top: 30px
-               margin-bottom: 30px
-               color: $primary-color
+                text-decoration: underline
+                margin-top: 30px
+                margin-bottom: 30px
+                color: $primary-color
             .list-wrapper
                 display: flex
                 flex-flow: column
-                
+
                 .skill-list
                     margin-top: 30px
-                   
+
                     .title
                         font-weight: bold
                         color: $primary-color
@@ -457,16 +463,12 @@ i
                                     left: 0
                                     position: absolute
                                     width: 100%
-                              
-                           
-                                
-                                
 
             .other-skills
-                    margin-top: 30px
-                    .title
-                        font-weight: bold
-                        color: $primary-color
+                margin-top: 30px
+                .title
+                    font-weight: bold
+                    color: $primary-color
                     .tags
                         padding: 10px
                         display: flex
@@ -477,15 +479,12 @@ i
                             max-width: fit-content
                             color: white
                             padding: 2px
-                            margin:3px
-                          
+                            margin: 3px
+
                     .tags:nth-child(odd)
                         margin-left: 5px
                     .tags:nth-child(even)
                         margin-right: 5px
-                    
-
-            
 
         .social
             @extend .section-card
@@ -511,7 +510,7 @@ i
                             font-size: 15pt
                             transform: none
                             margin-top: 0
-                        
+
                         .fa-ellipsis-v
                             font-size: 15pt
                             transform: rotate(180deg)
@@ -535,30 +534,29 @@ i
                         a
                             padding: 0
                         img,a
-                          
+
                             object-fit: contain
                             display: block
                             width: 100%
                             height: 100%
 
-            
         @media screen and (min-width: $breakpoint-phone)
-                .section-title
+            .section-title
+                color: white
+                background-color: $primary-color
+                padding: 5px 10px 5px 10px
+                span
                     color: white
-                    background-color: $primary-color
-                    padding: 5px 10px 5px 10px
-                    span
-                        color: white
                     .bottom-bar
                         color: white
-                    
+
                 .personal-projects
                     .project-wrapper
                         display: flex
                         flex-flow: row
                         flex-wrap: wrap
                         margin-top: 50px !important
-                
+
                         .project
                             width: 400px
                             margin: 20px
@@ -566,21 +564,20 @@ i
                             .about
                                 p
                                     max-width: 100%
-                       
+
                 .social
                     .edu-path
                         margin-top: 0px
                 .skills
-                   
+
                     .skills-intro
                         margin-bottom: 50px
                         padding: 30px
-                        margin:30px
+                        margin: 30px
                         background-color: $primary-color
                         color: white
                         text-decoration: none
-                      
-                       
+
                     .list-wrapper
                         flex-flow: row
                         .skill-list

@@ -237,6 +237,12 @@ i {
     transform: scale(1);
   }
 }
+.me {
+  width: 100vw;
+  height: 100vw;
+  object-fit: cover;
+}
+
 .menu-bar-wrapper {
   display: flex;
   height: fit-content;
@@ -386,8 +392,11 @@ i {
   flex: 3;
 }
 .body-wrapper .section-wrapper #intro {
-  background-color: #E7DFC6;
   padding: 10px;
+  background-size: cover;
+  background-image: url("images/currentme.jpg");
+  background-attachment: fixed;
+  background-position: 0px 0px, right 3em bottom 2em;
 }
 .body-wrapper .section-wrapper #education {
   background-color: #E9F1F7;
@@ -445,17 +454,24 @@ i {
   display: flex;
   flex-flow: column;
   align-items: center;
+  font-weight: bolder;
 }
 .body-wrapper .section-wrapper .intro .about h1 {
   margin: 0;
+  color: #2274A5;
+  font-size: 2.5rem;
 }
 .body-wrapper .section-wrapper .intro .about h6 {
   margin: 10px;
 }
 .body-wrapper .section-wrapper .intro .about p {
-  border: 1px dashed #2274A5;
+  color: white;
+  border: 1px solid #2274A5;
   border-radius: 5px;
   padding: 20px;
+}
+.body-wrapper .section-wrapper .intro .about p:hover {
+  border: 1px solid white;
 }
 .body-wrapper .section-wrapper .intro img {
   border-radius: 5px;
@@ -643,23 +659,23 @@ i {
   font-weight: bold;
   color: #2274A5;
 }
-.body-wrapper .section-wrapper .skills .other-skills .tags {
+.body-wrapper .section-wrapper .skills .other-skills .title .tags {
   padding: 10px;
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
 }
-.body-wrapper .section-wrapper .skills .other-skills .tags div {
+.body-wrapper .section-wrapper .skills .other-skills .title .tags div {
   background-color: #2274A5;
   max-width: fit-content;
   color: white;
   padding: 2px;
   margin: 3px;
 }
-.body-wrapper .section-wrapper .skills .other-skills .tags:nth-child(odd) {
+.body-wrapper .section-wrapper .skills .other-skills .title .tags:nth-child(odd) {
   margin-left: 5px;
 }
-.body-wrapper .section-wrapper .skills .other-skills .tags:nth-child(even) {
+.body-wrapper .section-wrapper .skills .other-skills .title .tags:nth-child(even) {
   margin-right: 5px;
 }
 .body-wrapper .section-wrapper .social {
@@ -729,27 +745,27 @@ i {
   .body-wrapper .section-wrapper .section-title span {
     color: white;
   }
-  .body-wrapper .section-wrapper .section-title .bottom-bar {
+  .body-wrapper .section-wrapper .section-title span .bottom-bar {
     color: white;
   }
-  .body-wrapper .section-wrapper .personal-projects .project-wrapper {
+  .body-wrapper .section-wrapper .section-title .personal-projects .project-wrapper {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
     margin-top: 50px !important;
   }
-  .body-wrapper .section-wrapper .personal-projects .project-wrapper .project {
+  .body-wrapper .section-wrapper .section-title .personal-projects .project-wrapper .project {
     width: 400px;
     margin: 20px;
     height: fit-content;
   }
-  .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .about p {
+  .body-wrapper .section-wrapper .section-title .personal-projects .project-wrapper .project .about p {
     max-width: 100%;
   }
-  .body-wrapper .section-wrapper .social .edu-path {
+  .body-wrapper .section-wrapper .section-title .social .edu-path {
     margin-top: 0px;
   }
-  .body-wrapper .section-wrapper .skills .skills-intro {
+  .body-wrapper .section-wrapper .section-title .skills .skills-intro {
     margin-bottom: 50px;
     padding: 30px;
     margin: 30px;
@@ -757,15 +773,15 @@ i {
     color: white;
     text-decoration: none;
   }
-  .body-wrapper .section-wrapper .skills .list-wrapper {
+  .body-wrapper .section-wrapper .section-title .skills .list-wrapper {
     flex-flow: row;
   }
-  .body-wrapper .section-wrapper .skills .list-wrapper .skill-list {
+  .body-wrapper .section-wrapper .section-title .skills .list-wrapper .skill-list {
     flex: 1;
     border: 1px solid #2274A5;
     padding: 30px;
   }
-  .body-wrapper .section-wrapper .skills .list-wrapper .skill-list:nth-child(odd) {
+  .body-wrapper .section-wrapper .section-title .skills .list-wrapper .skill-list:nth-child(odd) {
     margin-right: 20px;
   }
 }
