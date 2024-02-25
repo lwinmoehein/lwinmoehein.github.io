@@ -1,9 +1,8 @@
-
 $primary-color: #2274A5
 $breakpoint-phone: 600px
 $active-nav-color: #131B23
 $icons-color: white
-$intro-clor: #E7DFC6
+$intro-color: #E7DFC6
 $education-color: #E9F1F7
 $experience-color: #816C61
 $projects-color: #131B23
@@ -12,6 +11,7 @@ $js-color: #efd81d
 $php-color: #4d588e
 
 @use 'sass/_modal'
+
 
 html
     scroll-behavior: smooth
@@ -49,6 +49,7 @@ body
 a
     text-decoration: none
     padding: 10px
+
 .color-text
     color: $primary-color
 .bold
@@ -236,21 +237,18 @@ i
 
         #intro
             padding: 10px
-            background-size: cover
-            background-image: url('images/currentme.jpg')
-            background-attachment: fixed
-            background-position: 0px 0px, right 3em bottom 2em
+
         #education
             background-color: $education-color
             padding: 10px
         #experience
-            background-color: $intro-clor
+            background-color: $intro-color
             padding: 10px
         #personal
             background-color: $education-color
             padding: 0px
         #skills
-            background-color: $intro-clor
+            background-color: $intro-color
             padding: 10px
 
         #skills:target
@@ -289,14 +287,18 @@ i
                 flex-flow: column
                 align-items: center
                 font-weight: bolder
+
                 h1
                     margin: 0
-                    color: $primary-color
+                    color: white
                     font-size: 2.5rem
+
+                h3
+                    color: white
 
                 h6
                     margin: 10px
-                    color:white
+                    color: white
                 p
                     color: white
                     border: 1px solid $primary-color
@@ -412,7 +414,7 @@ i
                     .techs
                         display: flex
                         span
-                            border: 1px solid $intro-clor
+                            border: 1px solid $intro-color
                             padding: 5px
                             margin: 2px
 
@@ -571,7 +573,6 @@ i
                 .skills
 
                     .skills-intro
-                        margin-bottom: 50px
                         padding: 30px
                         margin: 30px
                         background-color: $primary-color

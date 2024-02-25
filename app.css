@@ -393,10 +393,6 @@ i {
 }
 .body-wrapper .section-wrapper #intro {
   padding: 10px;
-  background-size: cover;
-  background-image: url("images/currentme.jpg");
-  background-attachment: fixed;
-  background-position: 0px 0px, right 3em bottom 2em;
 }
 .body-wrapper .section-wrapper #education {
   background-color: #E9F1F7;
@@ -458,11 +454,15 @@ i {
 }
 .body-wrapper .section-wrapper .intro .about h1 {
   margin: 0;
-  color: #2274A5;
+  color: white;
   font-size: 2.5rem;
+}
+.body-wrapper .section-wrapper .intro .about h3 {
+  color: white;
 }
 .body-wrapper .section-wrapper .intro .about h6 {
   margin: 10px;
+  color: white;
 }
 .body-wrapper .section-wrapper .intro .about p {
   color: white;
@@ -766,7 +766,6 @@ i {
     margin-top: 0px;
   }
   .body-wrapper .section-wrapper .section-title .skills .skills-intro {
-    margin-bottom: 50px;
     padding: 30px;
     margin: 30px;
     background-color: #2274A5;
