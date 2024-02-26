@@ -454,7 +454,13 @@ i {
   flex-flow: column;
   align-items: start;
   justify-content: start;
-  padding-top: 60px;
+  padding: 10px !important;
+  padding-top: 60px !important;
+}
+@media screen and (min-width: 600px) {
+  .body-wrapper .section-wrapper .education {
+    padding: 20px !important;
+  }
 }
 .body-wrapper .section-wrapper .education .edu-path {
   display: flex;
@@ -471,6 +477,7 @@ i {
   margin-top: 2px;
   margin-left: 10px;
   color: white;
+  margin-bottom: 10px;
 }
 .body-wrapper .section-wrapper .education .edu-path .item ul {
   color: white;
@@ -479,7 +486,7 @@ i {
   display: flex;
   flex-flow: column;
 }
-.body-wrapper .section-wrapper .education .edu-path .item .indicator .fa-graduation-cap, .body-wrapper .section-wrapper .education .edu-path .item .indicator .fa-question {
+.body-wrapper .section-wrapper .education .edu-path .item .indicator .fa-school, .body-wrapper .section-wrapper .education .edu-path .item .indicator .fa-university, .body-wrapper .section-wrapper .education .edu-path .item .indicator .fa-question {
   font-size: 15pt;
   color: white !important;
   transform: none;
@@ -648,7 +655,7 @@ i {
   display: flex;
   flex-flow: column;
 }
-.body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-arrow-right, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-address-book, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-envelope, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-phone, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-link {
+.body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-arrow-right, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-address-book, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-envelope, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-phone, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-github, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-stack-overflow, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-linkedin {
   font-size: 15pt;
   transform: none;
 }
