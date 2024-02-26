@@ -495,6 +495,10 @@ i {
   align-items: flex-start;
   justify-content: center;
 }
+.body-wrapper .section-wrapper .education .edu-path .item h5 {
+  margin-top: 2px;
+  margin-left: 10px;
+}
 .body-wrapper .section-wrapper .education .edu-path .item .indicator {
   display: flex;
   flex-flow: column;
@@ -525,6 +529,10 @@ i {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+.body-wrapper .section-wrapper .experience .edu-path .item h5 {
+  margin-top: 2px;
+  margin-left: 10px;
 }
 .body-wrapper .section-wrapper .experience .edu-path .item .indicator {
   display: flex;
@@ -691,6 +699,9 @@ i {
   align-items: flex-start;
   justify-content: center;
   margin-top: 20px;
+}
+.body-wrapper .section-wrapper .social .edu-path .item h5 {
+  margin-top: 0;
 }
 .body-wrapper .section-wrapper .social .edu-path .item .indicator {
   display: flex;
