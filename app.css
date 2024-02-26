@@ -543,8 +543,8 @@ i {
 @media screen and (min-width: 600px) {
   .body-wrapper .section-wrapper .personal-projects .project-wrapper {
     grid-template-columns: 1fr 1fr 1fr !important;
-    column-gap: 10px !important;
-    row-gap: 10px !important;
+    column-gap: 20px !important;
+    row-gap: 30px !important;
   }
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper {
@@ -552,12 +552,15 @@ i {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 5px;
-  row-gap: 5px;
+  row-gap: 50px;
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project {
   padding: 10px;
-  border: 1px solid white;
+  border: 1px solid black;
   color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper {
   display: flex;
@@ -577,14 +580,31 @@ i {
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .about p {
   border: 1px solid #2274A5;
 }
+.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .btn {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  background: black;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .btn i {
+  color: white;
+}
+.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .btn a {
+  color: white;
+}
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .techs {
   display: flex;
   flex-wrap: wrap;
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .techs span {
-  border: 1px solid #22BBCC;
-  padding: 5px;
+  border: 0.2px solid #22BBCC;
+  padding: 1px 5px;
   margin: 2px;
+  font-size: x-small;
+  color: black;
 }
 .body-wrapper .section-wrapper .skills {
   padding: 10px !important;

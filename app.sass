@@ -378,8 +378,8 @@ i
             @media screen and (min-width: $breakpoint-phone)
                     .project-wrapper
                         grid-template-columns: 1fr 1fr 1fr !important
-                        column-gap: 10px !important
-                        row-gap: 10px !important
+                        column-gap: 20px !important
+                        row-gap: 30px !important
 
             .project-wrapper
                 margin-top: 40px
@@ -387,12 +387,15 @@ i
                 display: grid
                 grid-template-columns: 1fr
                 column-gap: 5px
-                row-gap: 5px
+                row-gap: 50px
 
                 .project
                     padding: 10px
-                    border: 1px solid white
+                    border: 1px solid black
                     color: white
+                    display: flex
+                    flex-flow: column
+                    justify-content: space-between
 
                     .title-wrapper
                         display: flex
@@ -409,13 +412,30 @@ i
                     .about
                         p
                             border: 1px solid $primary-color
+                    .btn
+                        display: flex
+                        justify-content: center
+                        color: white
+                        font-weight: bold
+                        background: black
+                        margin-top: 10px
+                        margin-bottom: 5px
+
+                        i
+                            color: white
+                        a
+                            color: white
+
                     .techs
                         display: flex
                         flex-wrap: wrap
                         span
-                            border: 1px solid $intro-color
-                            padding: 5px
+                            border: 0.2px solid $intro-color
+                            padding: 1px 5px
                             margin: 2px
+                            font-size: x-small
+                            color: black
+
 
         .skills
             @extend .section-card
