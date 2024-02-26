@@ -207,6 +207,7 @@ a {
   font-weight: bold;
   z-index: 99;
   margin: 0;
+  background-color: black;
 }
 
 .nav a {
@@ -511,6 +512,7 @@ i {
 .body-wrapper .section-wrapper .experience .edu-path .item h5 {
   margin-top: 2px;
   margin-left: 10px;
+  margin-bottom: 5px;
 }
 .body-wrapper .section-wrapper .experience .edu-path .item .indicator {
   display: flex;
@@ -592,7 +594,7 @@ i {
   grid-template-columns: 1fr;
   height: fit-content;
   grid-row-gap: 20px;
-  grid-column-gap: 5px;
+  grid-column-gap: 100px;
 }
 @media screen and (min-width: 600px) {
   .body-wrapper .section-wrapper .skills .skills-wrapper {
@@ -637,7 +639,7 @@ i {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .body-wrapper .section-wrapper .social .edu-path .item h5 {
   margin-top: 0;
@@ -646,10 +648,9 @@ i {
   display: flex;
   flex-flow: column;
 }
-.body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-arrow-right, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-address-book, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-envelope, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-phone {
+.body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-arrow-right, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-address-book, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-envelope, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-phone, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-link {
   font-size: 15pt;
   transform: none;
-  margin-top: 0;
 }
 .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-ellipsis-v {
   font-size: 15pt;
@@ -667,7 +668,7 @@ i {
   margin-left: 30px;
   padding: 10px;
   border: 1px dashed #2274A5;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 .body-wrapper .section-wrapper .social .edu-path .item .content .title {
   color: #2274A5;

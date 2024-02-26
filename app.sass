@@ -70,6 +70,7 @@ a
     font-weight: bold
     z-index: 99
     margin: 0
+    background-color: black
 
 .nav
     a
@@ -349,6 +350,7 @@ i
                     h5
                         margin-top: 2px
                         margin-left: 10px
+                        margin-bottom: 5px
                     .indicator
                         display: flex
                         flex-flow: column
@@ -424,7 +426,7 @@ i
                 grid-template-columns: 1fr
                 height: fit-content
                 grid-row-gap: 20px
-                grid-column-gap: 5px
+                grid-column-gap: 100px
 
                 @media screen and (min-width: $breakpoint-phone)
                     grid-template-columns: 1fr 1fr 1fr
@@ -466,7 +468,7 @@ i
                     display: flex
                     align-items: flex-start
                     justify-content: center
-                    margin-top: 20px
+                    margin-top: 10px
 
                     h5
                         margin-top: 0
@@ -474,10 +476,9 @@ i
                     .indicator
                         display: flex
                         flex-flow: column
-                        .fa-arrow-right,.fa-address-book,.fa-envelope,.fa-phone
+                        .fa-arrow-right,.fa-address-book,.fa-envelope,.fa-phone,.fa-link
                             font-size: 15pt
                             transform: none
-                            margin-top: 0
 
                         .fa-ellipsis-v
                             font-size: 15pt
@@ -493,7 +494,7 @@ i
                         margin-left: 30px
                         padding: 10px
                         border: 1px dashed $primary-color
-                        border-radius: 5px
+                        border-radius: 0px
 
                         .title
                             color: $primary-color
