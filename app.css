@@ -393,21 +393,20 @@ i {
   background-color: #22BBCC;
 }
 .body-wrapper .section-wrapper #education {
-  background-color: #E9F1F7;
+  background-color: #22BBCC;
   padding: 10px;
 }
 .body-wrapper .section-wrapper #experience {
-  background-color: #22BBCC;
-  padding: 10px;
-}
-.body-wrapper .section-wrapper #personal {
   background-color: #E9F1F7;
   padding: 10px;
 }
-.body-wrapper .section-wrapper #skills {
-  background-color: #22BBCC;
+.body-wrapper .section-wrapper #personal {
+  background-color: #2274A5;
   padding: 10px;
-  color: white;
+}
+.body-wrapper .section-wrapper #skills {
+  background-color: #E9F1F7;
+  padding: 10px;
 }
 .body-wrapper .section-wrapper #skills:target .level-90 {
   animation-duration: 3s;
@@ -571,7 +570,7 @@ i {
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project {
   padding: 10px;
-  background-color: #2274A5;
+  border: 1px solid white;
   color: white;
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper {
