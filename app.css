@@ -742,7 +742,7 @@ i {
 @media screen and (min-width: 600px) {
   .body-wrapper .section-wrapper .section-title {
     color: white;
-    background-color: #2274A5;
+    background-color: black;
     padding: 5px 10px 5px 10px;
   }
   .body-wrapper .section-wrapper .section-title span {
