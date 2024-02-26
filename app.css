@@ -334,6 +334,9 @@ i {
     align-items: center;
     flex-flow: row;
   }
+  .intro p {
+    max-width: 50%;
+  }
   .go-down {
     display: flex;
     justify-content: center;
@@ -382,9 +385,6 @@ i {
   }
   .body-wrapper .section-wrapper {
     margin-left: 240px;
-  }
-  .body-wrapper .section-wrapper p {
-    max-width: 30%;
   }
 }
 .body-wrapper .section-wrapper {
