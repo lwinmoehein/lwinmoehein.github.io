@@ -275,7 +275,7 @@
             <div class="drawer-menu">
                 <div class="menu-grid">
                     <div class="mobile-nav-item nav active-nav">
-                        <a href="#intro">Hola</a>
+                        <a href="#about-me">About Me</a>
                     </div>
                     <div class="mobile-nav-item nav">
                         <a href="#education">Education</a>
@@ -300,7 +300,7 @@
             <div class="nav-wrapper">
                 <nav>
                     <div class="nav-item nav active-nav">
-                        <a href="#intro">Hola</a>
+                        <a href="#about-me" >About Me</a>
                     </div>
                     <div class="nav-item nav">
                         <a href="#education">Education</a>
@@ -323,8 +323,8 @@
                 <div id="scroller" class="go-down">
                     <i id="scroll-icon" class="fa-solid fa-arrow-down"></i>
                 </div>
-                <section id="intro">
-                    <h3 class="section-title" data-hash="#intro"><span class="bottom-bar">A</span>bout me</h3>
+                <section id="about-me">
+                    <h3 class="section-title" data-hash="#about-me"><span class="bottom-bar">A</span>bout me</h3>
                     <div class="intro">
                         <div class="about">
                             <h1>Lwin Moe Hein</h1>
@@ -751,8 +751,8 @@
             winX = null;
             winY = null;
         }
-        disableWindowScroll()
 
+        disableWindowScroll()
 
         window.throttle = function (f, ms) {
             let isThrottled, lastThis, lastArgs
@@ -773,7 +773,6 @@
                 }, ms)
             }
         }
-
         window.bounce = function (f, ms) {
             let timeOutId
             return function () {
@@ -808,7 +807,7 @@
         let social = {
             href: "#social",
             next: {
-                href: "#intro",
+                href: "#about-me",
                 next: {
                     href: "#education",
                     next: {
@@ -828,7 +827,6 @@
 
         }
 
-
         let sections = [social.next, social.next.next, social.next.next.next, social.next.next.next.next, social.next.next.next.next.next, social]
 
         function onDrawerToggled(isClosed = true) {
@@ -840,22 +838,18 @@
                 drawer.style.opacity = 1
             }
         }
-
-
         menuOpen.addEventListener("click", function () {
             onDrawerToggled(false)
         })
-
-
         menuClose.addEventListener("click", function () {
             onDrawerToggled(true)
         })
-
         links.forEach(link => {
             link.addEventListener("click", function () {
                 onDrawerToggled(true)
             })
         })
+
         projectDetailCloseButtons.forEach(closeButton => {
             closeButton.addEventListener("click", function () {
                 currentFeatureIndex = 0
@@ -871,29 +865,24 @@
             mainContent.style.opacity = "1"
             enableWindowScroll()
         })
-
         scroller.addEventListener("click", function () {
             updateScrollFloatingButtonStatus()
         })
 
 
-
         //scrollbar timeout
         let setScrollerVisible = bounce(() => {
             scroller.style.display = "flex"
-        }, 500)
+        }, 0)
         let updateCurrentHash = throttle(() => {
             sectionTitles.forEach(t => {
                 if (isScrolledIntoView(t)) {
-                    setTimeout(() => {
                         history.pushState({}, '', t.getAttribute('data-hash'))
                         locationHashChanged()
                         updateScrollFloatingButtonStatus(true)
-                    }, 0)
                 }
             })
-
-        }, 1000)
+        }, 100)
 
         document.addEventListener('scroll', function (e) {
             updateCurrentHash()
@@ -924,7 +913,7 @@
                 }
             })
             navItems.forEach(nav => {
-                if (matchedLink.hash != nav.lastElementChild.hash) {
+                if (matchedLink.hash !== nav.lastElementChild.hash) {
                     nav.classList.remove('active-nav')
                 } else {
                     nav.classList.add('active-nav')
@@ -933,8 +922,8 @@
         }
 
         function updateScrollFloatingButtonStatus(updateUiOnly = false) {
-            let currentLocation = sections.filter(s => s.href === location.hash || (location.hash == "" && s.href == "#intro"))[0]
-            if (currentLocation.href == "#social") {
+            let currentLocation = sections.filter(s => s.href === location.hash || (location.hash === "" && s.href === "#about-me"))[0]
+            if (currentLocation.href === "#social") {
                 scrollIcon.classList.remove("fa-arrow-down")
                 scrollIcon.classList.add("fa-arrow-up")
             } else {
@@ -958,11 +947,7 @@
             var elemTop = rect.top;
             var elemBottom = rect.bottom;
 
-            // Only completely visible elements return true:
-            var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-            // Partially visible elements return true:
-            //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-            return isVisible;
+            return (elemTop >= 0) && (elemBottom <= window.innerHeight);
         }
 
         function onFeatureNavClick(isPrevious = true, projectName = "techbooks") {
@@ -1000,6 +985,10 @@
             featureImage.src = feature.img_url
             featureTitle.innerText = feature.title
             featureInfo.innerText = feature.description
+        }
+
+        function onNavClick(){
+
         }
 
     </script>
