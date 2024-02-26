@@ -194,7 +194,7 @@ a {
 
 .section-card, .body-wrapper .section-wrapper .social, .body-wrapper .section-wrapper .skills, .body-wrapper .section-wrapper .personal-projects, .body-wrapper .section-wrapper .experience, .body-wrapper .section-wrapper .education, .body-wrapper .section-wrapper .intro {
   padding: 20px;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
 }
 
@@ -357,7 +357,6 @@ i {
 }
 .body-wrapper {
   display: flex;
-  height: 100vh;
 }
 .body-wrapper a {
   color: #2274A5;
@@ -385,7 +384,6 @@ i {
   }
 }
 .body-wrapper .section-wrapper {
-  height: 100vh;
   flex: 3;
 }
 .body-wrapper .section-wrapper #intro {
@@ -442,7 +440,6 @@ i {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
 .body-wrapper .section-wrapper .intro .about {
   display: flex;
@@ -555,18 +552,17 @@ i {
 }
 @media screen and (min-width: 600px) {
   .body-wrapper .section-wrapper .personal-projects .project-wrapper {
-    flex-flow: row !important;
-  }
-  .body-wrapper .section-wrapper .personal-projects .project-wrapper .project {
-    width: 30% !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    column-gap: 10px !important;
+    row-gap: 10px !important;
   }
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper {
   margin-top: 40px;
-  display: flex;
-  flex-flow: column;
-  gap: 10px;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 5px;
+  row-gap: 5px;
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project {
   padding: 10px;
