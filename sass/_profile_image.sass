@@ -1,0 +1,20 @@
+// Variables for customization
+$profile-image-size: 150px  // Adjust as needed
+$profile-image-border-radius: 100%  // Makes the image round
+
+// Style for the profile image
+.profile-image
+  width: $profile-image-size
+  height: $profile-image-size
+  border-radius: $profile-image-border-radius !important
+  overflow: hidden  // Ensures the image stays within the rounded border
+  object-fit: cover
+
+
+  // Responsive styling
+  @media (max-width: 768px)
+    width: 150px  // Adjust as needed for smaller screens
+    height: 150px
+
+  // Example: Set background image (replace with actual image URL)
+
