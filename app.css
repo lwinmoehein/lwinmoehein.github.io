@@ -455,7 +455,7 @@ i {
   align-items: start;
   justify-content: start;
   padding: 10px !important;
-  padding-top: 60px !important;
+  margin-top: 60px !important;
 }
 @media screen and (min-width: 600px) {
   .body-wrapper .section-wrapper .education {
@@ -503,7 +503,7 @@ i {
   flex-flow: column;
   align-items: start;
   justify-content: start;
-  padding-top: 60px;
+  margin-top: 60px;
 }
 .body-wrapper .section-wrapper .experience .edu-path {
   display: flex;
