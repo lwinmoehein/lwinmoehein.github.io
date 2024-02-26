@@ -244,27 +244,6 @@ i
             background-color: $education-color
             padding: 10px
 
-
-        #skills:target
-            .level-90
-                animation-duration: 3s
-                animation-name: slide90
-                animation-iteration-count: 1
-            @keyframes slide90
-                from
-                    width: 0%
-                to
-                    width: 90%
-            .level-70
-                animation-duration: 3s
-                animation-name: slide70
-                animation-iteration-count: 1
-            @keyframes slide70
-                from
-                    width: 0%
-                to
-                    width: 70%
-
         #social
             background-color: $education-color
             padding: 10px
@@ -310,8 +289,9 @@ i
         .education
             @extend .section-card
             flex-flow: column
-            align-items: center
-            justify-content: center
+            align-items: start
+            justify-content: start
+            padding-top: 30px
 
             .edu-path
                 display: flex
@@ -346,8 +326,9 @@ i
         .experience
             @extend .section-card
             flex-flow: column
-            align-items: center
-            justify-content: center
+            align-items: start
+            justify-content: start
+            padding-top: 30px
 
             .edu-path
                 display: flex
@@ -427,78 +408,47 @@ i
 
         .skills
             @extend .section-card
-            flex-flow: column
-            margin-top: 20px
-            .skills-intro
-                text-decoration: underline
+            padding: 10px !important
+
+            @media screen and (min-width: $breakpoint-phone)
+                padding: 20px !important
+
+            .skills-wrapper
                 margin-top: 30px
-                margin-bottom: 30px
-                color: $primary-color
-            .list-wrapper
-                display: flex
-                flex-flow: column
+                display: grid
+                grid-template-columns: 1fr
+                height: fit-content
+                grid-row-gap: 20px
+                grid-column-gap: 5px
 
-                .skill-list
-                    margin-top: 30px
+                @media screen and (min-width: $breakpoint-phone)
+                    grid-template-columns: 1fr 1fr 1fr
 
+                .other-skills
                     .title
                         font-weight: bold
                         color: $primary-color
-                    .list
-                        display: flex
-                        flex-flow: column
-                        .item
+                        .tags
                             padding: 10px
-                            .level-wrapper
-                                position: relative
-                                display: block
-                                .level
-                                    margin-top: 10px
-                                    margin-bottom: 10px
-                                    height: 5px
-                                    background-color: $primary-color
-                                    left: 0
-                                    position: absolute
-                                    z-index: 1
-                                .level-90
-                                    width: 90%
-                                .level-70
-                                    width: 70%
-                                .level-background
-                                    margin-top: 10px
-                                    margin-bottom: 10px
-                                    height: 5px
-                                    background-color: black
-                                    left: 0
-                                    position: absolute
-                                    width: 100%
+                            display: flex
+                            flex-flow: row
+                            flex-wrap: wrap
+                            div
+                                background-color: $primary-color
+                                max-width: fit-content
+                                color: white
+                                padding: 2px
+                                margin: 3px
 
-            .other-skills
-                margin-top: 30px
-                .title
-                    font-weight: bold
-                    color: $primary-color
-                    .tags
-                        padding: 10px
-                        display: flex
-                        flex-flow: row
-                        flex-wrap: wrap
-                        div
-                            background-color: $primary-color
-                            max-width: fit-content
-                            color: white
-                            padding: 2px
-                            margin: 3px
-
-                    .tags:nth-child(odd)
-                        margin-left: 5px
-                    .tags:nth-child(even)
-                        margin-right: 5px
+                        .tags:nth-child(odd)
+                            margin-left: 5px
+                        .tags:nth-child(even)
+                            margin-right: 5px
 
         .social
             @extend .section-card
             flex-flow: column
-            align-items: center
+            align-items: start
 
             .edu-path
                 display: flex
@@ -566,19 +516,3 @@ i
                 .social
                     .edu-path
                         margin-top: 0
-                .skills
-                    .skills-intro
-                        padding: 30px
-                        margin: 30px
-                        background-color: $primary-color
-                        color: white
-                        text-decoration: none
-
-                    .list-wrapper
-                        flex-flow: row
-                        .skill-list
-                            flex: 1
-                            border: 1px solid $primary-color
-                            padding: 30px
-                        .skill-list:nth-child(odd)
-                            margin-right: 20px
