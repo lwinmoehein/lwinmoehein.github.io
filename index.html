@@ -148,126 +148,6 @@
             </div>
         </div>
 
-        <div id="project-detail-modal-1" class="project-detail">
-            <div class="detail">
-                <div class="button-wrapper">
-                    <div class="title-wrapper">
-                        <p class="title">Myanmar Tech Books</p>
-                    </div>
-                    <div class="button-end">
-                        <p class="demo-btn hithere">Visit Demo Site</p>
-                        <i class="close-detail fa-solid fa-xmark"></i>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="app-intro">
-                        <p>
-                            Myanmar Tech books a website for reviewing technology books.It's written in Vue
-                            JS(SPA),Laravel (API).
-                        </p>
-                    </div>
-
-                    <div class="feature-wrapper">
-                        <div class="feature-images">
-                            <div class="img-nav" onclick="onFeatureNavClick(true,'techbooks')">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                            <div class="image">
-                                <img src="" id="techbooks-feature-img" alt="">
-                            </div>
-                            <div class="img-nav" onclick="onFeatureNavClick(false,'techbooks')">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </div>
-                        <div class="feature-about">
-                            <h3 id="techbooks-feature-title">Register Page</h3>
-                            <p id="techbooks-feature-info">
-                                Register Page
-                            </p>
-                        </div>
-                    </div>
-                    <div class="about">
-                        <div>
-                            <h3>Languages</h3>
-                            <div class="list">
-                                <span>PHP</span>
-                                <span>Javascript</span>
-                                <span>CSS</span>
-                                <span>SASS</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h3>Tools & Libraries</h3>
-                            <div class="list">
-                                <span>Github Pages</span>
-                                <span>SASS</span>
-                            </div>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="project-detail-modal-2" class="project-detail">
-            <div class="detail">
-                <div class="button-wrapper">
-                    <div class="title-wrapper">
-                        <p class="title">M Knowledge</p>
-                    </div>
-                    <div class="button-end">
-                        <p class="demo-btn hithere">Download From Playstore</p>
-                        <i class="close-detail fa-solid fa-xmark"></i>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="app-intro">
-                        <p>
-                            Myanmar Wikipedia offline application.
-                        </p>
-                    </div>
-                    <!-- <div class="caption">
-                     <h3>Home Page</h3>
-                 </div> -->
-                    <div class="feature-wrapper">
-                        <div class="feature-images">
-                            <div class="img-nav" onclick="onFeatureNavClick(true,'mknowledge')">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                            <div class="image">
-                                <img src="" id="mknowledge-feature-img" alt="">
-                            </div>
-                            <div class="img-nav" onclick="onFeatureNavClick(false,'mknowledge')">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </div>
-                        <div class="feature-about">
-                            <h3 id="mknowledge-feature-title">Register Page</h3>
-                            <p id="mknowledge-feature-info">
-                                Register Page
-                            </p>
-                        </div>
-                    </div>
-                    <div class="about">
-                        <div>
-                            <h3>Languages</h3>
-                            <div class="list">
-                                <span>Kotlin</span>
-                                <span>XML</span>
-                                <span>Groovy</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h3>Tools & Libraries</h3>
-                            <div class="list">
-                                <span>Jetpack Compose</span>
-                                <span>Clean architecture</span>
-                            </div>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="drawer" class="drawer-menu-wrapper">
             <div class="button-wrapper">
                 <i id="menu-close" class="fa-solid fa-xmark"></i>
@@ -334,7 +214,6 @@
                                 Framework.I am confident to work with <span class="bold">Javascript</span>
                                 and
                                 <span class="bold">PHP</span>
-                                langauges.
                             </p>
 
                         </div>
@@ -669,71 +548,6 @@
         var winX = null;
         var winY = null;
 
-        let currentFeatureIndex = 0
-
-        const techBooksReviews = {
-            id:'techbooks',
-            title: "Myanmar Tech Books",
-            features: [
-                {
-                    title: "Register",
-                    img_url: "",
-                    description: "Register User"
-                },
-                {
-                    title: "Login",
-                    img_url: "",
-                    description: "Login User"
-                },
-                {
-                    title: "Dashboard",
-                    img_url: "",
-                    description: "Dashboard User"
-                },
-                {
-                    title: "Categories",
-                    img_url: "",
-                    description: "List of categories"
-                },
-                {
-                    title: "Saved Books",
-                    img_url: "",
-                    description: "Saved books User"
-                },
-                {
-                    title: "Settings",
-                    img_url: "",
-                    description: "Settins User"
-                }
-            ]
-        }
-        const mKnowledge = {
-            id:'mknowledge',
-            title: "M Knowledge",
-            features: [
-                {
-                    title: "Search",
-                    img_url: "",
-                    description: "Search wiki"
-                },
-                {
-                    title: "History",
-                    img_url: "",
-                    description: "Search History"
-                },
-                {
-                    title: "Saved",
-                    img_url: "",
-                    description: "Saved Articles"
-                },
-                {
-                    title: "Settings",
-                    img_url: "",
-                    description: "Settings"
-                }
-            ]
-        }
-
         window.addEventListener('scroll', function () {
             if (winX !== null && winY !== null) {
                 window.scrollTo(winX, winY);
@@ -794,15 +608,6 @@
         let navItems = document.querySelectorAll('.nav')
         let sectionElements = document.querySelectorAll('section')
         let sectionTitles = document.querySelectorAll('.section-title')
-        let projectItems = document.querySelectorAll('.project')
-        let projectModal1 = document.querySelector('#project-detail-modal-1')
-        let projectModal2 = document.querySelector('#project-detail-modal-2')
-
-        let projectDetails = document.querySelectorAll('.project-detail')
-        let projectDetailCloseButtons = document.querySelectorAll('.close-detail')
-
-        const projectOne = document.getElementById('pj-1')
-        const projectTwo = document.getElementById('pj-2')
 
         let social = {
             href: "#social",
@@ -850,15 +655,6 @@
             })
         })
 
-        projectDetailCloseButtons.forEach(closeButton => {
-            closeButton.addEventListener("click", function () {
-                currentFeatureIndex = 0
-                projectDetails.forEach(detail => {
-                    detail.style.visibility = "hidden"
-                    detail.style.opacity = 0
-                })
-            })
-        })
         window.addEventListener("load", function () {
             loadingStatus.style.display = "none"
             mainContent.style.visibility = "visible"
@@ -869,11 +665,10 @@
             updateScrollFloatingButtonStatus()
         })
 
-
-        //scrollbar timeout
         let setScrollerVisible = bounce(() => {
             scroller.style.display = "flex"
         }, 0)
+
         let updateCurrentHash = throttle(() => {
             sectionTitles.forEach(t => {
                 if (isScrolledIntoView(t)) {
@@ -891,19 +686,7 @@
             setScrollerVisible()
         });
 
-        projectOne.addEventListener("click", function () {
-            replaceProjectDetails(techBooksReviews,0)
-            projectModal1.style.visibility = "visible"
-            projectModal1.style.opacity = 1
-        })
 
-        projectTwo.addEventListener("click", function () {
-            replaceProjectDetails(mKnowledge,0)
-            projectModal2.style.visibility = "visible"
-            projectModal2.style.opacity = 1
-        })
-
-        //active link
         function locationHashChanged(e) {
             let matchedLink
             navItems.forEach(nav => {
@@ -949,44 +732,6 @@
 
             return (elemTop >= 0) && (elemBottom <= window.innerHeight);
         }
-
-        function onFeatureNavClick(isPrevious = true, projectName = "techbooks") {
-            switch (projectName) {
-                case "techbooks":
-                    navigateFeature(isPrevious, techBooksReviews)
-                    break;
-                default:
-                    navigateFeature(isPrevious, mKnowledge)
-                    break;
-
-            }
-        }
-        function navigateFeature(isPrevious, project) {
-            if (isPrevious && currentFeatureIndex >= 1) {
-                currentFeatureIndex--
-            }
-
-            if (!isPrevious && currentFeatureIndex < project.features.length) {
-                currentFeatureIndex++
-            }
-            replaceProjectDetails(project,currentFeatureIndex)
-        }
-
-        function replaceProjectDetails(project,featureIndex){
-            console.log(project.features.length+","+featureIndex);
-            const featureImage = document.getElementById(`${project.id}-feature-img`)
-            const featureTitle = document.getElementById(`${project.id}-feature-title`)
-            const featureInfo = document.getElementById(`${project.id}-feature-info`)
-
-            const feature = project.features[featureIndex]
-
-            if(!feature) return
-
-            featureImage.src = feature.img_url
-            featureTitle.innerText = feature.title
-            featureInfo.innerText = feature.description
-        }
-
     </script>
 </body>
 

@@ -18,6 +18,7 @@ html
 
 body
     background-color: $primary-color !important
+
 @font-face
     font-family: WorkSans
     src: url("./webfonts/WorkSans-Regular.ttf")
@@ -33,12 +34,13 @@ body::-webkit-scrollbar-thumb
     outline: 1px solid $primary-color
 
 body
-    font-family: WorkSans
+    font-family: WorkSans, serif
 
 .active-nav
     background-color: $active-nav-color
     a
         color: white !important
+
 .js
     color: $js-color
 .laravel
@@ -91,19 +93,7 @@ i
     display: flex
     justify-content: center
     align-items: center
-.hithere
-    animation: hithere 3s ease infinite
 
-@keyframes hithere
-    30%
-        transform: scale(1.2)
-    100%
-        transform: scale(1)
-
-.me
-    width: 100vw
-    height: 100vw
-    object-fit: cover
 
 .menu-bar-wrapper
     display: flex
@@ -208,14 +198,15 @@ i
             color: $primary-color
 
 .body-wrapper
-    height: 100%
     display: flex
+    height: 100vh
 
     a
         color: $primary-color
 
     .nav-wrapper
         display: none
+        
     @media screen and (min-width: $breakpoint-phone)
         .nav-wrapper
             padding: 20px
@@ -234,7 +225,7 @@ i
 
 
     .section-wrapper
-        height: 100%
+        height: 100vh
         flex: 3
 
         #intro
@@ -249,10 +240,11 @@ i
             padding: 10px
         #personal
             background-color: $education-color
-            padding: 0px
+            padding: 10px
         #skills
             background-color: $intro-color
             padding: 10px
+            color: white
 
         #skills:target
             .level-90
@@ -345,11 +337,8 @@ i
                             margin-bottom: 10px
                             margin-top: 10px
                             transform: rotate(90deg)
-                    .content
-                        margin-left: 30px
-                        padding: 10px
-                        border: 1px dashed $primary-color
-                        border-radius: 5px
+
+
 
         .experience
             @extend .section-card
@@ -379,27 +368,33 @@ i
                             margin-bottom: 10px
                             margin-top: 10px
                             transform: rotate(90deg)
-                    .content
-                        margin-left: 30px
-                        padding: 10px
-                        border: 1px dashed $primary-color
-                        border-radius: 5px
+
 
         .personal-projects
             @extend .section-card
             display: flex
             flex-flow: column
             padding: 10px
+
+            @media screen and (min-width: $breakpoint-phone)
+                    .project-wrapper
+                        flex-flow: row !important
+                        .project
+                            width: 30% !important
+
             .project-wrapper
+                margin-top: 40px
+
                 display: flex
                 flex-flow: column
-                margin-top: 100px
+                gap: 10px
+                justify-content: start
+
                 .project
-                    margin-top: 10px
                     padding: 10px
                     background-color: $primary-color
                     color: white
-                    min-height: 200px
+
                     .title-wrapper
                         display: flex
                         flex-flow: row
@@ -411,13 +406,13 @@ i
                             background-color: $projects-color
                             border-radius: 5px
                             padding: 5px
-                            padding: 5px
                             font-size: smaller
                     .about
                         p
                             border: 1px solid $primary-color
                     .techs
                         display: flex
+                        flex-wrap: wrap
                         span
                             border: 1px solid $intro-color
                             padding: 5px
@@ -557,26 +552,10 @@ i
                     .bottom-bar
                         color: white
 
-                .personal-projects
-                    .project-wrapper
-                        display: flex
-                        flex-flow: row
-                        flex-wrap: wrap
-                        margin-top: 50px !important
-
-                        .project
-                            width: 400px
-                            margin: 20px
-                            height: fit-content
-                            .about
-                                p
-                                    max-width: 100%
-
                 .social
                     .edu-path
-                        margin-top: 0px
+                        margin-top: 0
                 .skills
-
                     .skills-intro
                         padding: 30px
                         margin: 30px
