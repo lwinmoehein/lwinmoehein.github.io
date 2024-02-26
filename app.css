@@ -293,6 +293,7 @@ i {
   z-index: 200;
   background-color: #2274A5;
   color: white;
+  cursor: pointer;
 }
 
 .go-down i:active {
