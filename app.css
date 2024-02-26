@@ -438,12 +438,11 @@ i {
 }
 .body-wrapper .section-wrapper .intro .about p {
   color: white;
-  border: 1px solid #2274A5;
-  border-radius: 5px;
   padding: 20px;
+  font-weight: lighter;
 }
 .body-wrapper .section-wrapper .intro .about p:hover {
-  border: 1px solid white;
+  border: 1px solid black;
 }
 .body-wrapper .section-wrapper .intro img {
   border-radius: 5px;
