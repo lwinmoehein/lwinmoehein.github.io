@@ -241,6 +241,9 @@ i
         #personal
             background-color: $primary-color
             padding: 10px
+        #certificates
+            background-color: $education-color
+            padding: 10px
         #skills
             background-color: $education-color
             padding: 10px
@@ -368,6 +371,51 @@ i
                             margin-top: 10px
                             transform: rotate(90deg)
 
+        .certificates
+                @extend .section-card
+                display: flex
+                flex-flow: column
+                padding: 10px
+
+                @media screen and (min-width: $breakpoint-phone)
+                    .certificate-wrapper
+                        grid-template-columns: 1fr 1fr !important
+                        column-gap: 20px !important
+                        row-gap: 30px !important
+
+                .certificate-wrapper
+                    margin-top: 40px
+
+                    display: grid
+                    grid-template-columns: 1fr
+                    column-gap: 5px
+                    row-gap: 50px
+
+                    .certificate
+                        padding: 10px
+                        border: 1px solid black
+                        color: black
+                        display: flex
+                        flex-flow: column
+                        justify-content: space-between
+                        .title
+                            display: flex
+                            align-items: center
+                        .type
+                            color: black
+                        .btn
+                            display: flex
+                            justify-content: center
+                            color: white
+                            font-weight: bold
+                            background: black
+                            margin-top: 10px
+                            margin-bottom: 5px
+
+                            i
+                                color: white
+                            a
+                                color: white
 
         .personal-projects
             @extend .section-card

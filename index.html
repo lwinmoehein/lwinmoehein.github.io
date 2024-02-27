@@ -162,6 +162,9 @@
                         <a href="#personal">Projects</a>
                     </div>
                     <div class="mobile-nav-item nav">
+                        <a href="#certificates">Certificates</a>
+                    </div>
+                    <div class="mobile-nav-item nav">
                         <a href="#skills">Skills</a>
                     </div>
                     <div class="mobile-nav-item nav">
@@ -184,6 +187,9 @@
                     </div>
                     <div class="nav-item nav">
                         <a href="#personal">Projects</a>
+                    </div>
+                    <div class="nav-item nav">
+                        <a href="#certificates">Certificates</a>
                     </div>
                     <div class="nav-item nav">
                         <a href="#skills">Skills</a>
@@ -305,7 +311,6 @@
                     <h3 class="section-title" data-hash="#personal"><span class="bottom-bar">Personal</span> Projects
                     </h3>
                     <div class="personal-projects">
-
                         <div class="project-wrapper">
                             <div class="project">
                                 <div>
@@ -467,7 +472,68 @@
                         </div>
                     </div>
                 </section>
+                <section id="certificates">
+                    <h3 class="section-title" data-hash="#certificates"><span class="bottom-bar">Certificates</span>
+                    </h3>
+                    <div class="certificates">
+                        <div class="certificate-wrapper">
+                            <div class="certificate">
+                                <div>
+                                    <div class="title-wrapper">
+                                        <div class="title">
+                                            <img src="images/solution-architect-associate.png" style="object-fit: cover" width="80" height="80"/>
+                                            <div>
+                                                 <div class="bold">
+                                                     AWS Certified Solutions Architect – Associate
+                                                 </div>
+                                                <div>
+                                                    <small class="type">Issued by <i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="about">
+                                        <p>This is my first professional certificate in cloud computing. By achieving this certificate , I get to design and implement scalable,durable and performant cloud applications using AWS technologies.</p>
+                                    </div>
+                                </div>
+                                <div class="btn">
+                                    <a  href="https://www.credly.com/badges/e566824e-e336-40ce-b5b6-164c36503903">
+                                        View Credential
+                                        <i class="fa-solid fa-link fa-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="certificate">
+                                <div>
+                                    <div class="title-wrapper">
+                                        <div class="title">
+                                            <img src="images/practitioner-cloud-quest.png" style="object-fit: cover" width="80" height="80"/>
+                                            <div>
+                                                <div class="bold">
+                                                    AWS Cloud Quest: Cloud Practitioner
+                                                </div>
+                                                <div>
+                                                    <small class="type">Issued by <i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="about">
+                                        <p>This is my first AWS Cloud related certificate.I gained foundational knowledge about AWS infrastructure and services it offers.</p>
+                                    </div>
+                                </div>
+                                <div class="btn">
+                                    <a  href="https://www.credly.com/badges/5b2b3e6f-c4bb-465a-8cae-1929cbab78fb">
+                                        View Credential
+                                        <i class="fa-solid fa-link fa-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section id="skills">
+                    <hr/>
                     <h3 class="section-title" data-hash="#skills"><span class="bottom-bar">Language &</span> Frameworks
                     </h3>
 
@@ -738,25 +804,28 @@
             href: "#social",
             next: {
                 href: "#about-me",
-                    next: {
+                next: {
                         href: "#experience",
                         next: {
                             href: "#personal",
                             next: {
-                                href: "#skills",
+                                href: "#certificates",
                                 next: {
-                                    href: "#education",
+                                    href: "#skills",
                                     next: {
-                                        href: "#social"
+                                        href: "#education",
+                                        next: {
+                                            href: "#social"
+                                        }
                                     }
+                                }
                             }
                         }
                     }
                 }
-            }
         }
 
-        let sections = [social.next, social.next.next, social.next.next.next, social.next.next.next.next, social.next.next.next.next.next, social]
+        let sections = [social.next, social.next.next, social.next.next.next, social.next.next.next.next, social.next.next.next.next.next, social.next.next.next.next.next.next, social]
 
         function onDrawerToggled(isClosed = true) {
             if (isClosed) {

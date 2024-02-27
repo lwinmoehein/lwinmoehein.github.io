@@ -192,7 +192,7 @@ a {
   font-weight: bold;
 }
 
-.section-card, .body-wrapper .section-wrapper .social, .body-wrapper .section-wrapper .skills, .body-wrapper .section-wrapper .personal-projects, .body-wrapper .section-wrapper .experience, .body-wrapper .section-wrapper .education, .body-wrapper .section-wrapper .intro {
+.section-card, .body-wrapper .section-wrapper .social, .body-wrapper .section-wrapper .skills, .body-wrapper .section-wrapper .personal-projects, .body-wrapper .section-wrapper .certificates, .body-wrapper .section-wrapper .experience, .body-wrapper .section-wrapper .education, .body-wrapper .section-wrapper .intro {
   padding: 20px;
   min-height: 100vh;
   display: flex;
@@ -403,6 +403,10 @@ i {
   background-color: #2274A5;
   padding: 10px;
 }
+.body-wrapper .section-wrapper #certificates {
+  background-color: #E9F1F7;
+  padding: 10px;
+}
 .body-wrapper .section-wrapper #skills {
   background-color: #E9F1F7;
   padding: 10px;
@@ -534,6 +538,55 @@ i {
   margin-bottom: 10px;
   margin-top: 10px;
   transform: rotate(90deg);
+}
+.body-wrapper .section-wrapper .certificates {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+}
+@media screen and (min-width: 600px) {
+  .body-wrapper .section-wrapper .certificates .certificate-wrapper {
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 20px !important;
+    row-gap: 30px !important;
+  }
+}
+.body-wrapper .section-wrapper .certificates .certificate-wrapper {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 5px;
+  row-gap: 50px;
+}
+.body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate {
+  padding: 10px;
+  border: 1px solid black;
+  color: black;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate .title {
+  display: flex;
+  align-items: center;
+}
+.body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate .type {
+  color: black;
+}
+.body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate .btn {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  background: black;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate .btn i {
+  color: white;
+}
+.body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate .btn a {
+  color: white;
 }
 .body-wrapper .section-wrapper .personal-projects {
   display: flex;
