@@ -6,9 +6,10 @@ $intro-color: #22BBCC
 $education-color: #E9F1F7
 $experience-color: #816C61
 $projects-color: #131B23
-$laravel-color: #f72c1f
+$laravel-color: #f9322c
 $js-color: #efd81d
 $php-color: #4d588e
+$vue-color:#42b883
 
 @use 'sass/_modal'
 @use "sass/_profile_image"
@@ -47,6 +48,8 @@ body
     color: $laravel-color
 .php
     color: $php-color
+.vue
+    color: $vue-color
 
 a
     text-decoration: none
@@ -130,6 +133,7 @@ i
         align-items: center
         z-index: 200
         background-color: $primary-color
+        border: 1px solid white
         color: white
         cursor: pointer
 .go-down
@@ -279,10 +283,10 @@ i
                     color: white
                 p
                     color: white
-                    padding: 20px
+                    padding: 10px
                     font-weight: lighter
-                p:hover
                     border: 1px solid black
+                    background-color: black
 
             img
                 border-radius: 5px
@@ -478,11 +482,11 @@ i
                         display: flex
                         flex-wrap: wrap
                         span
-                            border: 0.2px solid $intro-color
-                            padding: 1px 5px
+                            border: 0.2px solid black
+                            padding: 1px 10px
                             margin: 2px
-                            font-size: x-small
-                            color: black
+                            font-size: small
+                            color: white !important
 
 
         .skills
@@ -493,7 +497,7 @@ i
                 padding: 20px !important
 
             .skills-wrapper
-                padding-top: 60px
+                padding-top: 40px !important
                 display: grid
                 grid-template-columns: 1fr
                 height: fit-content
