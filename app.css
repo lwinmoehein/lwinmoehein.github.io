@@ -561,7 +561,12 @@ i {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 5px;
-  row-gap: 50px;
+  row-gap: 20px;
+}
+@media screen and (min-width: 600px) {
+  .body-wrapper .section-wrapper .certificates .certificate-wrapper {
+    row-gap: 50px;
+  }
 }
 .body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate {
   padding: 10px;
@@ -610,7 +615,12 @@ i {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 5px;
-  row-gap: 50px;
+  row-gap: 20px;
+}
+@media screen and (min-width: 600px) {
+  .body-wrapper .section-wrapper .personal-projects .project-wrapper {
+    row-gap: 50px;
+  }
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project {
   padding: 10px;

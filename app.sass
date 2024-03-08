@@ -393,7 +393,10 @@ i
                     display: grid
                     grid-template-columns: 1fr
                     column-gap: 5px
-                    row-gap: 50px
+                    row-gap: 20px
+
+                    @media screen and (min-width: $breakpoint-phone)
+                      row-gap: 50px
 
                     .certificate
                         padding: 10px
@@ -439,7 +442,10 @@ i
                 display: grid
                 grid-template-columns: 1fr
                 column-gap: 5px
-                row-gap: 50px
+                row-gap: 20px
+
+                @media screen and (min-width: $breakpoint-phone)
+                    row-gap: 50px
 
                 .project
                     padding: 10px
