@@ -24,16 +24,84 @@ $modal-backdrop-bg: rgba(0, 0, 0, 0.5)
             overflow-y: auto
             border-radius: 5px
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
-            p
+
+
+            .modal-body
               padding: 10px
+
+            .technologies
+              display: flex
+              gap: 5px
+              flex-wrap: wrap
+              span
+                border: 0.5px solid v.$primary-color
+                padding: 3px
+
+            h3
+              color: v.$primary-color !important
+              margin-top: 20px
+
+            .slider
+              display: grid
+              grid-template-columns: 1fr 8fr 1fr
+              margin-top: 30px
+              .start-button
+                display: flex
+                align-items: center
+                justify-content: center
+                cursor: pointer
+              @media screen and (min-width: v.$breakpoint-phone)
+                .start-button
+                  justify-content: start !important
+                .end-button
+                  justify-content: end !important
+
+              .end-button
+                display: flex
+                align-items: center
+                justify-content: center
+                cursor: pointer
+              .slides
+                display: flex
+                align-items: center
+                justify-items: center
+                transition: transform 0.5s ease-in-out
+              .slide
+                display: flex
+                flex-flow: column
+                width: 100%
+                .detail
+                  display: flex
+                  flex-flow: column
+                  justify-content: center
+                  align-items: center
+                  width: 100%
+              img
+                width: 100%
+                height: auto
+                object-fit: cover
+              @media screen and (min-width: v.$breakpoint-phone)
+                .slide
+                  flex-flow: row
+                img
+                  max-width: 400px
+                  height: 400px
+                  object-fit: cover
+
+
+              button
+                background-color: rgba(0, 0, 0, 0.5)
+                color: #fff
+                border: none
+                padding: 10px 20px
+                cursor: pointer
 
     .modal-header
         border-bottom: 1px solid #ddd
         display: flex
-        padding-left: 10px
-        padding-right: 10px
         justify-content: space-between
         align-items: center
+        padding: 10px
     .modal-close
         font-weight: bold
         color: #333
@@ -43,6 +111,8 @@ $modal-backdrop-bg: rgba(0, 0, 0, 0.5)
         .modal-content
             width: 90% !important
             height: 90% !important
+            .slide
+              grid-template-columns: 1fr 4fr 1fr !important
 
 .modal-backdrop.show
     background-color: $modal-backdrop-bg

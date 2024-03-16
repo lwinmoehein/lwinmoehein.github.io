@@ -150,7 +150,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div>
-                        <p x-text="currentProjectDetail.title" class="modal-title"></p>
+                        <h3 x-text="currentProjectDetail.title" class="modal-title"></h3>
                     </div>
                     <div x-on:click="currentProjectDetail=''">
                         <p class="fa-lg modal-close fa fa-close"></p>
@@ -159,7 +159,37 @@
                 <div class="modal-body">
                     <p x-text="currentProjectDetail.description">
                     </p>
+                    <h3>Technologies</h3>
+                    <div class="technologies">
+                        <template x-for="technology in currentProjectDetail.technologies">
+                            <span x-text="technology"></span>
+                        </template>
+                    </div>
+                    <h3>Features</h3>
+                    <div class="slider">
+                        <div class="start-button">
+                            <p @click="prev()" class="prev">
+                                <i class="fa fa-caret-left"></i>
+                            </p>
+                        </div>
 
+                        <div class="slides" x-bind:style="'transform: translateX(-' + currentIndex * 100 + '%)'">
+                            <template x-for="(feature, index) in currentProjectDetail.features" :key="index">
+                                <div class="slide" x-show="currentProjectFeature.name==feature.name">
+                                    <img src="images/lwinmoehein.jpg" >
+                                    <div class="detail">
+                                        <h4 x-text="feature.name"></h4>
+                                        <p x-text="feature.description"></p>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                        <div class="end-button">
+                            <p @click="next()" class="next">
+                                <i class="fa fa-caret-right"></i>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -341,7 +371,7 @@
                     <div class="personal-projects">
                         <div class="project-wrapper">
                             <template x-for="projectDetail in projectDetails">
-                                <div class="project" x-on:click="currentProjectDetail=projectDetail">
+                                <div class="project" x-on:click="onProjectClick(projectDetail)">
                                     <div>
                                         <div class="title-wrapper">
                                             <div class="title" x-text="projectDetail.title"></div>
