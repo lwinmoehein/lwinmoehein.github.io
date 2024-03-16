@@ -159,6 +159,11 @@
                 <div class="modal-body">
                     <p x-text="currentProjectDetail.description">
                     </p>
+                    <div>
+                        <div>
+                            <a :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
+                        </div>
+                    </div>
                     <h3>Technologies</h3>
                     <div class="technologies">
                         <template x-for="technology in currentProjectDetail.technologies">
@@ -168,15 +173,15 @@
                     <h3>Features</h3>
                     <div class="slider">
                         <div class="start-button">
-                            <p @click="prev()" class="prev">
-                                <i class="fa fa-caret-left"></i>
+                            <p  class="prev">
+                                <i  @click="prev()" class="fa fa-arrow-left"></i>
                             </p>
                         </div>
 
                         <div class="slides" x-bind:style="'transform: translateX(-' + currentIndex * 100 + '%)'">
                             <template x-for="(feature, index) in currentProjectDetail.features" :key="index">
                                 <div class="slide" x-show="currentProjectFeature.name==feature.name">
-                                    <img src="images/lwinmoehein.jpg" >
+                                    <img :src="feature.image_url" >
                                     <div class="detail">
                                         <h4 x-text="feature.name"></h4>
                                         <p x-text="feature.description"></p>
@@ -185,8 +190,8 @@
                             </template>
                         </div>
                         <div class="end-button">
-                            <p @click="next()" class="next">
-                                <i class="fa fa-caret-right"></i>
+                            <p  class="next">
+                                <i @click="next()" class="fa fa-arrow-right"></i>
                             </p>
                         </div>
                     </div>
@@ -378,7 +383,7 @@
                                             <div class="type" x-text="projectDetail.type_name"></div>
                                         </div>
                                         <div class="about">
-                                            <p x-text="projectDetail.description"></p>
+                                            <p x-text="projectDetail.short_description"></p>
                                         </div>
                                     </div>
                                 </div>

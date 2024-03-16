@@ -1,3 +1,16 @@
+.visit-site {
+  background-color: #2274A5;
+  border-radius: 3px;
+  color: white;
+  padding: 3px;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+}
+
 .modal-fullscreen .modal-dialog {
   z-index: 100;
   position: fixed;
@@ -17,7 +30,7 @@
   width: 100%;
   height: 100%;
   background-color: #fff;
-  overflow-y: auto;
+  overflow-y: scroll;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -39,13 +52,16 @@
 }
 .modal-fullscreen .modal-dialog .modal-content .slider {
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 10fr 1fr;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
 }
 .modal-fullscreen .modal-dialog .modal-content .slider .start-button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.modal-fullscreen .modal-dialog .modal-content .slider .start-button i {
   cursor: pointer;
 }
 @media screen and (min-width: 600px) {
@@ -60,6 +76,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.modal-fullscreen .modal-dialog .modal-content .slider .end-button i {
   cursor: pointer;
 }
 .modal-fullscreen .modal-dialog .modal-content .slider .slides {
@@ -72,27 +90,40 @@
   display: flex;
   flex-flow: column;
   width: 100%;
+  gap: 10px;
 }
 .modal-fullscreen .modal-dialog .modal-content .slider .slide .detail {
+  padding: 5px;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 100%;
+  text-align: start;
+}
+.modal-fullscreen .modal-dialog .modal-content .slider .slide .detail h4 {
+  border-bottom: 3px solid #2274A5;
 }
 .modal-fullscreen .modal-dialog .modal-content .slider img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: scale-down;
+  outline: none !important;
+  border-width: 0 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px;
 }
 @media screen and (min-width: 600px) {
   .modal-fullscreen .modal-dialog .modal-content .slider .slide {
     flex-flow: row;
   }
   .modal-fullscreen .modal-dialog .modal-content .slider img {
-    max-width: 400px;
-    height: 400px;
-    object-fit: cover;
+    width: 70%;
+    height: 500px;
+    padding: 5px;
+    object-fit: scale-down;
+    outline: none !important;
+    border-width: 0 !important;
   }
 }
 .modal-fullscreen .modal-dialog .modal-content .slider button {
@@ -119,8 +150,9 @@
     width: 90% !important;
     height: 90% !important;
   }
-  .modal-fullscreen .modal-content .slide {
-    grid-template-columns: 1fr 4fr 1fr !important;
+  .modal-fullscreen .modal-content .slider {
+    grid-template-columns: 1fr 18fr 1fr !important;
+    box-shadow: none !important;
   }
 }
 
