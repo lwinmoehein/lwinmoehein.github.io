@@ -6,6 +6,10 @@ body {
   background-color: #2274A5 !important;
 }
 
+[x-cloak] {
+  display: none !important;
+}
+
 @font-face {
   font-family: WorkSans;
   src: url("./webfonts/WorkSans-Regular.ttf");
