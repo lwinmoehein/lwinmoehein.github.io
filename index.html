@@ -121,11 +121,12 @@
     </style>
     <script src="https://kit.fontawesome.com/3f18ac30ff.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="js/data.js"></script>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="main-section-wrapper.css">
 </head>
 
-<body x-data="{ currentProjectDetail: '' }">
+<body x-data="utils">
     <div id="loading-status-wrapper">
         <div class="lds-default">
             <div></div>
@@ -149,33 +150,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div>
-                        <p class="modal-title">Modal Title</p>
+                        <p x-text="currentProjectDetail.title" class="modal-title"></p>
                     </div>
                     <div x-on:click="currentProjectDetail=''">
                         <p class="fa-lg modal-close fa fa-close"></p>
                     </div>
                 </div>
                 <div class="modal-body">
-                    <p>
-
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-
-                        Nullam vitae nisi:
-
-                        Curabitur sodales ligula in libero.
-                        Sed dignissim lacinia nunc.
-                        Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.
-                        Maecenas mattis. Sed convallis tristique sem.
-                        Integer ante arcu:
-
-                        consequat imperdiet.
-                        Integer ante arcu,
-                        accumsan a, consectetuer eget, posuere ut, mauris.
-                        Pellentesque in semper:
-
-                        congue libero, ac tellus. Integer fermentum elit in tellus.
-                        Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. Vivamus aliquet elit ac nisl. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae.
-
+                    <p x-text="currentProjectDetail.description">
                     </p>
 
                 </div>
@@ -358,171 +340,19 @@
                     </h3>
                     <div class="personal-projects">
                         <div class="project-wrapper">
-                            <div class="project" x-on:click="currentProjectDetail='test'">
-                                <div>
-                                    <div class="title-wrapper">
-                                        <div class="title">englishdailyacademy.com</div>
-                                        <div class="type">Website</div>
-                                    </div>
-                                    <div class="about">
-                                        <p>English Daily Academy is a learning platform for English learners written in Laravel and VueJS. It comes with an admin portal to manage courses and other website data.Deployed on a Hostinger VPS and configured CI/CD with Github Actions. </p>
-                                    </div>
-                                    <div class="techs">
-                                        <span>Laravel</span>
-                                        <span>Vue</span>
-                                        <span>Nginx</span>
-                                        <span>MySQL</span>
-                                        <span>Javascript</span>
-                                        <span>HTML</span>
-                                        <span>Tailwind</span>
-                                        <span>Vimeo Video</span>
-                                        <span>Hostinger</span>
-                                        <span>Cloudflare</span>
+                            <template x-for="projectDetail in projectDetails">
+                                <div class="project" x-on:click="currentProjectDetail=projectDetail">
+                                    <div>
+                                        <div class="title-wrapper">
+                                            <div class="title" x-text="projectDetail.title"></div>
+                                            <div class="type" x-text="projectDetail.type_name"></div>
+                                        </div>
+                                        <div class="about">
+                                            <p x-text="projectDetail.description"></p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="btn">
-                                    <a  href="https://englishdailyacademy.com">
-                                        Visit Website
-                                        <i class="fa-solid fa-link fa-sm"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <div>
-                                    <div class="title-wrapper">
-                                        <div class="title">Book Center</div>
-                                        <div class="type">Web App</div>
-                                    </div>
-                                    <div class="about">
-                                        <p>A book review SPA demo website where users can write book reviews and rate stars. Laravel is used to provide RESTFul API which is hosted on AWS EC2 with RDS as a database. This VueJS SPA applications is integrated with AWS Code Pipeline to automatically build and deploy static files S3. </p>
-                                    </div>
-                                    <div class="techs">
-                                        <span>Vue2</span>
-                                        <span>Vuex</span>
-                                        <span>Laravel API</span>
-                                        <span>AWS EC2</span>
-                                        <span>AWS RDS (MySQL)</span>
-                                        <span>AWS Code Pipeline</span>
-                                        <span>Cloudflare</span>
-                                        <span>Tailwind</span>
-                                    </div>
-                                </div>
-                                <div class="btn">
-                                    <a  href="https://bookcenter.lwinmoehein.info" >
-                                        View Demo
-                                        <i class="fa-solid fa-link fa-sm"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <div>
-                                    <div class="title-wrapper">
-                                        <div class="title">Lwin Moe Hein's Portfolio</div>
-                                        <div class="type">Web App</div>
-                                    </div>
-                                    <div class="about">
-                                        <p>This is my current portfolio site. I did not want to use templates so I developed my own portfolio site with pure HTML,Javascript and HTML. No other libraries were used.</p>
-                                    </div>
-                                    <div class="techs">
-                                        <span>Javascript</span>
-                                        <span>Github Pages</span>
-                                        <span>Cloudflare</span>
-                                        <span>SASS</span>
-                                        <span>HTML</span>
-                                    </div>
-                                </div>
-                                <div class="btn">
-                                    <a  href="https://lwinmoehein.info">
-                                        Visit Website
-                                        <i class="fa-solid fa-link fa-sm"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="project">
-                                <div>
-                                    <div class="title-wrapper">
-                                        <div class="title">MM Mobile Tools</div>
-                                        <div class="type">Library</div>
-                                    </div>
-                                    <div class="about">
-                                        <p>A javascript library for validating Myanmar phone numbers. This library is integrated with Github Actions to deploy releases to NPM automatically. Codecov is also used to report code coverage inside README file.</p>
-                                    </div>
-                                    <div class="techs">
-                                        <span>Typescript</span>
-                                        <span>NPM</span>
-                                        <span>Codecov</span>
-                                        <span>Github Actions</span>
-                                    </div>
-                                </div>
-                                <div class="btn">
-                                    <a  href="https://github.com/lwinmoehein/MM-Mobile-Tools-JS" >
-                                        Github
-                                        <i class="fa-brands fa-github fa-sm"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <div>
-                                    <div class="title-wrapper">
-                                        <div class="title">M Knowledge</div>
-                                        <div class="type">Android App</div>
-                                    </div>
-                                    <div class="about">
-                                        <p>M Knowledge is an android application for Wikipedia(Myanmar) lovers where users
-                                            can search offline articles in text-only mode.</p>
-                                    </div>
-                                    <div class="techs">
-                                        <span>Kotlin</span>
-                                        <span>MVVM</span>
-                                        <span>Jetpack Compose</span>
-                                        <span>Room</span>
-                                        <span>Hilt</span>
-                                        <span>Clean Architecture</span>
-                                        <span>PlayStore</span>
-                                    </div>
-                                </div>
-                                <div class="btn">
-                                    <a  href="https://play.google.com/store/apps/details?id=lab.justonebyte.mknowledge&hl=en&gl=US&pli=1" >
-                                        Google Play
-                                        <i class="fa-brands fa-google-play fa-sm"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <div>
-                                    <div class="title-wrapper">
-                                        <div class="title">Simple Expense</div>
-                                        <div class="type">Android App</div>
-                                    </div>
-                                    <div class="about">
-                                        <p>A personal expense tracker android application. Users can record their expenses with categories , export files , sync data with their Google accounts to AWS.</p>
-                                    </div>
-                                    <div class="techs">
-                                        <span>Kotlin</span>
-                                        <span>MVVM</span>
-                                        <span>Jetpack Compose</span>
-                                        <span>Room</span>
-                                        <span>Hilt</span>
-                                        <span>Clean Architecture</span>
-                                        <span>Laravel API</span>
-                                        <span>Google OAuth</span>
-                                        <span>AWS EC2</span>
-                                        <span>Github Actions</span>
-                                        <span>AWS RDS</span>
-                                        <span>Cloudflare</span>
-                                    </div>
-                                </div>
-                                <div class="btn">
-                                    <a  href="https://play.google.com/store/apps/details?id=lab.justonebyte.simpleexpense&pcampaignid=web_share" >
-                                        Google Play
-                                        <i class="fa-brands fa-google-play fa-sm"></i>
-                                    </a>
-                                </div>
-
-                            </div>
-
-
+                            </template>
                         </div>
                     </div>
                 </section>

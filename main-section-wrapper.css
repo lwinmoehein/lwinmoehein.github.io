@@ -322,32 +322,6 @@
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .about p {
   border: 1px solid #2274A5;
 }
-.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .btn {
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  background: black;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .btn i {
-  color: white;
-}
-.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .btn a {
-  color: white;
-}
-.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .techs {
-  display: flex;
-  flex-wrap: wrap;
-}
-.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .techs span {
-  border: 0.2px solid black;
-  padding: 1px 10px;
-  margin: 2px;
-  font-size: small;
-  color: white !important;
-}
 .body-wrapper .section-wrapper .skills {
   padding: 10px !important;
 }
