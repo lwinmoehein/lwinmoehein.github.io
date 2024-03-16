@@ -1,24 +1,10 @@
-$primary-color: #2274A5
-$breakpoint-phone: 600px
-$active-nav-color: #131B23
-$icons-color: white
-$intro-color: #22BBCC
-$education-color: #E9F1F7
-$experience-color: #816C61
-$projects-color: #131B23
-$laravel-color: #f9322c
-$js-color: #efd81d
-$php-color: #4d588e
-$vue-color:#42b883
-
-@use 'sass/_modal'
-@use "sass/_profile_image"
+@use "sass/_variables" as v
 
 html
     scroll-behavior: auto
 
 body
-    background-color: $primary-color !important
+    background-color: v.$primary-color !important
 
 @font-face
     font-family: WorkSans
@@ -31,32 +17,32 @@ body::-webkit-scrollbar-track
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
 
 body::-webkit-scrollbar-thumb
-    background-color: $primary-color
-    outline: 1px solid $primary-color
+    background-color: v.$primary-color
+    outline: 1px solid v.$primary-color
 
 body
     font-family: WorkSans, serif
 
 .active-nav
-    background-color: $active-nav-color
+    background-color: v.$active-nav-color
     a
         color: white !important
 
 .js
-    color: $js-color
+    color: v.$js-color
 .laravel
-    color: $laravel-color
+    color: v.$laravel-color
 .php
-    color: $php-color
+    color: v.$php-color
 .vue
-    color: $vue-color
+    color: v.$vue-color
 
 a
     text-decoration: none
     padding: 10px
 
 .color-text
-    color: $primary-color
+    color: v.$primary-color
 .bold
     font-weight: bold
 .section-card
@@ -69,7 +55,7 @@ a
     left: 20px
     width: fit-content
     position: sticky
-    color: $primary-color
+    color: v.$primary-color
     font-weight: bold
     z-index: 99
     margin: 0
@@ -88,12 +74,12 @@ a
 .bottom-bar
     width: 10px
     height: 10px
-    background-color: $primary-color
+    background-color: v.$primary-color
     display: inline
     color: white
 
 i
-    color: $primary-color
+    color: v.$primary-color
     font-size: 30px
     display: flex
     justify-content: center
@@ -132,7 +118,7 @@ i
         justify-content: center
         align-items: center
         z-index: 200
-        background-color: $primary-color
+        background-color: v.$primary-color
         border: 1px solid white
         color: white
         cursor: pointer
@@ -154,7 +140,7 @@ i
         width: 100%
         display: flex
         justify-content: flex-end
-        background-color: $primary-color
+        background-color: v.$primary-color
 
         i
             color: white
@@ -168,13 +154,13 @@ i
         align-items: center
         width: 100%
         height: 100%
-        background-color: $primary-color
+        background-color: v.$primary-color
         .menu-grid
             display: grid
             row-gap: 10px
             margin-bottom: 50%
 
-@media screen and (min-width: $breakpoint-phone)
+@media screen and (min-width: v.$breakpoint-phone)
     .menu-bar-wrapper
         display: none
     .drawer-menu
@@ -193,26 +179,26 @@ i
         right: 50px
         position: fixed
         i:hover
-            background-color: $primary-color
+            background-color: v.$primary-color
             color: white
     .section-title
         left: 20%
-        border-bottom: 3px solid $primary-color
+        border-bottom: 3px solid v.$primary-color
         padding-bottom: 3px
         .bottom-bar
             background-color: transparent
-            color: $primary-color
+            color: v.$primary-color
 
 .body-wrapper
     display: flex
 
     a
-        color: $primary-color
+        color: v.$primary-color
 
     .nav-wrapper
         display: none
         
-    @media screen and (min-width: $breakpoint-phone)
+    @media screen and (min-width: v.$breakpoint-phone)
         .nav-wrapper
             padding: 20px
             width: 200px
@@ -228,381 +214,3 @@ i
         .section-wrapper
             margin-left: 240px
 
-
-    .section-wrapper
-        flex: 3
-
-        #intro
-            padding: 10px
-            background-color: $intro-color
-
-        #education
-            background-color: $primary-color
-            padding: 10px
-        #experience
-            background-color: $education-color
-            padding: 10px
-        #personal
-            background-color: $primary-color
-            padding: 10px
-        #certificates
-            background-color: $education-color
-            padding: 10px
-        #skills
-            background-color: $education-color
-            padding: 10px
-
-        #social
-            background-color: $education-color
-            padding: 10px
-
-        .intro
-            @extend .section-card
-            flex-flow: column
-            align-items: center
-            justify-content: center
-
-            .about
-                display: flex
-                flex-flow: column
-                align-items: center
-                font-weight: bolder
-
-                h1
-                    margin: 0
-                    color: white
-                    font-size: 2.5rem
-
-                h3
-                    color: white
-                    margin-top: 0
-                    margin-bottom: 0
-
-                h6
-                    margin: 10px
-                    color: white
-                p
-                    color: white
-                    padding: 10px
-                    font-weight: lighter
-                    border: 1px solid black
-                    background-color: black
-
-
-            .profile-image 
-                width: 150px
-                height: 150px
-                border-radius: 100% !important
-                object-fit: cover
-                border: 1px solid white
-        .education
-            @extend .section-card
-            flex-flow: column
-            align-items: start
-            justify-content: start
-            padding: 10px !important
-            margin-top: 60px !important
-
-            @media screen and (min-width: $breakpoint-phone)
-                padding: 20px !important
-
-            .edu-path
-                display: flex
-                flex-flow: column
-                justify-content: flex-start
-                align-items: flex-start
-
-                .item
-                    display: flex
-                    align-items: flex-start
-                    justify-content: center
-
-                    h5
-                        margin-top: 2px
-                        margin-left: 10px
-                        color: white
-                        margin-bottom: 10px
-                    ul
-                        color: white
-
-                    .indicator
-                        display: flex
-                        flex-flow: column
-                        .fa-school,.fa-university,.fa-question
-                            font-size: 15pt
-                            color: white !important
-                            transform: none
-                            margin-top: 0
-                        i
-                            color: white !important
-                            font-size: 7pt
-                            margin-bottom: 10px
-                            margin-top: 10px
-                            transform: rotate(90deg)
-
-
-
-        .experience
-            @extend .section-card
-            flex-flow: column
-            align-items: start
-            justify-content: start
-            margin-top: 60px
-
-            .edu-path
-                display: flex
-                flex-flow: column
-                justify-content: flex-start
-                align-items: flex-start
-
-                .item
-                    display: flex
-                    align-items: flex-start
-                    justify-content: center
-
-                    h5
-                        margin-top: 2px
-                        margin-left: 10px
-                        margin-bottom: 5px
-                    .indicator
-                        display: flex
-                        flex-flow: column
-                        .fa-briefcase,.fa-question
-                            font-size: 15pt
-                            transform: none
-                            margin-top: 0
-                        i
-                            font-size: 7pt
-                            margin-bottom: 10px
-                            margin-top: 10px
-                            transform: rotate(90deg)
-
-        .certificates
-                @extend .section-card
-                display: flex
-                flex-flow: column
-                padding: 10px
-
-                @media screen and (min-width: $breakpoint-phone)
-                    .certificate-wrapper
-                        grid-template-columns: 1fr 1fr !important
-                        column-gap: 20px !important
-                        row-gap: 30px !important
-
-                .certificate-wrapper
-                    margin-top: 40px
-
-                    display: grid
-                    grid-template-columns: 1fr
-                    column-gap: 5px
-                    row-gap: 20px
-
-                    @media screen and (min-width: $breakpoint-phone)
-                      row-gap: 50px
-
-                    .certificate
-                        padding: 10px
-                        border: 1px solid black
-                        color: black
-                        display: flex
-                        flex-flow: column
-                        justify-content: space-between
-                        .title
-                            display: flex
-                            align-items: center
-                        .type
-                            color: black
-                        .btn
-                            display: flex
-                            justify-content: center
-                            color: white
-                            font-weight: bold
-                            background: black
-                            margin-top: 10px
-                            margin-bottom: 5px
-
-                            i
-                                color: white
-                            a
-                                color: white
-
-        .personal-projects
-            @extend .section-card
-            display: flex
-            flex-flow: column
-            padding: 10px
-
-            @media screen and (min-width: $breakpoint-phone)
-                    .project-wrapper
-                        grid-template-columns: 1fr 1fr 1fr !important
-                        column-gap: 20px !important
-                        row-gap: 30px !important
-
-            .project-wrapper
-                margin-top: 40px
-
-                display: grid
-                grid-template-columns: 1fr
-                column-gap: 5px
-                row-gap: 20px
-
-                @media screen and (min-width: $breakpoint-phone)
-                    row-gap: 50px
-
-                .project
-                    padding: 10px
-                    border: 1px solid black
-                    color: white
-                    display: flex
-                    flex-flow: column
-                    justify-content: space-between
-
-                    .title-wrapper
-                        display: flex
-                        flex-flow: row
-                        justify-content: space-between
-                        .title
-                            font-weight: bolder
-                            border-bottom: 2px solid $projects-color
-                        .type
-                            background-color: $projects-color
-                            border-radius: 5px
-                            padding: 5px
-                            font-size: smaller
-                    .about
-                        p
-                            border: 1px solid $primary-color
-                    .btn
-                        display: flex
-                        justify-content: center
-                        color: white
-                        font-weight: bold
-                        background: black
-                        margin-top: 10px
-                        margin-bottom: 5px
-
-                        i
-                            color: white
-                        a
-                            color: white
-
-                    .techs
-                        display: flex
-                        flex-wrap: wrap
-                        span
-                            border: 0.2px solid black
-                            padding: 1px 10px
-                            margin: 2px
-                            font-size: small
-                            color: white !important
-
-
-        .skills
-            @extend .section-card
-            padding: 10px !important
-
-            @media screen and (min-width: $breakpoint-phone)
-                padding: 20px !important
-
-            .skills-wrapper
-                padding-top: 40px !important
-                display: grid
-                grid-template-columns: 1fr
-                height: fit-content
-                grid-row-gap: 20px
-                grid-column-gap: 100px
-
-                @media screen and (min-width: $breakpoint-phone)
-                    grid-template-columns: 1fr 1fr 1fr
-
-                .other-skills
-                    .title
-                        font-weight: bold
-                        color: $primary-color
-                        .tags
-                            padding: 10px
-                            display: flex
-                            flex-flow: row
-                            flex-wrap: wrap
-                            div
-                                background-color: $primary-color
-                                max-width: fit-content
-                                color: white
-                                padding: 2px
-                                margin: 3px
-
-                        .tags:nth-child(odd)
-                            margin-left: 5px
-                        .tags:nth-child(even)
-                            margin-right: 5px
-
-        .social
-            @extend .section-card
-            flex-flow: column
-            align-items: start
-
-            .edu-path
-                display: flex
-                flex-flow: column
-                justify-content: flex-start
-                align-items: flex-start
-                margin-top: 50px
-
-                .item
-                    display: flex
-                    align-items: flex-start
-                    justify-content: center
-                    margin-top: 10px
-
-                    h5
-                        margin-top: 0
-
-                    .indicator
-                        display: flex
-                        flex-flow: column
-                        .fa-arrow-right,.fa-address-book,.fa-envelope,.fa-phone,.fa-github,.fa-stack-overflow,.fa-linkedin
-                            font-size: 15pt
-                            transform: none
-
-                        .fa-ellipsis-v
-                            font-size: 15pt
-                            transform: rotate(180deg)
-                            margin-top: 1px
-                            margin-bottom: 1px
-                        i
-                            font-size: 7pt
-                            margin-bottom: 10px
-                            margin-top: 10px
-                            transform: rotate(90deg)
-                    .content
-                        margin-left: 30px
-                        padding: 10px
-                        border: 1px dashed $primary-color
-                        border-radius: 0px
-
-                        .title
-                            color: $primary-color
-                            font-weight: bolder
-                            margin-bottom: 10px
-                        a
-                            padding: 0
-                        img,a
-
-                            object-fit: contain
-                            display: block
-                            width: 100%
-                            height: 100%
-
-        @media screen and (min-width: $breakpoint-phone)
-            .section-title
-                color: white
-                background-color: black
-                padding: 5px 10px 5px 10px
-                span
-                    color: white
-                    .bottom-bar
-                        color: white
-
-                .social
-                    .edu-path
-                        margin-top: 0
