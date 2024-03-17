@@ -357,8 +357,7 @@
   }
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project:hover {
-  background-color: #222831;
-  color: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project {
   padding: 10px;
@@ -378,11 +377,16 @@
   border-bottom: 2px solid #131B23;
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper .type {
-  background-color: #131B23;
+  background-color: #222831;
   color: white;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: smaller;
+  padding: 1px 5px;
+  font-size: x-small;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper .type i {
+  color: white;
 }
 .body-wrapper .section-wrapper .skills {
   padding: 10px !important;

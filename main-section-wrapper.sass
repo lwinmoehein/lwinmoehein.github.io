@@ -173,8 +173,8 @@
           row-gap: 50px
 
         .project:hover
-          background-color: v.$primary-color
-          color: white
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8)
+
 
         .project
           padding: 10px
@@ -192,12 +192,15 @@
               font-weight: bolder
               border-bottom: 2px solid v.$projects-color
             .type
-              background-color: v.$projects-color
+              background-color: v.$primary-color
               color: white
-              border-radius: 5px
-              padding: 5px
-              font-size: smaller
-
+              padding: 1px 5px
+              font-size: x-small
+              display: flex
+              align-items: center
+              gap: 3px
+              i
+                color: white
 
 
 
