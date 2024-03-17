@@ -107,6 +107,48 @@ document.addEventListener('alpine:init', () => {
                         description:'Manage account and settings.'
                     }
                 ]
+            },
+            {
+                id:'simple-expense',
+                title:'Book Center - Book Review',
+                type_id:'web',
+                type_name:'Web',
+                demo_url:'https://bookcenter.lwinmoehein.info',
+                description:'Book Center is a demo Vue.js Single Page Application (SPA) with Laravel API.Amazon CodePipeline is used to automatically build Vue.js source files to static files and deploy built files to Amazon S3. Github Actions is also used to deploy Laravel API code changes to Amazon EC2. Amazon RDS is used as a database of the application.',
+                short_description: 'A book reviews website where users can browse books and write book reviews. Users can also bookmark their favorite books.',
+                technologies:['Laravel','Vue.js','Amazon EC2','Amazon RDS','Amazon CodePipeline','Cloudflare'],
+                features:[
+                    {
+                        name:'Login',
+                        image_url:'images/book-center/login.png',
+                        description:'Login with an email to access the website.'
+                    },
+                    {
+                        name:'Book Recommendation',
+                        image_url:'images/book-center/select_category.png',
+                        description:'Select favorite book categories to get recommended based on reviews.'
+                    },
+                    {
+                        name:'Home',
+                        image_url:'images/book-center/home.png',
+                        description:'Users can find latest books and recommended books.'
+                    },
+                    {
+                        name:'Book Detail',
+                        image_url:'images/book-center/detail.png',
+                        description:'Users can see details of a book, bookmark it or write a book review.'
+                    },
+                    {
+                        name:'Saved Books',
+                        image_url:'images/book-center/saved.png',
+                        description:'Books saved by the user can be seen at saved books.'
+                    },
+                    {
+                        name:'Settings',
+                        image_url:'images/book-center/settings.png',
+                        description:'Users can change account settings such as user name, email etc.'
+                    }
+                ]
             }
         ],
         next() {
