@@ -289,12 +289,12 @@
   }
 }
 .body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate {
-  padding: 10px;
-  border: 1px solid black;
+  padding: 20px;
   color: black;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 .body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate .title {
   display: flex;
@@ -305,18 +305,15 @@
 }
 .body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate .btn {
   display: flex;
-  justify-content: center;
-  color: white;
+  justify-content: start;
+  color: #222831 !important;
   font-weight: bold;
-  background: black;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-.body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate .btn i {
-  color: white;
+  background: transparent;
 }
 .body-wrapper .section-wrapper .certificates .certificate-wrapper .certificate .btn a {
-  color: white;
+  padding: 0;
+  text-decoration: underline;
+  font-size: small;
 }
 .body-wrapper .section-wrapper .personal-projects {
   display: flex;

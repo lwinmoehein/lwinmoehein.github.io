@@ -114,12 +114,14 @@
           row-gap: 50px
 
         .certificate
-          padding: 10px
-          border: 1px solid black
+          padding: 20px
+
           color: black
           display: flex
           flex-flow: column
           justify-content: space-between
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1)
+
           .title
             display: flex
             align-items: center
@@ -127,17 +129,17 @@
             color: black
           .btn
             display: flex
-            justify-content: center
-            color: white
-            font-weight: bold
-            background: black
-            margin-top: 10px
-            margin-bottom: 5px
+            justify-content: start
+            color: v.$primary-color !important
 
-            i
-              color: white
+            font-weight: bold
+            background: transparent
             a
-              color: white
+              padding: 0
+              text-decoration: underline
+              font-size: small
+
+
 
     .personal-projects
       @extend .section-card

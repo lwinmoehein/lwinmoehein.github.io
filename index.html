@@ -161,10 +161,10 @@
                     </p>
                     <div>
                         <div x-show="currentProjectDetail.type_id!=='android'">
-                            <a :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
+                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
                         </div>
                         <div  x-show="currentProjectDetail.type_id==='android'">
-                            <a :href="currentProjectDetail.demo_url" class="visit-site">Google Play <i class="fa fa-brands fa-google-play fa-sm" style="margin-left: 3px;color: white"></i></a>
+                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Google Play <i class="fa fa-brands fa-google-play fa-sm" style="margin-left: 3px;color: white"></i></a>
                         </div>
                     </div>
                     <h3>Technologies</h3>
@@ -485,18 +485,18 @@
                                                 <div>
                                                     <small class="type">Issued by <i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>
                                                 </div>
+                                                <div class="btn">
+                                                    <a  target="_blank" href="https://www.credly.com/badges/e566824e-e336-40ce-b5b6-164c36503903">
+                                                        View Credential
+                                                        <i class="fa-solid fa-link fa-sm"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="about">
                                         <p>This is my first professional certificate in cloud computing. By achieving this certificate , I get to design and implement scalable,durable and performant cloud applications using AWS technologies.</p>
                                     </div>
-                                </div>
-                                <div class="btn">
-                                    <a  href="https://www.credly.com/badges/e566824e-e336-40ce-b5b6-164c36503903">
-                                        View Credential
-                                        <i class="fa-solid fa-link fa-sm"></i>
-                                    </a>
                                 </div>
                             </div>
 
@@ -512,18 +512,18 @@
                                                 <div>
                                                     <small class="type">Issued by <i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>
                                                 </div>
+                                                <div class="btn">
+                                                    <a target="_blank"  href="https://www.credly.com/badges/c1bf6762-a560-4451-8d45-86029e13d87d/public_url">
+                                                        View Credential
+                                                        <i class="fa-solid fa-link fa-sm"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="about">
                                         <p>This is my first AWS Cloud related certificate.I gained foundational knowledge about AWS infrastructure and services it offers.</p>
                                     </div>
-                                </div>
-                                <div class="btn">
-                                    <a  href="https://www.credly.com/badges/c1bf6762-a560-4451-8d45-86029e13d87d/public_url">
-                                        View Credential
-                                        <i class="fa-solid fa-link fa-sm"></i>
-                                    </a>
                                 </div>
                             </div>
                             <div class="certificate">
@@ -538,18 +538,18 @@
                                                 <div>
                                                     <small class="type">Issued by <i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>
                                                 </div>
+                                                <div class="btn">
+                                                    <a target="_blank"  href="https://www.credly.com/badges/5b2b3e6f-c4bb-465a-8cae-1929cbab78fb">
+                                                        View Credential
+                                                        <i class="fa-solid fa-link fa-sm"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="about">
                                         <p>This is my first AWS Cloud related certificate.I gained foundational knowledge about AWS infrastructure and services it offers.</p>
                                     </div>
-                                </div>
-                                <div class="btn">
-                                    <a  href="https://www.credly.com/badges/5b2b3e6f-c4bb-465a-8cae-1929cbab78fb">
-                                        View Credential
-                                        <i class="fa-solid fa-link fa-sm"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -573,9 +573,12 @@
                                 </div>
                                 <div class="content">
                                     <div class="title"><a
+                                            target="_blank"
                                             href="https://stackoverflow.com/users/11811931/lwin-moe-hein">StackOverflow</a>
                                     </div>
-                                    <a href="https://stackoverflow.com/users/11811931/lwin-moe-hein"><img
+                                    <a
+                                            target="_blank"
+                                            href="https://stackoverflow.com/users/11811931/lwin-moe-hein"><img
                                             src="https://stackoverflow.com/users/flair/11811931.png" width="208"
                                             height="58"
                                             alt="profile for lwin moe hein at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
@@ -592,7 +595,7 @@
                                 </div>
 
                                 <div class="content">
-                                    <div class="title"><a href="https://github.com/lwinmoehein">Github</a></div>
+                                    <div class="title"><a target="_blank" href="https://github.com/lwinmoehein">Github</a></div>
                                     <img src="https://ghchart.rshah.org/lwinmoehein" alt="Lwin Contributions" />
                                 </div>
                             </div>
@@ -604,7 +607,7 @@
 
                                 </div>
                                 <div class="content">
-                                    <div class="title"><a
+                                    <div class="title"><a target="_blank"
                                             href="mailto:dev.lwinmoehein@gmail.com">dev.lwinmoehein@gmail.com</a></div>
                                 </div>
                             </div>
@@ -615,7 +618,7 @@
                                     <i></i>
                                 </div>
                                 <div class="content">
-                                    <div class="title"><a
+                                    <div class="title"><a target="_blank"
                                             href="https://linkedin.com/in/lwin-moe-hein">Lwin Moe Hein</a></div>
                                 </div>
                             </div>
@@ -625,7 +628,7 @@
                                     <i></i>
                                 </div>
                                 <div class="content">
-                                    <div class="title"><a href="tel:+959440813572">+971544385204</a></div>
+                                    <div class="title"><a target="_blank" href="tel:+959440813572">+971544385204</a></div>
                                 </div>
                             </div>
                         </div>
