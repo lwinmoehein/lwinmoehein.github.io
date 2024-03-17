@@ -67,29 +67,44 @@ document.addEventListener('alpine:init', () => {
                 ]
             },
             {
-                id:'english-test',
-                title:'English Test ',
+                id:'simple-expense',
+                title:'Simple Expense',
                 type_id:'android',
                 type_name:'Android',
-                demo_url:'',
-                description:'blah test',
-                short_description: 'short',
-                technologies:['Laravel','Vue.js','MySQL','Ubuntu','Hostinger','Cloudflare','GithubActions'],
+                demo_url:'https://play.google.com/store/apps/details?id=lab.justonebyte.simpleexpense',
+                description:'Simple Expense is an Android application on Google Play which simply enables users to record their expense and income.This application contains features such as exporting data as Excel files, backing up data with Google account, managing categories. Laravel API is hosted on Amazon EC2 and uses Amazon RDS as database. Github Actions is used to automatically update code changes to EC2.',
+                short_description: 'An Android application to record expense and income , powered by Laravel API.',
+                technologies:['Laravel','Kotlin','Amazon EC2','Amazon RDS','Github Actions','Jetpack Compose','MVVM'],
                 features:[
                     {
-                        name:'Hello',
-                        image_url:'',
-                        description:'Test Desc'
+                        name:'Login',
+                        image_url:'images/simple-expense/login.png',
+                        description:'Login with Google account to backup recorded data on the application.'
                     },
                     {
-                        name:'There',
-                        image_url:'',
-                        description:'Test Desc'
+                        name:'Record Income & Expense',
+                        image_url:'images/simple-expense/home.png',
+                        description:'Simply record expense and income and view the total balances.'
                     },
                     {
-                        name:'Test',
-                        image_url:'',
-                        description:'Test Desc'
+                        name:'Data as Pie Chart',
+                        image_url:'images/simple-expense/charts.png',
+                        description:'View recorded data as pie charts.'
+                    },
+                    {
+                        name:'Manage Categories',
+                        image_url:'images/simple-expense/categories.png',
+                        description:'Customize expense and income categories.'
+                    },
+                    {
+                        name:'Data as Excel File',
+                        image_url:'images/simple-expense/export.png',
+                        description:'Export recorded data as Excel files.'
+                    },
+                    {
+                        name:'My Account',
+                        image_url:'images/simple-expense/settings.png',
+                        description:'Manage account and settings.'
                     }
                 ]
             }

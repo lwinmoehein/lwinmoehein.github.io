@@ -160,8 +160,11 @@
                     <p x-text="currentProjectDetail.description">
                     </p>
                     <div>
-                        <div>
+                        <div x-show="currentProjectDetail.type_id!=='android'">
                             <a :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
+                        </div>
+                        <div  x-show="currentProjectDetail.type_id==='android'">
+                            <a :href="currentProjectDetail.demo_url" class="visit-site">Google Play <i class="fa fa-brands fa-google-play fa-sm" style="margin-left: 3px;color: white"></i></a>
                         </div>
                     </div>
                     <h3>Technologies</h3>
