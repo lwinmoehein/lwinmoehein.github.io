@@ -203,7 +203,7 @@
   padding: 10px;
 }
 .body-wrapper .section-wrapper #skills {
-  background-color: #76ABAE;
+  background-color: #EEEEEE;
   padding: 10px;
 }
 .body-wrapper .section-wrapper #social {
@@ -383,36 +383,32 @@
   display: grid;
   grid-template-columns: 1fr;
   height: fit-content;
-  grid-row-gap: 20px;
+  grid-row-gap: 50px;
   grid-column-gap: 100px;
 }
-@media screen and (min-width: 600px) {
-  .body-wrapper .section-wrapper .skills .skills-wrapper {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.body-wrapper .section-wrapper .skills .skills-wrapper .other-skills {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
 }
 .body-wrapper .section-wrapper .skills .skills-wrapper .other-skills .title {
   font-weight: bold;
   color: #222831;
+  text-decoration: underline;
 }
-.body-wrapper .section-wrapper .skills .skills-wrapper .other-skills .title .tags {
-  padding: 10px;
+.body-wrapper .section-wrapper .skills .skills-wrapper .other-skills .tags {
   display: flex;
-  flex-flow: row;
+  gap: 12px;
   flex-wrap: wrap;
 }
-.body-wrapper .section-wrapper .skills .skills-wrapper .other-skills .title .tags div {
-  background-color: #222831;
-  max-width: fit-content;
-  color: white;
-  padding: 2px;
-  margin: 3px;
+.body-wrapper .section-wrapper .skills .skills-wrapper .other-skills .tags span {
+  margin-top: 8px;
+  font-size: small;
 }
-.body-wrapper .section-wrapper .skills .skills-wrapper .other-skills .title .tags:nth-child(odd) {
-  margin-left: 5px;
-}
-.body-wrapper .section-wrapper .skills .skills-wrapper .other-skills .title .tags:nth-child(even) {
-  margin-right: 5px;
+@media screen and (min-width: 600px) {
+  .body-wrapper .section-wrapper .skills .skills-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .body-wrapper .section-wrapper .social {
   flex-flow: column;

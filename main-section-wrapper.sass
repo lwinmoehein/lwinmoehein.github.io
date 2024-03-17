@@ -26,7 +26,7 @@
       background-color: v.$experience-color
       padding: 10px
     #skills
-      background-color: v.$education-color
+      background-color: v.$experience-color
       padding: 10px
 
     #social
@@ -203,32 +203,29 @@
         display: grid
         grid-template-columns: 1fr
         height: fit-content
-        grid-row-gap: 20px
+        grid-row-gap: 50px
         grid-column-gap: 100px
 
-        @media screen and (min-width: v.$breakpoint-phone)
-          grid-template-columns: 1fr 1fr 1fr
-
         .other-skills
+          display: flex
+          flex-flow: column
+          gap: 20px
+
           .title
             font-weight: bold
             color: v.$primary-color
-            .tags
-              padding: 10px
-              display: flex
-              flex-flow: row
-              flex-wrap: wrap
-              div
-                background-color: v.$primary-color
-                max-width: fit-content
-                color: white
-                padding: 2px
-                margin: 3px
+            text-decoration: underline
+          .tags
+            display: flex
+            gap: 12px
+            flex-wrap: wrap
 
-            .tags:nth-child(odd)
-              margin-left: 5px
-            .tags:nth-child(even)
-              margin-right: 5px
+            span
+              margin-top: 8px
+              font-size: small
+
+        @media screen and (min-width: v.$breakpoint-phone)
+          grid-template-columns: 1fr 1fr
 
     .social
       @extend .section-card

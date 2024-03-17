@@ -124,6 +124,7 @@
     <script src="js/data.js"></script>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="main-section-wrapper.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body x-data="utils">
@@ -144,7 +145,6 @@
         </div>
     </div>
     <div x-cloak x-show="currentProjectDetail" class="modal-backdrop"></div>
-
     <div x-cloak x-show="currentProjectDetail"  @click="currentProjectDetail=''" class="modal modal-fullscreen">
         <div class="modal-dialog">
             <div class="modal-content" @click.stop>
@@ -277,6 +277,156 @@
                         </div>
                     </div>
                 </section>
+                <section id="skills">
+                    <h3 class="section-title" data-hash="#skills"><span class="bottom-bar">Skills</span>
+                    </h3>
+
+                    <div class="skills">
+                        <div class="skills-wrapper">
+                            <div class="other-skills">
+                                <div class="title">Languages</div>
+                                <div class="tags">
+                                    <div>
+                                        <i class="devicon-php-plain colored"></i>
+                                        <span>PHP</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-javascript-plain colored"></i>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-typescript-plain colored"></i>
+                                        <span>TypeScript</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-kotlin-plain colored"></i>
+                                        <span>Kotlin</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-html5-plain colored"></i>
+                                        <span>
+                                            HTML
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-css3-plain colored"></i>
+                                        <span>CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="other-skills">
+                                <div class="title">Frameworks</div>
+                                <div class="tags">
+                                    <div>
+                                        <i class="devicon-laravel-plain colored"></i>
+                                        <span>Laravel</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-vuejs-plain colored"></i>
+                                        <span>Vue.js</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-nuxtjs-plain colored"></i>
+                                        <span>Nuxt</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-quasar-plain colored"></i>
+                                        <span>
+                                            Quasar
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-react-plain colored"></i>
+                                        <span>ReactJS</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-angular-plain" style="color: red"></i>
+                                        <span>Angular</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="other-skills">
+                                <div class="title">Cloud</div>
+                                <div class="tags">
+                                    <div>
+                                        <i class="devicon-amazonwebservices-plain colored"></i>
+                                        <span>AWS</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-cloudflare-plain colored"></i>
+                                        <span>Cloudflare</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-linux-plain colored"></i>
+                                        <span>Linux</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-mysql-plain colored"></i>
+                                        <span>MySQL</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-mongodb-plain colored"></i>
+                                        <span>
+                                            MongoDB
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-firebase-plain" style="color: red"></i>
+                                        <span>Firebase</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-nginx-plain" style="color: red"></i>
+                                        <span>Nginx</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="other-skills">
+                                <div class="title">Tools</div>
+                                <div class="tags">
+                                    <div>
+                                        <i class="devicon-jetbrains-plain"></i>
+                                        <span>Jetbrains</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-vscode-plain colored"></i>
+                                        <span>VsCode</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-vim-plain colored"></i>
+                                        <span>Vim</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-nano-plain colored"></i>
+                                        <span>
+                                            Nano
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="personal">
+                    <h3 class="section-title" data-hash="#personal"><span class="bottom-bar">Personal</span> Projects
+                    </h3>
+                    <div class="personal-projects">
+                        <div class="project-wrapper">
+                            <template x-for="projectDetail in projectDetails">
+                                <div class="project" x-on:click="onProjectClick(projectDetail)">
+                                    <div>
+                                        <div class="title-wrapper">
+                                            <div class="title" x-text="projectDetail.title"></div>
+                                            <div class="type" x-text="projectDetail.type_name"></div>
+                                        </div>
+                                        <div class="about">
+                                            <p x-text="projectDetail.short_description"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </section>
                 <section id="experience">
                     <h3 class="section-title" data-hash="#experience"><span class="bottom-bar">E</span>xperience</h3>
 
@@ -315,27 +465,6 @@
                                     </small>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="personal">
-                    <h3 class="section-title" data-hash="#personal"><span class="bottom-bar">Personal</span> Projects
-                    </h3>
-                    <div class="personal-projects">
-                        <div class="project-wrapper">
-                            <template x-for="projectDetail in projectDetails">
-                                <div class="project" x-on:click="onProjectClick(projectDetail)">
-                                    <div>
-                                        <div class="title-wrapper">
-                                            <div class="title" x-text="projectDetail.title"></div>
-                                            <div class="type" x-text="projectDetail.type_name"></div>
-                                        </div>
-                                        <div class="about">
-                                            <p x-text="projectDetail.short_description"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </template>
                         </div>
                     </div>
                 </section>
@@ -424,73 +553,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section id="skills">
-                    <h3 class="section-title" data-hash="#skills"><span class="bottom-bar">Language &</span> Frameworks
-                    </h3>
-
-                    <div class="skills">
-                       <div class="skills-wrapper">
-                           <div class="other-skills">
-                               <div class="title">Languages</div>
-                               <div class="tags">
-                                   <div>HTML</div>
-                                   <div>CSS</div>
-                                   <div>Javascript</div>
-                                   <div>Typescript</div>
-                                   <div>SQL</div>
-                                   <div>JSON</div>
-                                   <div>PHP</div>
-                                   <div>Kotlin</div>
-                               </div>
-                           </div>
-                           <div class="other-skills">
-                               <div class="title">Frameworks & Libraries</div>
-                               <div class="tags">
-                                   <div>Laravel</div>
-                                   <div>Vue</div>
-                                   <div>Nuxt</div>
-                                   <div>Quasar</div>
-                                   <div>Angular</div>
-                                   <div>Tailwind</div>
-                                   <div>Ant Design</div>
-                                   <div>Material Design</div>
-                               </div>
-                           </div>
-                           <div class="other-skills">
-                               <div class="title">Cloud</div>
-                               <div class="tags">
-                                   <div>AWS</div>
-                                   <div>Cloudflare</div>
-                                   <div>Hostinger</div>
-                                   <div>Digital Ocean</div>
-                                   <div>CI/CD</div>
-                               </div>
-                           </div>
-                           <div class="other-skills">
-                               <div class="title">Linux  & Networking</div>
-                               <div class="tags">
-                                   <div>Linux Commands</div>
-                                   <div>Docker</div>
-                                   <div>Nginx</div>
-                                   <div>Apache</div>
-                                   <div>DNS Management</div>
-                                   <div>SSL Configuration</div>
-                                   <div>Network Troubleshooting</div>
-                               </div>
-                           </div>
-                           <div class="other-skills">
-                               <div class="title">Tools</div>
-                               <div class="tags">
-                                   <div>Jetbrains IDEs</div>
-                                   <div>VSCode</div>
-                                   <div>Vim</div>
-                                   <div>Nano</div>
-                                   <div>Git</div>
-                               </div>
-                           </div>
-                       </div>
                     </div>
                 </section>
                 <section id="social">
@@ -650,7 +712,7 @@
                             next: {
                                 href: "#experience",
                                 next: {
-                                    href: "#certificate",
+                                    href: "#certificates",
                                         next: {
                                             href: "#social"
                                         }
