@@ -177,8 +177,8 @@
   }
 }
 
-.section-card, .body-wrapper .section-wrapper .social, .body-wrapper .section-wrapper .skills, .body-wrapper .section-wrapper .personal-projects, .body-wrapper .section-wrapper .certificates, .body-wrapper .section-wrapper .experience, .body-wrapper .section-wrapper .intro {
-  padding: 20px;
+.section-card, .body-wrapper .section-wrapper .contact-me, .body-wrapper .section-wrapper .skills, .body-wrapper .section-wrapper .personal-projects, .body-wrapper .section-wrapper .certificates, .body-wrapper .section-wrapper .experience, .body-wrapper .section-wrapper .intro {
+  padding: 10px;
   min-height: 100vh;
   display: flex;
 }
@@ -258,16 +258,16 @@
   margin-top: 60px;
 }
 .body-wrapper .section-wrapper .experience .edu-path {
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 30px;
 }
 .body-wrapper .section-wrapper .experience .edu-path .item {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: start;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 .body-wrapper .section-wrapper .experience .edu-path .item h5 {
   margin-top: 2px;
@@ -416,9 +416,35 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-.body-wrapper .section-wrapper .social {
+.body-wrapper .section-wrapper .contact-me {
   flex-flow: column;
   align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+.body-wrapper .section-wrapper .contact-me .divider {
+  display: none;
+}
+.body-wrapper .section-wrapper .contact-me a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  font-size: larger;
+}
+@media screen and (min-width: 600px) {
+  .body-wrapper .section-wrapper .contact-me {
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .body-wrapper .section-wrapper .contact-me div {
+    margin-bottom: 100px;
+  }
+  .body-wrapper .section-wrapper .contact-me .divider {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=main-section-wrapper.css.map */

@@ -3,7 +3,7 @@
 @use "sass/_profile_image"
 
 .section-card
-  padding: 20px
+  padding: 10px
   min-height: 100vh
   display: flex
 
@@ -81,16 +81,17 @@
       margin-top: 60px
 
       .edu-path
-        display: flex
-        flex-flow: column
-        justify-content: flex-start
-        align-items: flex-start
-        gap: 50px
+        display: grid
+        grid-template-columns: 1fr
+        grid-row-gap: 30px
 
         .item
           display: flex
           align-items: flex-start
-          justify-content: center
+          justify-content: start
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1)
+          padding: 20px
+
 
           h5
             margin-top: 2px
@@ -236,9 +237,30 @@
         @media screen and (min-width: v.$breakpoint-phone)
           grid-template-columns: 1fr 1fr
 
-    .social
+    .contact-me
       @extend .section-card
       flex-flow: column
       align-items: start
+      justify-content: center
+      gap: 10px
+      .divider
+        display: none
+      a
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 5px
+        font-weight: bold
+        font-size: larger
+      @media screen and (min-width: v.$breakpoint-phone)
+        flex-flow: row
+        align-items: center
+        justify-content: center
+        div
+          margin-bottom: 100px
+        .divider
+          display: block
+
+
 
 
