@@ -416,11 +416,11 @@
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project {
   padding: 10px;
-  border: 1px solid black;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   cursor: pointer;
+  background-color: #EEEEEE;
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper {
   display: flex;

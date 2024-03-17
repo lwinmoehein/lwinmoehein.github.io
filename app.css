@@ -78,11 +78,10 @@ a {
   left: 20px;
   width: fit-content;
   position: sticky;
-  color: #222831;
+  color: white;
   font-weight: bold;
   z-index: 99;
   margin: 0;
-  background-color: black;
 }
 
 .nav a {
@@ -131,6 +130,9 @@ i {
   display: flex;
   padding-right: 20px;
   padding-top: 20px;
+}
+.menu-bar-wrapper i {
+  color: white;
 }
 
 .go-down {
