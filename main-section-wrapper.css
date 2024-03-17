@@ -177,7 +177,7 @@
   }
 }
 
-.section-card, .body-wrapper .section-wrapper .social, .body-wrapper .section-wrapper .skills, .body-wrapper .section-wrapper .personal-projects, .body-wrapper .section-wrapper .certificates, .body-wrapper .section-wrapper .experience, .body-wrapper .section-wrapper .education, .body-wrapper .section-wrapper .intro {
+.section-card, .body-wrapper .section-wrapper .social, .body-wrapper .section-wrapper .skills, .body-wrapper .section-wrapper .personal-projects, .body-wrapper .section-wrapper .certificates, .body-wrapper .section-wrapper .experience, .body-wrapper .section-wrapper .intro {
   padding: 20px;
   min-height: 100vh;
   display: flex;
@@ -189,10 +189,6 @@
 .body-wrapper .section-wrapper #intro {
   padding: 10px;
   background-color: #22BBCC;
-}
-.body-wrapper .section-wrapper #education {
-  background-color: #222831;
-  padding: 10px;
 }
 .body-wrapper .section-wrapper #experience {
   background-color: #EEEEEE;
@@ -246,55 +242,6 @@
   border: 1px solid black;
   background-color: black;
 }
-.body-wrapper .section-wrapper .education {
-  flex-flow: column;
-  align-items: start;
-  justify-content: start;
-  padding: 10px !important;
-  margin-top: 60px !important;
-}
-@media screen and (min-width: 600px) {
-  .body-wrapper .section-wrapper .education {
-    padding: 20px !important;
-  }
-}
-.body-wrapper .section-wrapper .education .edu-path {
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.body-wrapper .section-wrapper .education .edu-path .item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-.body-wrapper .section-wrapper .education .edu-path .item h5 {
-  margin-top: 2px;
-  margin-left: 10px;
-  color: white;
-  margin-bottom: 10px;
-}
-.body-wrapper .section-wrapper .education .edu-path .item ul {
-  color: white;
-}
-.body-wrapper .section-wrapper .education .edu-path .item .indicator {
-  display: flex;
-  flex-flow: column;
-}
-.body-wrapper .section-wrapper .education .edu-path .item .indicator .fa-school, .body-wrapper .section-wrapper .education .edu-path .item .indicator .fa-university, .body-wrapper .section-wrapper .education .edu-path .item .indicator .fa-question {
-  font-size: 15pt;
-  color: white !important;
-  transform: none;
-  margin-top: 0;
-}
-.body-wrapper .section-wrapper .education .edu-path .item .indicator i {
-  color: white !important;
-  font-size: 7pt;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  transform: rotate(90deg);
-}
 .body-wrapper .section-wrapper .experience {
   flex-flow: column;
   align-items: start;
@@ -306,6 +253,7 @@
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 50px;
 }
 .body-wrapper .section-wrapper .experience .edu-path .item {
   display: flex;
@@ -314,23 +262,7 @@
 }
 .body-wrapper .section-wrapper .experience .edu-path .item h5 {
   margin-top: 2px;
-  margin-left: 10px;
   margin-bottom: 5px;
-}
-.body-wrapper .section-wrapper .experience .edu-path .item .indicator {
-  display: flex;
-  flex-flow: column;
-}
-.body-wrapper .section-wrapper .experience .edu-path .item .indicator .fa-briefcase, .body-wrapper .section-wrapper .experience .edu-path .item .indicator .fa-question {
-  font-size: 15pt;
-  transform: none;
-  margin-top: 0;
-}
-.body-wrapper .section-wrapper .experience .edu-path .item .indicator i {
-  font-size: 7pt;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  transform: rotate(90deg);
 }
 .body-wrapper .section-wrapper .certificates {
   display: flex;
