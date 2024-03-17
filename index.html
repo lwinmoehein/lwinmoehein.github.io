@@ -145,9 +145,9 @@
     </div>
     <div x-cloak x-show="currentProjectDetail" class="modal-backdrop"></div>
 
-    <div x-cloak x-show="currentProjectDetail" class="modal modal-fullscreen">
+    <div x-cloak x-show="currentProjectDetail"  @click="currentProjectDetail=''" class="modal modal-fullscreen">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content" @click.stop>
                 <div class="modal-header">
                     <div>
                         <h3 x-text="currentProjectDetail.title" class="modal-title"></h3>

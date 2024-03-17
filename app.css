@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #2274A5 !important;
+  background-color: #222831 !important;
 }
 
 [x-cloak] {
@@ -23,8 +23,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #2274A5;
-  outline: 1px solid #2274A5;
+  background-color: #222831;
+  outline: 1px solid #222831;
 }
 
 body {
@@ -60,7 +60,7 @@ a {
 }
 
 .color-text {
-  color: #2274A5;
+  color: #222831;
 }
 
 .bold {
@@ -78,7 +78,7 @@ a {
   left: 20px;
   width: fit-content;
   position: sticky;
-  color: #2274A5;
+  color: #222831;
   font-weight: bold;
   z-index: 99;
   margin: 0;
@@ -102,13 +102,13 @@ a {
 .bottom-bar {
   width: 10px;
   height: 10px;
-  background-color: #2274A5;
+  background-color: #222831;
   display: inline;
   color: white;
 }
 
 i {
-  color: #2274A5;
+  color: #222831;
   font-size: 30px;
   display: flex;
   justify-content: center;
@@ -149,7 +149,7 @@ i {
   justify-content: center;
   align-items: center;
   z-index: 200;
-  background-color: #2274A5;
+  background-color: #222831;
   border: 1px solid white;
   color: white;
   cursor: pointer;
@@ -173,7 +173,7 @@ i {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: #2274A5;
+  background-color: #222831;
 }
 .drawer-menu-wrapper .button-wrapper i {
   color: white;
@@ -187,7 +187,7 @@ i {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #2274A5;
+  background-color: #222831;
 }
 .drawer-menu-wrapper .drawer-menu .menu-grid {
   display: grid;
@@ -219,24 +219,24 @@ i {
     position: fixed;
   }
   .go-down i:hover {
-    background-color: #2274A5;
+    background-color: #222831;
     color: white;
   }
   .section-title {
     left: 20%;
-    border-bottom: 3px solid #2274A5;
+    border-bottom: 3px solid #222831;
     padding-bottom: 3px;
   }
   .section-title .bottom-bar {
     background-color: transparent;
-    color: #2274A5;
+    color: #222831;
   }
 }
 .body-wrapper {
   display: flex;
 }
 .body-wrapper a {
-  color: #2274A5;
+  color: #222831;
 }
 .body-wrapper .nav-wrapper {
   display: none;

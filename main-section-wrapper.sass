@@ -20,20 +20,20 @@
       background-color: v.$primary-color
       padding: 10px
     #experience
-      background-color: v.$education-color
+      background-color: v.$experience-color
       padding: 10px
     #personal
-      background-color: v.$primary-color
+      background-color: v.$education-color
       padding: 10px
     #certificates
-      background-color: v.$education-color
+      background-color: v.$experience-color
       padding: 10px
     #skills
       background-color: v.$education-color
       padding: 10px
 
     #social
-      background-color: v.$education-color
+      background-color: v.$experience-color
       padding: 10px
 
     .intro
@@ -149,6 +149,7 @@
               margin-top: 10px
               transform: rotate(90deg)
 
+
     .certificates
       @extend .section-card
       display: flex
@@ -221,10 +222,13 @@
         @media screen and (min-width: v.$breakpoint-phone)
           row-gap: 50px
 
+        .project:hover
+          background-color: v.$primary-color
+          color: white
+
         .project
           padding: 10px
           border: 1px solid black
-          color: white
           display: flex
           flex-flow: column
           justify-content: space-between
@@ -239,12 +243,12 @@
               border-bottom: 2px solid v.$projects-color
             .type
               background-color: v.$projects-color
+              color: white
               border-radius: 5px
               padding: 5px
               font-size: smaller
-          .about
-            p
-              border: 1px solid v.$primary-color
+
+
 
 
     .skills

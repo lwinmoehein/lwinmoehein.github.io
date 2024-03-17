@@ -1,5 +1,5 @@
 .visit-site {
-  background-color: #2274A5;
+  background-color: #222831;
   border-radius: 3px;
   color: white;
   padding-top: 3px;
@@ -45,11 +45,11 @@
   flex-wrap: wrap;
 }
 .modal-fullscreen .modal-dialog .modal-content .technologies span {
-  border: 0.5px solid #2274A5;
+  border: 0.5px solid #222831;
   padding: 3px;
 }
 .modal-fullscreen .modal-dialog .modal-content h3 {
-  color: #2274A5 !important;
+  color: #222831 !important;
   margin-top: 20px;
 }
 .modal-fullscreen .modal-dialog .modal-content .slider {
@@ -104,7 +104,7 @@
   text-align: start;
 }
 .modal-fullscreen .modal-dialog .modal-content .slider .slide .detail h4 {
-  border-bottom: 3px solid #2274A5;
+  border-bottom: 3px solid #222831;
 }
 .modal-fullscreen .modal-dialog .modal-content .slider img {
   width: 100%;
@@ -191,27 +191,27 @@
   background-color: #22BBCC;
 }
 .body-wrapper .section-wrapper #education {
-  background-color: #2274A5;
+  background-color: #222831;
   padding: 10px;
 }
 .body-wrapper .section-wrapper #experience {
-  background-color: #E9F1F7;
+  background-color: #EEEEEE;
   padding: 10px;
 }
 .body-wrapper .section-wrapper #personal {
-  background-color: #2274A5;
+  background-color: #76ABAE;
   padding: 10px;
 }
 .body-wrapper .section-wrapper #certificates {
-  background-color: #E9F1F7;
+  background-color: #EEEEEE;
   padding: 10px;
 }
 .body-wrapper .section-wrapper #skills {
-  background-color: #E9F1F7;
+  background-color: #76ABAE;
   padding: 10px;
 }
 .body-wrapper .section-wrapper #social {
-  background-color: #E9F1F7;
+  background-color: #EEEEEE;
   padding: 10px;
 }
 .body-wrapper .section-wrapper .intro {
@@ -410,10 +410,13 @@
     row-gap: 50px;
   }
 }
+.body-wrapper .section-wrapper .personal-projects .project-wrapper .project:hover {
+  background-color: #222831;
+  color: white;
+}
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project {
   padding: 10px;
   border: 1px solid black;
-  color: white;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -430,12 +433,10 @@
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper .type {
   background-color: #131B23;
+  color: white;
   border-radius: 5px;
   padding: 5px;
   font-size: smaller;
-}
-.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .about p {
-  border: 1px solid #2274A5;
 }
 .body-wrapper .section-wrapper .skills {
   padding: 10px !important;
@@ -460,7 +461,7 @@
 }
 .body-wrapper .section-wrapper .skills .skills-wrapper .other-skills .title {
   font-weight: bold;
-  color: #2274A5;
+  color: #222831;
 }
 .body-wrapper .section-wrapper .skills .skills-wrapper .other-skills .title .tags {
   padding: 10px;
@@ -469,7 +470,7 @@
   flex-wrap: wrap;
 }
 .body-wrapper .section-wrapper .skills .skills-wrapper .other-skills .title .tags div {
-  background-color: #2274A5;
+  background-color: #222831;
   max-width: fit-content;
   color: white;
   padding: 2px;
@@ -524,11 +525,11 @@
 .body-wrapper .section-wrapper .social .edu-path .item .content {
   margin-left: 30px;
   padding: 10px;
-  border: 1px dashed #2274A5;
+  border: 1px dashed #222831;
   border-radius: 0px;
 }
 .body-wrapper .section-wrapper .social .edu-path .item .content .title {
-  color: #2274A5;
+  color: #222831;
   font-weight: bolder;
   margin-bottom: 10px;
 }
