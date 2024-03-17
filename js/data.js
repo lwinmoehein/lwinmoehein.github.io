@@ -191,6 +191,23 @@ document.addEventListener('alpine:init', () => {
                         description:'Manage application settings such as dark mode, font sizes, home screen customizations.'
                     }
                 ]
+            },
+            {
+                id:'mm-mobile-tools',
+                title:'MM Mobile Tools - JS Library',
+                type_id:'library',
+                type_name:'library',
+                demo_url:'https://github.com/lwinmoehein/MM-Mobile-Tools-JS',
+                description:'MM Mobile Tools is a JavaScript library to check and validate Myanmar mobile phone numbers. It\'s written in Typescript and uses Jest library to test library functions.Codecov is used to report code coverage on README page. Github Actions is used to automatically publish library releases to NPM.',
+                short_description: 'A JavaScript Library for validating and checking Myanmar mobile phone numbers.',
+                technologies:['TypeScript','Jest','GithubActions','CodeCov','NPM'],
+                features:[
+                    {
+                        name:'Validate Phone No. and get operator name',
+                        image_url:'images/mm-mobile-tools/usage.png',
+                        description:'By installing the library from npm, library users can validate phone number, and get the operator of the phone number.'
+                    }
+                ]
             }
         ],
         next() {
