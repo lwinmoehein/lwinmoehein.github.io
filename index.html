@@ -230,7 +230,7 @@
                         <a href="#certificates">Certificates</a>
                     </div>
                     <div class="mobile-nav-item nav">
-                        <a href="#social">Socials</a>
+                        <a href="#contact-me">Contact Me</a>
                     </div>
                 </div>
             </div>
@@ -254,7 +254,7 @@
                         <a href="#certificates">Certificates</a>
                     </div>
                     <div class="nav-item nav">
-                        <a href="#social">Socials</a>
+                        <a href="#contact-me">Contact Me</a>
                     </div>
                 </nav>
             </div>
@@ -263,7 +263,8 @@
                     <i id="scroll-icon" class="fa-solid fa-arrow-down"></i>
                 </div>
                 <section id="about-me">
-                    <h3 class="section-title" data-hash="#about-me"><span class="bottom-bar">About me<span></span></h3>
+                    <h3 class="section-title"  data-hash="#about-me"><span class="bottom-bar">About Me</span>
+                    </h3>
                     <div class="intro">
                         <div class="about">
                             <img class="profile-image" src="images/lwinmoehein.jpg"/>
@@ -555,77 +556,19 @@
                         </div>
                     </div>
                 </section>
-                <section id="social">
-                    <h3 class="section-title" data-hash="#social"><span class="bottom-bar">Socials</span>
+                <section id="contact-me">
+                    <h3 class="section-title" data-hash="#contact-me"><span class="bottom-bar">Contact Me</span>
                     </h3>
 
                     <div class="social">
-                        <div class="edu-path">
-                            <div class="item">
-                                <div class="indicator">
-                                    <div class="dot"></div>
-                                    <i class="fa-brands  fa-stack-overflow"></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-
-                                </div>
-                                <div class="content">
-                                    <div class="title"><a
-                                            target="_blank"
-                                            href="https://stackoverflow.com/users/11811931/lwin-moe-hein">StackOverflow</a>
-                                    </div>
-                                    <a
-                                            target="_blank"
-                                            href="https://stackoverflow.com/users/11811931/lwin-moe-hein"><img
-                                            src="https://stackoverflow.com/users/flair/11811931.png" width="208"
-                                            height="58"
-                                            alt="profile for lwin moe hein at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
-                                            title="profile for lwin moe hein at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="indicator">
-                                    <i class="fa-brands  fa-github"></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                </div>
-
-                                <div class="content">
-                                    <div class="title"><a target="_blank" href="https://github.com/lwinmoehein">Github</a></div>
-                                    <img src="https://ghchart.rshah.org/lwinmoehein" alt="Lwin Contributions" />
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="indicator">
-                                    <i class="fa-solid  fa-envelope"></i>
-                                    <i></i>
-                                    <i></i>
-
-                                </div>
                                 <div class="content">
                                     <div class="title"><a target="_blank"
                                             href="mailto:dev.lwinmoehein@gmail.com">dev.lwinmoehein@gmail.com</a></div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="indicator">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                    <i></i>
-                                    <i></i>
-                                </div>
+
                                 <div class="content">
                                     <div class="title"><a target="_blank"
                                             href="https://linkedin.com/in/lwin-moe-hein">Lwin Moe Hein</a></div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="indicator">
-                                    <i class="fa-solid  fa-phone"></i>
-                                    <i></i>
                                 </div>
                                 <div class="content">
                                     <div class="title"><a target="_blank" href="tel:+959440813572">+971544385204</a></div>
@@ -705,7 +648,7 @@
         let sectionTitles = document.querySelectorAll('.section-title')
 
         let social = {
-            href: "#social",
+            href: "#contact-me",
             next: {
                 href: "#about-me",
                 next: {
@@ -717,7 +660,7 @@
                                 next: {
                                     href: "#certificates",
                                         next: {
-                                            href: "#social"
+                                            href: "#contact-me"
                                         }
                                     }
                                 }
@@ -800,7 +743,7 @@
 
         function updateScrollFloatingButtonStatus(updateUiOnly = false) {
             let currentLocation = sections.filter(s => s.href === location.hash || (location.hash === "" && s.href === "#about-me"))[0]
-            if (currentLocation.href === "#social") {
+            if (currentLocation.href === "#contact-me") {
                 scrollIcon.classList.remove("fa-arrow-down")
                 scrollIcon.classList.add("fa-arrow-up")
             } else {
@@ -810,11 +753,11 @@
 
             if (updateUiOnly) return;
 
-            if (currentLocation === "#social") {
+            if (currentLocation === "#contact-me") {
                 window.location.href = social.next.href
                 return;
             }
-            window.location.href = currentLocation ? currentLocation.next ? currentLocation.next.href : "#social" : "#social"
+            window.location.href = currentLocation ? currentLocation.next ? currentLocation.next.href : "#contact-me" : "#contact-me"
         }
 
         window.onhashchange = locationHashChanged

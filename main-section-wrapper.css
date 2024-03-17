@@ -186,9 +186,18 @@
 .body-wrapper .section-wrapper {
   flex: 3;
 }
-.body-wrapper .section-wrapper #intro {
+.body-wrapper .section-wrapper #about-me {
   padding: 10px;
-  background-color: #22BBCC;
+  background-color: #222831;
+}
+@media screen and (min-width: 600px) {
+  .body-wrapper .section-wrapper #about-me .section-title {
+    background-color: #EEEEEE !important;
+  }
+  .body-wrapper .section-wrapper #about-me .section-title .bottom-bar {
+    background-color: transparent !important;
+    color: #222831 !important;
+  }
 }
 .body-wrapper .section-wrapper #experience {
   background-color: #EEEEEE;
@@ -206,7 +215,7 @@
   background-color: #EEEEEE;
   padding: 10px;
 }
-.body-wrapper .section-wrapper #social {
+.body-wrapper .section-wrapper #contact-me {
   background-color: #EEEEEE;
   padding: 10px;
 }
@@ -410,62 +419,6 @@
 .body-wrapper .section-wrapper .social {
   flex-flow: column;
   align-items: start;
-}
-.body-wrapper .section-wrapper .social .edu-path {
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-top: 50px;
-}
-.body-wrapper .section-wrapper .social .edu-path .item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 10px;
-}
-.body-wrapper .section-wrapper .social .edu-path .item h5 {
-  margin-top: 0;
-}
-.body-wrapper .section-wrapper .social .edu-path .item .indicator {
-  display: flex;
-  flex-flow: column;
-}
-.body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-arrow-right, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-address-book, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-envelope, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-phone, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-github, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-stack-overflow, .body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-linkedin {
-  font-size: 15pt;
-  transform: none;
-}
-.body-wrapper .section-wrapper .social .edu-path .item .indicator .fa-ellipsis-v {
-  font-size: 15pt;
-  transform: rotate(180deg);
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-.body-wrapper .section-wrapper .social .edu-path .item .indicator i {
-  font-size: 7pt;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  transform: rotate(90deg);
-}
-.body-wrapper .section-wrapper .social .edu-path .item .content {
-  margin-left: 30px;
-  padding: 10px;
-  border: 1px dashed #222831;
-  border-radius: 0px;
-}
-.body-wrapper .section-wrapper .social .edu-path .item .content .title {
-  color: #222831;
-  font-weight: bolder;
-  margin-bottom: 10px;
-}
-.body-wrapper .section-wrapper .social .edu-path .item .content a {
-  padding: 0;
-}
-.body-wrapper .section-wrapper .social .edu-path .item .content img, .body-wrapper .section-wrapper .social .edu-path .item .content a {
-  object-fit: contain;
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 /*# sourceMappingURL=main-section-wrapper.css.map */
