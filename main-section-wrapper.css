@@ -470,21 +470,5 @@
   width: 100%;
   height: 100%;
 }
-@media screen and (min-width: 600px) {
-  .body-wrapper .section-wrapper .section-title {
-    color: white;
-    background-color: black;
-    padding: 5px 10px 5px 10px;
-  }
-  .body-wrapper .section-wrapper .section-title span {
-    color: white;
-  }
-  .body-wrapper .section-wrapper .section-title span .bottom-bar {
-    color: white;
-  }
-  .body-wrapper .section-wrapper .section-title .social .edu-path {
-    margin-top: 0;
-  }
-}
 
 /*# sourceMappingURL=main-section-wrapper.css.map */
