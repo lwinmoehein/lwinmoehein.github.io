@@ -149,6 +149,48 @@ document.addEventListener('alpine:init', () => {
                         description:'Users can change account settings such as user name, email etc.'
                     }
                 ]
+            },
+            {
+                id:'m-knowledge',
+                title:'M Knowledge - Offline Wiki',
+                type_id:'android',
+                type_name:'Android',
+                demo_url:'https://play.google.com/store/apps/details?id=lab.justonebyte.mknowledge',
+                description:'M Kowledge is an Android application which enables users to read Myanmar Wikipedia articles online.Users can search Wikipedia articles and read them.It also has a feature where users can navigate to another article using links inside the reading article.',
+                short_description: 'An android application to read Myanmar Wikipedia articles offline.',
+                technologies:['Kotlin','Jetpack Compose','Hilt','Clean Architecture','MVVM','Room'],
+                features:[
+                    {
+                        name:'Home',
+                        image_url:'images/m-knowledge/home.png',
+                        description:'Users can read random articles and today\'s article.'
+                    },
+                    {
+                        name:'Search Articles',
+                        image_url:'images/m-knowledge/search.png',
+                        description:'Search Wikipedia articles without the need of the internet.'
+                    },
+                    {
+                        name:'Article Detail',
+                        image_url:'images/m-knowledge/detail.png',
+                        description:'Read articles and click through links to read mentioned articles using links.'
+                    },
+                    {
+                        name:'Read History',
+                        image_url:'images/m-knowledge/history.png',
+                        description:'Users can also check their history of the articles they have read.'
+                    },
+                    {
+                        name:'Saved Articles',
+                        image_url:'images/m-knowledge/favorites.png',
+                        description:'Users can see their favorite articles.'
+                    },
+                    {
+                        name:'Settings',
+                        image_url:'images/m-knowledge/settings.png',
+                        description:'Manage application settings such as dark mode, font sizes, home screen customizations.'
+                    }
+                ]
             }
         ],
         next() {
