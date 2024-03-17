@@ -4,13 +4,14 @@
   color: white;
   padding-top: 3px;
   padding-bottom: 3px;
-  padding-left: 8px !important;
-  padding-right: 8px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
   display: flex;
   align-items: center;
   width: fit-content;
   cursor: pointer;
   font-weight: bold;
+  gap: 5px;
 }
 
 .modal-fullscreen .modal-dialog {
@@ -33,6 +34,7 @@
   height: 100%;
   background-color: #fff;
   overflow-y: scroll;
+  scrollbar-width: none;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -140,7 +142,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.modal-fullscreen .modal-header .modal-title {
+  font-weight: bolder;
 }
 .modal-fullscreen .modal-close {
   font-weight: bold;
@@ -149,8 +155,10 @@
 }
 @media screen and (min-width: 600px) {
   .modal-fullscreen .modal-content {
-    width: 90% !important;
+    width: 80% !important;
     height: 90% !important;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .modal-fullscreen .modal-content .slider {
     grid-template-columns: 1fr 18fr 1fr !important;
