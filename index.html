@@ -163,6 +163,9 @@
                         <div x-show="currentProjectDetail.type_id==='web'">
                             <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
                         </div>
+                        <div x-show="currentProjectDetail.type_id==='website'">
+                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
+                        </div>
                         <div  x-show="currentProjectDetail.type_id==='android'">
                             <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Google Play <i class="fa fa-brands fa-google-play fa-sm" style="margin-left: 3px;color: white"></i></a>
                         </div>
@@ -176,8 +179,8 @@
                             <span x-text="technology"></span>
                         </template>
                     </div>
-                    <h3>Features</h3>
-                    <div class="slider">
+                    <h3 x-show="currentProjectDetail.features.length>0">Features</h3>
+                    <div class="slider" x-show="currentProjectDetail.features.length>0">
                         <div class="start-button">
                             <p  class="prev">
                                 <i  @click="prev()" class="fa fa-arrow-left"></i>
@@ -435,9 +438,9 @@
                                         <div class="header">
                                             <div class="title-wrapper">
                                                 <div class="title" x-text="projectDetail.title"></div>
-                                                <div class="type" :class="{'android':projectDetail.type_id==='android','web':projectDetail.type_id==='web','library':projectDetail.type_id==='library'}">
+                                                <div class="type" :class="{'android':projectDetail.type_id==='android','web':projectDetail.type_id==='web' || projectDetail.type_id==='website','library':projectDetail.type_id==='library'}">
                                                     <i class="fa fa-android fa-sm" x-show="projectDetail.type_id==='android'"></i>
-                                                    <i class="devicon-ie10-plain colored" style="font-size: small" x-show="projectDetail.type_id==='web'"></i>
+                                                    <i class="devicon-ie10-plain colored" style="font-size: small" x-show="projectDetail.type_id==='web' || projectDetail.type_id==='website' "></i>
                                                     <i class="fa fa-github fa-sm" x-show="projectDetail.type_id==='library'"></i>
                                                     <span x-text="projectDetail.type_name"></span>
                                                 </div>

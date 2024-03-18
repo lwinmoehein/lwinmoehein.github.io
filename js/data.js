@@ -113,7 +113,7 @@ document.addEventListener('alpine:init', () => {
             },
             {
                 id:'book-center',
-                title:'Book Center',
+                title:'bookcenter.lwinmoehein.info',
                 memorable_title:'book review demo website',
                 type_id:'web',
                 type_name:'Web App',
@@ -215,6 +215,17 @@ document.addEventListener('alpine:init', () => {
                         description:'By installing the library from npm, library users can validate phone number, and get the operator of the phone number.'
                     }
                 ]
+            },
+            {
+                id:'lwinmoehein-info',
+                memorable_title:'my portfolio website',
+                title:'lwinmoehein.info',
+                type_id:'website',
+                type_name:'Website',
+                demo_url:'https://lwinmoehein.info',
+                description:'This is my current portfolio website written in Javascript, Alpine.js and SCSS and deployed on Github Pages.',
+                short_description: 'My current portfolio website. I didn\'t want to used a template so I made my own portfolio project.',
+                technologies:['JavaScript','SCSS','HTML','CSS','Github Pages','Alpine.js']
             }
         ],
         next() {
