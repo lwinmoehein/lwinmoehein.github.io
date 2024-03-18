@@ -9,9 +9,9 @@ document.addEventListener('alpine:init', () => {
                 title:'englishdailyacademy.com',
                 memorable_title:'learning platform website',
                 type_id:'web',
-                type_name:'Web',
+                type_name:'Web App',
                 demo_url:'https://englishdailyacademy.com',
-                short_description:'An English learning web application where students can learn from courses uploaded by website admins.',
+                short_description:'An English learning web application where students learn English from courses with a subscription. Features include subscription model, videos, articles, audios, quizzes, exams, certificates, books, account settings etc which were all configure via admin portal.',
                 description:'englishdailyacademy.com is a website for English learners where students can learn English from the website. Courses and contents are uploaded by the website admin using Admin Portal. A student first subscribe to the website by monthly, yearly etc. Course contents contain articles, videos, audios, quizzes and exams to automatically give students course completion certificates directly from the website.',
                 technologies:['Laravel','Vue.js','MySQL','Ubuntu','Hostinger','Cloudflare','GithubActions'],
                 features:[
@@ -73,9 +73,10 @@ document.addEventListener('alpine:init', () => {
                 memorable_title:'expense recorder Android application',
                 type_id:'android',
                 type_name:'Android',
+                users_count:4000,
                 demo_url:'https://play.google.com/store/apps/details?id=lab.justonebyte.simpleexpense',
                 description:'Simple Expense is an Android application on Google Play which simply enables users to record their expense and income.This application contains features such as exporting data as Excel files, backing up data with Google account, managing categories. Laravel API is hosted on Amazon EC2 and uses Amazon RDS as database. Github Actions is used to automatically update code changes to EC2.',
-                short_description: 'An Android application to record expense and income , powered by Laravel API.',
+                short_description: 'An Android application to record expense and income. Features include recording income and expense data, charts, manage categories, export data, sync data with Google account, settings etc.',
                 technologies:['Laravel','Kotlin','Amazon EC2','Amazon RDS','Github Actions','Jetpack Compose','MVVM'],
                 features:[
                     {
@@ -115,10 +116,10 @@ document.addEventListener('alpine:init', () => {
                 title:'Book Center',
                 memorable_title:'book review demo website',
                 type_id:'web',
-                type_name:'Web',
+                type_name:'Web App',
                 demo_url:'https://bookcenter.lwinmoehein.info',
                 description:'Book Center is a demo Vue.js Single Page Application (SPA) with Laravel API.Amazon CodePipeline is used to automatically build Vue.js source files to static files and deploy built files to Amazon S3. Github Actions is also used to deploy Laravel API code changes to Amazon EC2. Amazon RDS is used as a database of the application.',
-                short_description: 'A book reviews website where users can browse books and write book reviews. Users can also bookmark their favorite books.',
+                short_description: 'A book reviews website where users can browse books and write book reviews. Features include favorite category, book detail, writing reviews, bookmarking, book categories, account settings etc.',
                 technologies:['Laravel','Vue.js','Amazon EC2','Amazon RDS','Amazon CodePipeline','Cloudflare'],
                 features:[
                     {
@@ -159,9 +160,10 @@ document.addEventListener('alpine:init', () => {
                 memorable_title:'offline wikipedia Android Application',
                 type_id:'android',
                 type_name:'Android',
+                users_count: 10,
                 demo_url:'https://play.google.com/store/apps/details?id=lab.justonebyte.mknowledge',
                 description:'M Kowledge is an Android application which enables users to read Myanmar Wikipedia articles online.Users can search Wikipedia articles and read them.It also has a feature where users can navigate to another article using links inside the reading article.',
-                short_description: 'An android application to read Myanmar Wikipedia articles offline.',
+                short_description: 'An android application to read Myanmar Wikipedia articles offline. Features include articles search, detail, internal article linking, bookmarking, history, settings etc.',
                 technologies:['Kotlin','Jetpack Compose','Hilt','Clean Architecture','MVVM','Room'],
                 features:[
                     {
@@ -204,7 +206,7 @@ document.addEventListener('alpine:init', () => {
                 type_name:'Library',
                 demo_url:'https://github.com/lwinmoehein/MM-Mobile-Tools-JS',
                 description:'MM Mobile Tools is a JavaScript library to check and validate Myanmar mobile phone numbers. It\'s written in Typescript and uses Jest library to test library functions.Codecov is used to report code coverage on README page. Github Actions is used to automatically publish library releases to NPM.',
-                short_description: 'A JavaScript Library for validating and checking Myanmar mobile phone numbers.',
+                short_description: 'A JavaScript library for validating Myanmar mobile phone numbers. It can validate a phone number, and get the mobile operator of the phone number.',
                 technologies:['TypeScript','Jest','GithubActions','CodeCov','NPM'],
                 features:[
                     {

@@ -443,12 +443,14 @@
                                                 </div>
                                             </div>
                                             <div class="memorable">
-                                                <div>
-                                                    <i class="fa fa-info-circle fa-sm"></i>
-                                                </div>
-                                                <div>
+                                                    <span class="icon"><i class="fa fa-circle-info fa-sm"></i></span>
                                                     <span x-text="projectDetail.memorable_title"></span>
-                                                </div>
+
+                                            </div>
+                                            <div class="memorable" x-show="projectDetail.users_count">
+                                                <span class="icon"><i class="fa-brands fa-google-play fa-sm"></i></span>
+                                                <span><span style="font-weight: bold" x-text="projectDetail.users_count"></span>+ Users</span>
+
                                             </div>
                                         </div>
                                         <div class="about">
