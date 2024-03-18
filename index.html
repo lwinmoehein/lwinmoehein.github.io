@@ -191,7 +191,7 @@
                                         <img :src="feature.image_url" >
                                     </div>
                                     <div class="detail">
-                                        <h4 x-text="feature.name"></h4>
+                                        <h2 x-text="feature.name"></h2>
                                         <p x-text="feature.description"></p>
                                     </div>
                                 </div>
@@ -432,13 +432,23 @@
                             <template x-for="projectDetail in projectDetails">
                                 <div class="project" x-on:click="onProjectClick(projectDetail)">
                                     <div>
-                                        <div class="title-wrapper">
-                                            <div class="title" x-text="projectDetail.title"></div>
-                                            <div class="type">
-                                                <i class="fa fa-android fa-sm" x-show="projectDetail.type_id==='android'"></i>
-                                                <i class="devicon-ie10-plain colored" style="font-size: small" x-show="projectDetail.type_id==='web'"></i>
-                                                <i class="fa fa-github fa-sm" x-show="projectDetail.type_id==='library'"></i>
-                                                <span x-text="projectDetail.type_name"></span>
+                                        <div class="header">
+                                            <div class="title-wrapper">
+                                                <div class="title" x-text="projectDetail.title"></div>
+                                                <div class="type" :class="{'android':projectDetail.type_id==='android','web':projectDetail.type_id==='web','library':projectDetail.type_id==='library'}">
+                                                    <i class="fa fa-android fa-sm" x-show="projectDetail.type_id==='android'"></i>
+                                                    <i class="devicon-ie10-plain colored" style="font-size: small" x-show="projectDetail.type_id==='web'"></i>
+                                                    <i class="fa fa-github fa-sm" x-show="projectDetail.type_id==='library'"></i>
+                                                    <span x-text="projectDetail.type_name"></span>
+                                                </div>
+                                            </div>
+                                            <div class="memorable">
+                                                <div>
+                                                    <i class="fa fa-info-circle fa-sm"></i>
+                                                </div>
+                                                <div>
+                                                    <span x-text="projectDetail.memorable_title"></span>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="about">

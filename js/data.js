@@ -7,6 +7,7 @@ document.addEventListener('alpine:init', () => {
             {
                 id:'english-daily',
                 title:'englishdailyacademy.com',
+                memorable_title:'learning platform website',
                 type_id:'web',
                 type_name:'Web',
                 demo_url:'https://englishdailyacademy.com',
@@ -69,6 +70,7 @@ document.addEventListener('alpine:init', () => {
             {
                 id:'simple-expense',
                 title:'Simple Expense',
+                memorable_title:'expense recorder Android application',
                 type_id:'android',
                 type_name:'Android',
                 demo_url:'https://play.google.com/store/apps/details?id=lab.justonebyte.simpleexpense',
@@ -109,8 +111,9 @@ document.addEventListener('alpine:init', () => {
                 ]
             },
             {
-                id:'simple-expense',
-                title:'Book Center - Book Review',
+                id:'book-center',
+                title:'Book Center',
+                memorable_title:'book review demo website',
                 type_id:'web',
                 type_name:'Web',
                 demo_url:'https://bookcenter.lwinmoehein.info',
@@ -152,7 +155,8 @@ document.addEventListener('alpine:init', () => {
             },
             {
                 id:'m-knowledge',
-                title:'M Knowledge - Offline Wiki',
+                title:'M Knowledge',
+                memorable_title:'offline wikipedia Android Application',
                 type_id:'android',
                 type_name:'Android',
                 demo_url:'https://play.google.com/store/apps/details?id=lab.justonebyte.mknowledge',
@@ -194,7 +198,8 @@ document.addEventListener('alpine:init', () => {
             },
             {
                 id:'mm-mobile-tools',
-                title:'MM Mobile Tools - JS Library',
+                memorable_title:'npm library to validate phones',
+                title:'MM Mobile Tools',
                 type_id:'library',
                 type_name:'Library',
                 demo_url:'https://github.com/lwinmoehein/MM-Mobile-Tools-JS',

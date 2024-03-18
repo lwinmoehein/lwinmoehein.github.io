@@ -157,7 +157,7 @@
 
       @media screen and (min-width: v.$breakpoint-phone)
         .project-wrapper
-          grid-template-columns: 1fr 1fr 1fr !important
+          grid-template-columns: 1fr 1fr !important
           column-gap: 20px !important
           row-gap: 30px !important
 
@@ -184,6 +184,18 @@
           cursor: pointer
           background-color: v.$experience-color
 
+          .header
+            display: flex
+            flex-flow: column
+            gap: 5px
+
+          .memorable
+            font-size: small
+            color: v.$primary-color
+            display: flex
+            gap: 3px
+            align-items: center
+
           .title-wrapper
             display: flex
             flex-flow: row
@@ -192,7 +204,6 @@
               font-weight: bolder
               border-bottom: 2px solid v.$projects-color
             .type
-              background-color: v.$primary-color
               color: white
               padding: 1px 5px
               font-size: x-small
@@ -201,6 +212,12 @@
               gap: 3px
               i
                 color: white
+            .android
+              background-color: #A4C639
+            .web
+              background-color: blue
+            .library
+              background-color: v.$primary-color
 
 
 

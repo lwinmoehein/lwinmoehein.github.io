@@ -48,7 +48,9 @@
 }
 .modal-fullscreen .modal-dialog .modal-content .technologies span {
   border: 0.5px solid #222831;
-  padding: 3px;
+  font-size: small;
+  font-weight: bold;
+  padding: 2px 6px;
 }
 .modal-fullscreen .modal-dialog .modal-content h3 {
   color: #222831 !important;
@@ -65,8 +67,15 @@
   align-items: center;
   justify-content: center;
 }
+.modal-fullscreen .modal-dialog .modal-content .slider .start-button i:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 .modal-fullscreen .modal-dialog .modal-content .slider .start-button i {
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  color: white;
 }
 @media screen and (min-width: 600px) {
   .modal-fullscreen .modal-dialog .modal-content .slider .start-button {
@@ -81,8 +90,15 @@
   align-items: center;
   justify-content: center;
 }
+.modal-fullscreen .modal-dialog .modal-content .slider .end-button i:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 .modal-fullscreen .modal-dialog .modal-content .slider .end-button i {
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  color: white;
 }
 .modal-fullscreen .modal-dialog .modal-content .slider .slides {
   display: flex;
@@ -347,7 +363,7 @@
 }
 @media screen and (min-width: 600px) {
   .body-wrapper .section-wrapper .personal-projects .project-wrapper {
-    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-columns: 1fr 1fr !important;
     column-gap: 20px !important;
     row-gap: 30px !important;
   }
@@ -375,6 +391,18 @@
   cursor: pointer;
   background-color: #EEEEEE;
 }
+.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .header {
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+}
+.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .memorable {
+  font-size: small;
+  color: #222831;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper {
   display: flex;
   flex-flow: row;
@@ -385,7 +413,6 @@
   border-bottom: 2px solid #131B23;
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper .type {
-  background-color: #222831;
   color: white;
   padding: 1px 5px;
   font-size: x-small;
@@ -395,6 +422,15 @@
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper .type i {
   color: white;
+}
+.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper .android {
+  background-color: #A4C639;
+}
+.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper .web {
+  background-color: blue;
+}
+.body-wrapper .section-wrapper .personal-projects .project-wrapper .project .title-wrapper .library {
+  background-color: #222831;
 }
 .body-wrapper .section-wrapper .skills {
   padding: 10px !important;
