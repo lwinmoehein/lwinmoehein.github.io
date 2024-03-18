@@ -187,7 +187,9 @@
                         <div class="slides" x-bind:style="'transform: translateX(-' + currentIndex * 100 + '%)'">
                             <template x-for="(feature, index) in currentProjectDetail.features" :key="index">
                                 <div class="slide" x-show="currentProjectFeature.name==feature.name">
-                                    <img :src="feature.image_url" >
+                                    <div class="image-wrapper">
+                                        <img :src="feature.image_url" >
+                                    </div>
                                     <div class="detail">
                                         <h4 x-text="feature.name"></h4>
                                         <p x-text="feature.description"></p>
