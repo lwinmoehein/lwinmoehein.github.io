@@ -35,7 +35,6 @@
   background-color: #fff;
   overflow-y: scroll;
   scrollbar-width: none;
-  border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .modal-fullscreen .modal-dialog .modal-content .modal-body {
@@ -373,11 +372,11 @@
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 5px;
-  row-gap: 20px;
+  row-gap: 10px;
 }
 @media screen and (min-width: 600px) {
   .body-wrapper .section-wrapper .personal-projects .project-wrapper {
-    row-gap: 50px;
+    row-gap: 20px !important;
   }
 }
 .body-wrapper .section-wrapper .personal-projects .project-wrapper .project:hover {
