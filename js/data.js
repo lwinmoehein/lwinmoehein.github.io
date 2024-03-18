@@ -224,7 +224,7 @@ document.addEventListener('alpine:init', () => {
                 type_name:'Website',
                 demo_url:'https://lwinmoehein.info',
                 description:'This is my current portfolio website written in Javascript, Alpine.js and SCSS and deployed on Github Pages.',
-                short_description: 'My current portfolio website. I didn\'t want to used a template so I made my own portfolio project.',
+                short_description: 'My current portfolio website. I didn\'t want to use a template so I made my own portfolio project.',
                 technologies:['devicon-javascript-plain colored','devicon-html5-plain colored','devicon-css3-plain colored','devicon-alpinejs-plain colored','devicon-git-plain colored','devicon-webstorm-plain colored'],
             }
         ],
