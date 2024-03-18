@@ -13,7 +13,7 @@ document.addEventListener('alpine:init', () => {
                 demo_url:'https://englishdailyacademy.com',
                 short_description:'An English learning web application where students learn English from courses with a subscription. Features include subscription model, videos, articles, audios, quizzes, exams, certificates, books, account settings etc which were all configure via admin portal.',
                 description:'englishdailyacademy.com is a website for English learners where students can learn English from the website. Courses and contents are uploaded by the website admin using Admin Portal. A student first subscribe to the website by monthly, yearly etc. Course contents contain articles, videos, audios, quizzes and exams to automatically give students course completion certificates directly from the website.',
-                technologies:['Laravel','Vue.js','MySQL','Ubuntu','Hostinger','Cloudflare','GithubActions'],
+                technologies:['devicon-php-plain colored','devicon-javascript-plain colored','devicon-html5-plain colored','devicon-css3-plain colored','devicon-laravel-plain colored','devicon-vuejs-plain colored','devicon-mysql-plain colored','devicon-tailwindcss-plain colored','devicon-nginx-plain colored','devicon-githubactions-plain colored','devicon-ubuntu-plain colored','devicon-git-plain colored','devicon-phpstorm-plain colored'],
                 features:[
                     {
                         name:'Browse English Courses',
@@ -77,7 +77,7 @@ document.addEventListener('alpine:init', () => {
                 demo_url:'https://play.google.com/store/apps/details?id=lab.justonebyte.simpleexpense',
                 description:'Simple Expense is an Android application on Google Play which simply enables users to record their expense and income.This application contains features such as exporting data as Excel files, backing up data with Google account, managing categories. Laravel API is hosted on Amazon EC2 and uses Amazon RDS as database. Github Actions is used to automatically update code changes to EC2.',
                 short_description: 'An Android application to record expense and income. Features include recording income and expense data, charts, manage categories, export data, sync data with Google account, settings etc.',
-                technologies:['Laravel','Kotlin','Amazon EC2','Amazon RDS','Github Actions','Jetpack Compose','MVVM'],
+                technologies:['devicon-php-plain colored','devicon-kotlin-plain colored','devicon-laravel-plain colored','devicon-jetpackcompose-plain colored','devicon-mysql-plain colored','devicon-nginx-plain colored','devicon-githubactions-plain colored','devicon-ubuntu-plain colored','devicon-git-plain colored','devicon-phpstorm-plain colored','devicon-androidstudio-plain colored'],
                 features:[
                     {
                         name:'Login',
@@ -120,7 +120,7 @@ document.addEventListener('alpine:init', () => {
                 demo_url:'https://bookcenter.lwinmoehein.info',
                 description:'Book Center is a demo Vue.js Single Page Application (SPA) with Laravel API.Amazon CodePipeline is used to automatically build Vue.js source files to static files and deploy built files to Amazon S3. Github Actions is also used to deploy Laravel API code changes to Amazon EC2. Amazon RDS is used as a database of the application.',
                 short_description: 'A book reviews website where users can browse books and write book reviews. Features include favorite category, book detail, writing reviews, bookmarking, book categories, account settings etc.',
-                technologies:['Laravel','Vue.js','Amazon EC2','Amazon RDS','Amazon CodePipeline','Cloudflare'],
+                technologies:['devicon-php-plain colored','devicon-javascript-plain colored','devicon-html5-plain colored','devicon-css3-plain colored','devicon-laravel-plain colored','devicon-vuejs-plain colored','devicon-tailwindcss-plain colored','devicon-mysql-plain colored','devicon-nginx-plain colored','devicon-amazonwebservices-plain colored','devicon-ubuntu-plain colored','devicon-git-plain colored','devicon-phpstorm-plain colored','devicon-webstorm-plain colored'],
                 features:[
                     {
                         name:'Login',
@@ -164,7 +164,7 @@ document.addEventListener('alpine:init', () => {
                 demo_url:'https://play.google.com/store/apps/details?id=lab.justonebyte.mknowledge',
                 description:'M Kowledge is an Android application which enables users to read Myanmar Wikipedia articles online.Users can search Wikipedia articles and read them.It also has a feature where users can navigate to another article using links inside the reading article.',
                 short_description: 'An android application to read Myanmar Wikipedia articles offline. Features include articles search, detail, internal article linking, bookmarking, history, settings etc.',
-                technologies:['Kotlin','Jetpack Compose','Hilt','Clean Architecture','MVVM','Room'],
+                technologies:['devicon-kotlin-plain colored','devicon-python-plain colored','devicon-jetpackcompose-plain colored','devicon-git-plain colored','devicon-androidstudio-plain colored'],
                 features:[
                     {
                         name:'Home',
@@ -207,7 +207,7 @@ document.addEventListener('alpine:init', () => {
                 demo_url:'https://github.com/lwinmoehein/MM-Mobile-Tools-JS',
                 description:'MM Mobile Tools is a JavaScript library to check and validate Myanmar mobile phone numbers. It\'s written in Typescript and uses Jest library to test library functions.Codecov is used to report code coverage on README page. Github Actions is used to automatically publish library releases to NPM.',
                 short_description: 'A JavaScript library for validating Myanmar mobile phone numbers. It can validate a phone number, and get the mobile operator of the phone number.',
-                technologies:['TypeScript','Jest','GithubActions','CodeCov','NPM'],
+                technologies:['devicon-typescript-plain colored','devicon-jest-plain colored','devicon-codecov-plain colored','devicon-githubactions-plain colored','devicon-git-plain colored','devicon-webstorm-plain colored'],
                 features:[
                     {
                         name:'Validate Phone No. and get operator name',
@@ -225,7 +225,7 @@ document.addEventListener('alpine:init', () => {
                 demo_url:'https://lwinmoehein.info',
                 description:'This is my current portfolio website written in Javascript, Alpine.js and SCSS and deployed on Github Pages.',
                 short_description: 'My current portfolio website. I didn\'t want to used a template so I made my own portfolio project.',
-                technologies:['JavaScript','SCSS','HTML','CSS','Github Pages','Alpine.js']
+                technologies:['devicon-javascript-plain colored','devicon-html5-plain colored','devicon-css3-plain colored','devicon-alpinejs-plain colored','devicon-git-plain colored','devicon-webstorm-plain colored'],
             }
         ],
         next() {

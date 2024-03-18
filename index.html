@@ -176,7 +176,9 @@
                     <h3>Technologies</h3>
                     <div class="technologies">
                         <template x-for="technology in currentProjectDetail.technologies">
-                            <span x-text="technology"></span>
+                            <span>
+                            <i :class="technology"></i>
+                            </span>
                         </template>
                     </div>
                     <h3 x-show="currentProjectDetail.features.length>0">Features</h3>
@@ -310,6 +312,10 @@
                                     <div>
                                         <i class="devicon-kotlin-plain colored"></i>
                                         <span>Kotlin</span>
+                                    </div>
+                                    <div>
+                                        <i class="devicon-python-plain colored"></i>
+                                        <span>Python</span>
                                     </div>
                                     <div>
                                         <i class="devicon-html5-plain colored"></i>
