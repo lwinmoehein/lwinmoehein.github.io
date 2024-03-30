@@ -5,6 +5,39 @@ document.addEventListener('alpine:init', () => {
         currentProjectFeatureIndex:0,
         projectDetails:[
             {
+                id:'meerkat',
+                memorable_title:'a web page tracking web application',
+                title:'Meerkat',
+                type_id:'web',
+                type_name:'Web App',
+                demo_url:'https://meerkat.lwinmoehein.info',
+                description:'Meerkat is a web application to track web page changes and get email notifications for new changes on the tracked pages. It uses Next.js SSR as a frontend and Laravel API on the backend where Laravel API is hosted on Amazon EC2 and SQS queue is used to store jobs for scraping web pages.',
+                short_description: 'Meerkat is a simple web application to track web pages for changes using tags and get notified when there are changes related to the specified tags.',
+                technologies:['devicon-nextjs-plain colored','devicon-react-plain colored','devicon-typescript-plain colored','devicon-laravel-plain colored','devicon-webstorm-plain colored'],
+                features:[
+                    {
+                        name:'Create webpage for tracking',
+                        image_url:'images/meerkat/home.png',
+                        description:'Users can create a web page to track, specify url of the page, and tags to track content within the page.'
+                    },
+                    {
+                        name:'Edit created web pages',
+                        image_url:'images/meerkat/edit.png',
+                        description:'Users can also edit their created web pages.'
+                    },
+                    {
+                        name:'Notifications',
+                        image_url:'images/meerkat/notifications.png',
+                        description:'Users can get email notifications when there are changes on the tracked web pages.'
+                    },
+                    {
+                        name:'Settings',
+                        image_url:'images/meerkat/settings.png',
+                        description:'Users can modify applications settings such as disabling notifications.'
+                    }
+                ]
+            },
+            {
                 id:'english-daily',
                 title:'englishdailyacademy.com',
                 memorable_title:'learning platform website',

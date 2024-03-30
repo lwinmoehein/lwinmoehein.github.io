@@ -269,19 +269,16 @@
                 </nav>
             </div>
             <div class="section-wrapper">
-                <div id="scroller" class="go-down">
-                    <i id="scroll-icon" class="fa-solid fa-arrow-down"></i>
-                </div>
                 <section id="about-me">
                     <h3 class="section-title"  data-hash="#about-me"><span class="bottom-bar">About Me</span>
                     </h3>
                     <div class="intro">
                         <div class="about">
-                            <img class="profile-image" src="images/lwinmoehein.jpg"/>
+<!--                            <img class="profile-image" src="images/lwinmoehein.jpg"/>-->
                             <h1>Lwin Moe Hein</h1>
                             <h3>Full Stack Developer</h3>
                             <span style="color: white;font-size: small"><span class="fa fa-location-dot" style="margin-right: 2px;margin-bottom: 20px;margin-top: 5px"></span>Dubai , UAE</span>
-                            <p>Full Stack Developer with almost 3 years of professional experience, mainly focused on <span class="laravel bold">Laravel</span> , <span class="vue bold">Vue.js</span>, proficient in front-end and back-end technologies with a focus on clean and
+                            <p>Full Stack Developer with over 3 years of professional experience, mainly focused on <span class="laravel bold">Laravel</span>, <span class="react bold">ReactJS</span> , <span class="vue bold">Vue.js</span>, proficient in front-end and back-end technologies with a focus on clean and
                                 maintainable code using industry best practices and principles.
                             </p>
 
@@ -691,7 +688,6 @@
         let links = document.querySelectorAll('.mobile-nav-item')
         let loadingStatus = document.querySelector('#loading-status-wrapper')
         let mainContent = document.querySelector('#content-wrapper')
-        let scroller = document.querySelector("#scroller")
         let scrollIcon = document.querySelector("#scroll-icon")
         let navItems = document.querySelectorAll('.nav')
         let sectionTitles = document.querySelectorAll('.section-title')
@@ -747,13 +743,7 @@
             mainContent.style.opacity = "1"
             enableWindowScroll()
         })
-        scroller.addEventListener("click", function () {
-            updateScrollFloatingButtonStatus()
-        })
 
-        let setScrollerVisible = bounce(() => {
-            scroller.style.display = "flex"
-        }, 0)
 
         let updateCurrentHash = throttle(() => {
             sectionTitles.forEach(t => {
@@ -767,9 +757,6 @@
 
         document.addEventListener('scroll', function (e) {
             updateCurrentHash()
-            //update scroll arrow visibility
-            scroller.style.display = "none"
-            setScrollerVisible()
         });
 
 
