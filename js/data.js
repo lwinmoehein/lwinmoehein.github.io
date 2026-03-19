@@ -7,11 +7,11 @@ document.addEventListener('alpine:init', () => {
             {
                 id:'meerkat',
                 memorable_title:'a web page tracking web application',
-                title:'Meerkat',
+                title:'MeerkatSentry',
                 type_id:'web',
                 type_name:'Web App',
-                demo_url:'https://meerkat.lwinmoehein.info',
-                description:'Meerkat is a web application to track web page changes and get email notifications for new changes on the tracked pages. It uses Next.js SSR as a frontend and Laravel API on the backend where Laravel API is hosted on Amazon EC2 and SQS queue is used to store jobs for scraping web pages.',
+                demo_url:'https://meerkatsentry.co',
+                description:'MeerkatSentry is a web application to track web page changes and get email notifications for new changes on the tracked pages. It uses Next.js SSR as a frontend and Laravel API on the backend where Laravel API is hosted on Amazon EC2 and SQS queue is used to store jobs for scraping web pages.',
                 short_description: 'Meerkat is a simple web application to track web pages for changes using tags and get notified when there are changes related to the specified tags.',
                 technologies:['devicon-nextjs-plain colored','devicon-react-plain colored','devicon-typescript-plain colored','devicon-laravel-plain colored','devicon-webstorm-plain colored'],
                 features:[
