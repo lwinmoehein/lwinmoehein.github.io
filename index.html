@@ -1,15 +1,15 @@
-<html  x-data="utils"  :class="{ 'scroll-forbidden': currentProjectDetail }">
+<html x-data="utils" :class="{ 'scroll-forbidden': currentProjectDetail }">
 
 <head>
-  <title>Lwin Moe Hein - Full Stack Developer</title>
-  <meta name="description" content="I'm Lwin Moe Hein, a skilled fullstack developer specializing in Laravel.">
-  <meta name="keywords" content="web development, larvel, aws, nginx, servers">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">  
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"> 
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <meta charset="UTF-8">
+    <title>Lwin Moe Hein - Full Stack Developer</title>
+    <meta name="description" content="I'm Lwin Moe Hein, a skilled fullstack developer specializing in Laravel.">
+    <meta name="keywords" content="web development, larvel, aws, nginx, servers">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no" name="viewport" />
     <style>
         body {
@@ -129,19 +129,19 @@
         }
     </style>
     <script src="https://kit.fontawesome.com/3f18ac30ff.js" crossorigin="anonymous"></script>
-    <script defer  src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="js/data.js"></script>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="main-section-wrapper.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQEFKHVSJ7"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-HQEFKHVSJ7');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HQEFKHVSJ7');
     </script>
 
 </head>
@@ -164,7 +164,7 @@
         </div>
     </div>
     <div x-cloak x-show="currentProjectDetail" class="modal-backdrop"></div>
-    <div x-cloak x-show="currentProjectDetail"  @click="currentProjectDetail=''" class="modal modal-fullscreen">
+    <div x-cloak x-show="currentProjectDetail" @click="currentProjectDetail=''" class="modal modal-fullscreen">
         <div class="modal-dialog">
             <div class="modal-content" @click.stop>
                 <div class="modal-header">
@@ -180,31 +180,40 @@
                     </p>
                     <div>
                         <div x-show="currentProjectDetail.type_id==='web'">
-                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
+                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i
+                                    class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
                         </div>
                         <div x-show="currentProjectDetail.type_id==='website'">
-                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
+                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i
+                                    class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
                         </div>
-                        <div  x-show="currentProjectDetail.type_id==='android'">
-                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Google Play <i class="fa fa-brands fa-google-play fa-sm" style="margin-left: 3px;color: white"></i></a>
+                        <div x-show="currentProjectDetail.type_id==='web-mobile'">
+                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Visit Website <i
+                                    class="fa fa-external-link fa-sm" style="margin-left: 3px;color: white"></i></a>
                         </div>
-                        <div  x-show="currentProjectDetail.type_id==='library'">
-                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Github<i class="fa fa-brands fa-github fa-sm" style="margin-left: 3px;color: white"></i></a>
+                        <div x-show="currentProjectDetail.type_id==='android'">
+                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Google Play <i
+                                    class="fa fa-brands fa-google-play fa-sm"
+                                    style="margin-left: 3px;color: white"></i></a>
+                        </div>
+                        <div x-show="currentProjectDetail.type_id==='library'">
+                            <a target="_blank" :href="currentProjectDetail.demo_url" class="visit-site">Github<i
+                                    class="fa fa-brands fa-github fa-sm" style="margin-left: 3px;color: white"></i></a>
                         </div>
                     </div>
                     <h3>Technologies</h3>
                     <div class="technologies">
                         <template x-for="technology in currentProjectDetail.technologies">
                             <span>
-                            <i :class="technology"></i>
+                                <i :class="technology"></i>
                             </span>
                         </template>
                     </div>
                     <h3 x-show="currentProjectDetail.features.length>0">Features</h3>
                     <div class="slider" x-show="currentProjectDetail.features.length>0">
                         <div class="start-button">
-                            <p  class="prev">
-                                <i  @click="prev()" class="fa fa-arrow-left"></i>
+                            <p class="prev">
+                                <i @click="prev()" class="fa fa-arrow-left"></i>
                             </p>
                         </div>
 
@@ -212,7 +221,7 @@
                             <template x-for="(feature, index) in currentProjectDetail.features" :key="index">
                                 <div class="slide" x-show="currentProjectFeature.name==feature.name">
                                     <div class="image-wrapper">
-                                        <img :src="feature.image_url" >
+                                        <img :src="feature.image_url">
                                     </div>
                                     <div class="detail">
                                         <h2 x-text="feature.name"></h2>
@@ -222,7 +231,7 @@
                             </template>
                         </div>
                         <div class="end-button">
-                            <p  class="next">
+                            <p class="next">
                                 <i @click="next()" class="fa fa-arrow-right"></i>
                             </p>
                         </div>
@@ -231,7 +240,7 @@
             </div>
         </div>
     </div>
-  
+
     <div id="content-wrapper" style="visibility: hidden;transition: visibility 0s, opacity 0.5s linear;opacity: 0">
         <div id="menu-bar-wrapper" class="menu-bar-wrapper">
             <div class="menu-bar">
@@ -269,7 +278,7 @@
             <div class="nav-wrapper">
                 <nav>
                     <div class="nav-item nav active-nav">
-                        <a href="#about-me" >About Me</a>
+                        <a href="#about-me">About Me</a>
                     </div>
                     <div class="nav-item nav">
                         <a href="#skills">Skills</a>
@@ -290,16 +299,20 @@
             </div>
             <div class="section-wrapper">
                 <section id="about-me">
-                    <h3 class="section-title"  data-hash="#about-me"><span class="bottom-bar">About Me</span>
+                    <h3 class="section-title" data-hash="#about-me"><span class="bottom-bar">About Me</span>
                     </h3>
                     <div class="intro">
                         <div class="about">
-<!--                            <img class="profile-image" src="images/lwinmoehein.jpg"/>-->
+                            <!--                            <img class="profile-image" src="images/lwinmoehein.jpg"/>-->
                             <h1>Lwin Moe Hein</h1>
                             <h3>Full Stack Developer</h3>
-                            <span style="color: white;font-size: small"><span class="fa fa-location-dot" style="margin-right: 2px;margin-bottom: 20px;margin-top: 5px"></span>Dubai , UAE</span>
+                            <span style="color: white;font-size: small"><span class="fa fa-location-dot"
+                                    style="margin-right: 2px;margin-bottom: 20px;margin-top: 5px"></span>Dubai ,
+                                UAE</span>
                             <p>
-                              Full stack developer based in Dubai. I write code for work, then go home and write more — some projects have thousands of users, some are still eternally in draft. Either way it beats wondering about the universe. 😄
+                                Full stack developer based in Dubai. I write code for work, then go home and write more
+                                — some projects have thousands of users, some are still eternally in draft. Either way
+                                it beats wondering about the universe. 😄
                             </p>
 
                         </div>
@@ -314,8 +327,8 @@
                             <div class="other-skills">
                                 <div class="title">Languages</div>
                                 <div class="tags">
-                              
-                                   <div>
+
+                                    <div>
                                         <i class="devicon-php-plain colored"></i>
                                         <span>PHP</span>
                                     </div>
@@ -348,13 +361,16 @@
                                 </div>
                             </div>
                             <div class="other-skills">
-                                <div class="title">Frameworks</div>
+                                <div class="title">Frameworks & Environments</div>
                                 <div class="tags">
                                     <div>
                                         <i class="devicon-laravel-plain colored"></i>
                                         <span>Laravel</span>
                                     </div>
-                                
+                                    <div>
+                                        <i class="devicon-nodejs-plain colored"></i>
+                                        <span>Node.js®</span>
+                                    </div>
                                     <div>
                                         <i class="devicon-vuejs-plain colored"></i>
                                         <span>Vue.js</span>
@@ -380,7 +396,7 @@
                                 </div>
                             </div>
                             <div class="other-skills">
-                                <div class="title">Cloud</div>
+                                <div class="title">Cloud & Servers</div>
                                 <div class="tags">
                                     <div>
                                         <i class="devicon-amazonwebservices-plain colored"></i>
@@ -463,26 +479,40 @@
                                         <div class="header">
                                             <div class="title-wrapper">
                                                 <div class="title" x-text="projectDetail.title"></div>
-                                                <div class="type" :class="{'android':projectDetail.type_id==='android','web':projectDetail.type_id==='web' || projectDetail.type_id==='website','library':projectDetail.type_id==='library'}">
-                                                    <i class="fa fa-android fa-sm" x-show="projectDetail.type_id==='android'"></i>
-                                                    <i class="devicon-ie10-plain colored" style="font-size: small" x-show="projectDetail.type_id==='web' || projectDetail.type_id==='website' "></i>
-                                                    <i class="fa fa-github fa-sm" x-show="projectDetail.type_id==='library'"></i>
+                                                <div class="type"
+                                                    :class="{'android':projectDetail.type_id==='android','web':projectDetail.type_id==='web' || projectDetail.type_id==='website' || projectDetail.type_id==='web-mobile','library':projectDetail.type_id==='library'}">
+                                                    <i class="fa fa-android fa-sm"
+                                                        x-show="projectDetail.type_id==='android'"></i>
+                                                    <i class="devicon-ie10-plain colored" style="font-size: small"
+                                                        x-show="projectDetail.type_id==='web' || projectDetail.type_id==='website' "></i>
+                                                    <i class="fa fa-globe fa-sm"
+                                                        x-show="projectDetail.type_id==='web-mobile'"></i>
+                                                    <i class="fa fa-github fa-sm"
+                                                        x-show="projectDetail.type_id==='library'"></i>
                                                     <span x-text="projectDetail.type_name"></span>
                                                 </div>
                                             </div>
                                             <div class="memorable">
-                                                    <span class="icon"><i class="fa fa-circle-info fa-sm"></i></span>
-                                                    <span x-text="projectDetail.memorable_title"></span>
+                                                <span class="icon"><i class="fa fa-circle-info fa-sm"></i></span>
+                                                <span x-text="projectDetail.memorable_title"></span>
 
                                             </div>
                                             <div class="memorable" x-show="projectDetail.users_count">
                                                 <span class="icon"><i class="fa-brands fa-google-play fa-sm"></i></span>
-                                                <span>+<span style="font-weight: bold" x-text="projectDetail.users_count"></span> Installed</span>
+                                                <span>+<span style="font-weight: bold"
+                                                        x-text="projectDetail.users_count"></span> Installed</span>
 
                                             </div>
                                         </div>
                                         <div class="about">
                                             <p x-text="projectDetail.short_description"></p>
+                                        </div>
+                                        <div class="project-technologies">
+                                            <template x-for="technology in projectDetail.technologies">
+                                                <span>
+                                                    <i :class="technology"></i>
+                                                </span>
+                                            </template>
                                         </div>
                                     </div>
                                 </div>
@@ -498,44 +528,52 @@
                             <div class="item">
                                 <div class="content">
                                     <h5>Software Developer - Nerd Herd IT Solutions</h5>
-                                    <small >
-                                        <i class="fa-solid fa-sm fa-location-dot" style="margin-right: 5px"></i>Dubai,UAE
+                                    <small>
+                                        <i class="fa-solid fa-sm fa-location-dot"
+                                            style="margin-right: 5px"></i>Dubai,UAE
                                     </small>
                                     <small style="margin-left: 5px">
-                                        <i class="fa-solid fa-sm fa-calendar" style="margin-right: 5px"></i>04/2024 - Current
+                                        <i class="fa-solid fa-sm fa-calendar" style="margin-right: 5px"></i>04/2024 -
+                                        Current
                                     </small>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="content">
                                     <h5>Full Stack Developer - Myanmar Payment Solution Services</h5>
-                                    <small >
-                                        <i class="fa-solid fa-sm fa-location-dot" style="margin-right: 5px"></i>Yangon,Myanmar
+                                    <small>
+                                        <i class="fa-solid fa-sm fa-location-dot"
+                                            style="margin-right: 5px"></i>Yangon,Myanmar
                                     </small>
                                     <small style="margin-left: 5px">
-                                        <i class="fa-solid fa-sm fa-calendar" style="margin-right: 5px"></i>05/2023 - 02/2024
+                                        <i class="fa-solid fa-sm fa-calendar" style="margin-right: 5px"></i>05/2023 -
+                                        02/2024
                                     </small>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="content">
                                     <h5>Full Stack Developer - UMG Idealab</h5>
-                                    <small >
-                                        <i class="fa-solid fa-sm fa-location-dot" style="margin-right: 5px"></i>Yangon,Myanmar
+                                    <small>
+                                        <i class="fa-solid fa-sm fa-location-dot"
+                                            style="margin-right: 5px"></i>Yangon,Myanmar
                                     </small>
                                     <small style="margin-left: 5px">
-                                        <i class="fa-solid fa-sm fa-calendar" style="margin-right: 5px"></i>10/2022 - 04/2023
+                                        <i class="fa-solid fa-sm fa-calendar" style="margin-right: 5px"></i>10/2022 -
+                                        04/2023
                                     </small>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="content">
                                     <h5>Full Stack Developer - MM Digital Solutions</h5>
-                                    <small >
-                                        <i class="fa-solid fa-sm fa-location-dot" style="margin-right: 5px"></i>Yangon,Myanmar
+                                    <small>
+                                        <i class="fa-solid fa-sm fa-location-dot"
+                                            style="margin-right: 5px"></i>Yangon,Myanmar
                                     </small>
                                     <small style="margin-left: 5px">
-                                        <i class="fa-solid fa-sm fa-calendar" style="margin-right: 5px"></i>06/2020 - 07/2022
+                                        <i class="fa-solid fa-sm fa-calendar" style="margin-right: 5px"></i>06/2020 -
+                                        07/2022
                                     </small>
                                 </div>
                             </div>
@@ -551,16 +589,18 @@
                                 <div>
                                     <div class="title-wrapper">
                                         <div class="title">
-                                            <img src="images/solution-architect-associate.png" style="object-fit: cover" width="80" height="80"/>
+                                            <img src="images/solution-architect-associate.png" style="object-fit: cover"
+                                                width="80" height="80" />
                                             <div>
-                                                 <div class="bold">
-                                                     AWS Certified Solutions Architect – Associate
-                                                 </div>
-<!--                                                <div>-->
-<!--                                                    <small class="type"> by <i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>-->
-<!--                                                </div>-->
+                                                <div class="bold">
+                                                    AWS Certified Solutions Architect – Associate
+                                                </div>
+                                                <!--                                                <div>-->
+                                                <!--                                                    <small class="type"> by <i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>-->
+                                                <!--                                                </div>-->
                                                 <div class="btn">
-                                                    <a  target="_blank" href="https://www.credly.com/badges/e566824e-e336-40ce-b5b6-164c36503903">
+                                                    <a target="_blank"
+                                                        href="https://www.credly.com/badges/e566824e-e336-40ce-b5b6-164c36503903">
                                                         View Credential
                                                         <i class="fa-solid fa-link fa-sm"></i>
                                                     </a>
@@ -569,7 +609,10 @@
                                         </div>
                                     </div>
                                     <div class="about">
-                                        <p>This is my first professional certificate in cloud computing. By achieving this certificate, I get to design and implement scalable, durable and performant cloud applications using AWS technologies.</p>
+                                        <p>This is my first professional certificate in cloud computing. By achieving
+                                            this
+                                            certificate, I get to design and implement scalable, durable and performant
+                                            cloud applications using AWS technologies.</p>
                                     </div>
                                 </div>
                             </div>
@@ -578,16 +621,18 @@
                                 <div>
                                     <div class="title-wrapper">
                                         <div class="title">
-                                            <img src="images/serverless-developer-cloud-quest.png" style="object-fit: cover" width="80" height="80"/>
+                                            <img src="images/serverless-developer-cloud-quest.png"
+                                                style="object-fit: cover" width="80" height="80" />
                                             <div>
                                                 <div class="bold">
                                                     AWS Cloud Quest: Serverless Developer
                                                 </div>
-<!--                                                <div>-->
-<!--                                                    <small class="type"> by <i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>-->
-<!--                                                </div>-->
+                                                <!--                                                <div>-->
+                                                <!--                                                    <small class="type"> by <i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>-->
+                                                <!--                                                </div>-->
                                                 <div class="btn">
-                                                    <a target="_blank"  href="https://www.credly.com/badges/c1bf6762-a560-4451-8d45-86029e13d87d/public_url">
+                                                    <a target="_blank"
+                                                        href="https://www.credly.com/badges/c1bf6762-a560-4451-8d45-86029e13d87d/public_url">
                                                         View Credential
                                                         <i class="fa-solid fa-link fa-sm"></i>
                                                     </a>
@@ -596,7 +641,9 @@
                                         </div>
                                     </div>
                                     <div class="about">
-                                        <p>In this AWS CloudQuest certificate , I gained knowledge in designing and developing Serverless applications, integrating CI/CD with AWS technologies using practical labs.</p>
+                                        <p>In this AWS CloudQuest certificate , I gained knowledge in designing and
+                                            developing Serverless applications, integrating CI/CD with AWS technologies
+                                            using practical labs.</p>
                                     </div>
                                 </div>
                             </div>
@@ -604,16 +651,18 @@
                                 <div>
                                     <div class="title-wrapper">
                                         <div class="title">
-                                            <img src="images/practitioner-cloud-quest.png" style="object-fit: cover" width="80" height="80"/>
+                                            <img src="images/practitioner-cloud-quest.png" style="object-fit: cover"
+                                                width="80" height="80" />
                                             <div>
                                                 <div class="bold">
                                                     AWS Cloud Quest: Cloud Practitioner
                                                 </div>
-<!--                                                <div>-->
-<!--                                                    <small class="type"><i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>-->
-<!--                                                </div>-->
+                                                <!--                                                <div>-->
+                                                <!--                                                    <small class="type"><i class="fa-brands fa-aws fa-sm" style="color: black"></i></small>-->
+                                                <!--                                                </div>-->
                                                 <div class="btn">
-                                                    <a target="_blank"  href="https://www.credly.com/badges/5b2b3e6f-c4bb-465a-8cae-1929cbab78fb">
+                                                    <a target="_blank"
+                                                        href="https://www.credly.com/badges/5b2b3e6f-c4bb-465a-8cae-1929cbab78fb">
                                                         View Credential
                                                         <i class="fa-solid fa-link fa-sm"></i>
                                                     </a>
@@ -622,7 +671,10 @@
                                         </div>
                                     </div>
                                     <div class="about">
-                                        <p>By achieving this AWS CloudQuest certificate, I gained foundational knowledge about AWS infrastructure and services it offers by using practical labs provided by CloudQuest.</p>
+                                        <p>By achieving this AWS CloudQuest certificate, I gained foundational knowledge
+                                            about AWS infrastructure and services it offers by using practical labs
+                                            provided
+                                            by CloudQuest.</p>
                                     </div>
                                 </div>
                             </div>
@@ -634,26 +686,26 @@
                     </h3>
 
                     <div class="contact-me">
-                           <div>
-                               <a target="_blank" href="mailto:dev.lwinmoehein@gmail.com">
-                                   <i class="fa-solid fa-envelope fa-sm"></i>
-                                   <span>dev.lwinmoehein@gmail.com</span>
-                               </a>
-                           </div>
-                            <div class="divider">|</div>
-                            <div>
-                                <a target="_blank" href="https://linkedin.com/in/lwin-moe-hein">
-                                    <i class="fa-brands fa-linkedin fa-sm"></i>
-                                    <span>Lwin Moe Hein</span>
-                                </a>
-                            </div>
-                            <div class="divider">|</div>
-                            <div>
-                                <a  href="tel:+971558617564">
-                                    <i class="fa-solid fa-phone fa-sm"></i>
-                                    <span>+971558617564</span>
-                                </a>
-                            </div>
+                        <div>
+                            <a target="_blank" href="mailto:dev.lwinmoehein@gmail.com">
+                                <i class="fa-solid fa-envelope fa-sm"></i>
+                                <span>dev.lwinmoehein@gmail.com</span>
+                            </a>
+                        </div>
+                        <div class="divider">|</div>
+                        <div>
+                            <a target="_blank" href="https://linkedin.com/in/lwin-moe-hein">
+                                <i class="fa-brands fa-linkedin fa-sm"></i>
+                                <span>Lwin Moe Hein</span>
+                            </a>
+                        </div>
+                        <div class="divider">|</div>
+                        <div>
+                            <a href="tel:+971558617564">
+                                <i class="fa-solid fa-phone fa-sm"></i>
+                                <span>+971558617564</span>
+                            </a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -730,21 +782,21 @@
             next: {
                 href: "#about-me",
                 next: {
-                        href: "#skills",
+                    href: "#skills",
+                    next: {
+                        href: "#personal",
                         next: {
-                            href: "#personal",
+                            href: "#experience",
                             next: {
-                                href: "#experience",
+                                href: "#certificates",
                                 next: {
-                                    href: "#certificates",
-                                        next: {
-                                            href: "#contact-me"
-                                        }
-                                    }
+                                    href: "#contact-me"
                                 }
+                            }
                         }
                     }
                 }
+            }
         }
 
         let sections = [social.next, social.next.next, social.next.next.next, social.next.next.next.next, social.next.next.next.next.next, social]
@@ -781,9 +833,9 @@
         let updateCurrentHash = throttle(() => {
             sectionTitles.forEach(t => {
                 if (isScrolledIntoView(t)) {
-                        history.pushState({}, '', t.getAttribute('data-hash'))
-                        locationHashChanged()
-                        updateScrollFloatingButtonStatus(true)
+                    history.pushState({}, '', t.getAttribute('data-hash'))
+                    locationHashChanged()
+                    updateScrollFloatingButtonStatus(true)
                 }
             })
         }, 100)
