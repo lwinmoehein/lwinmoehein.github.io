@@ -90,6 +90,28 @@ document.addEventListener('alpine:init', () => {
                 ]
             },
             {
+                id: 'dev-courses',
+                memorable_title: 'education website for developers',
+                title: 'dev-courses',
+                type_id: 'web',
+                type_name: 'Education platform',
+                demo_url: 'https://dev-courses.lwin.dev',
+                description: 'DevCourses is a demo full-stack education platform that handles the entire online learning lifecycle. Using a robust Laravel backend and a sleek Tailwind interface, it provides creators with tools to structure curriculum, manage tiered subscriptions, and assess students through interactive exams. For learners, it offers a premium, distraction-free environment to consume multimedia content, track their module progress, and earn dynamically generated, verifiable certificates upon mastery.',
+                short_description: 'DevCourses is a demo Learning Management System (LMS) built with Laravel that allows educators to monetize and deliver interactive video, audio, and quiz-based courses, complete with automated PDF certification',
+                technologies: [
+                    'devicon-cloudflare-plain colored',
+                    'devicon-laravel-plain colored',
+                    'devicon-tailwindcss-plain colored',
+                    'devicon-linux-plain colored',
+                    'devicon-nginx-plain colored',
+                    'devicon-mysql-plain colored',
+                    'devicon-git-plain colored',
+                ],
+                features: [
+
+                ]
+            },
+            {
                 id:'m-knowledge',
                 title:'M Knowledge',
                 memorable_title:'offline wikipedia Android Application',
