@@ -5,6 +5,27 @@ document.addEventListener('alpine:init', () => {
         currentProjectFeatureIndex:0,
         projectDetails:[
             {
+                id: 'ai-notes',
+                memorable_title: 'AI powered note taking app',
+                title: 'AI Notes',
+                type_id: 'web',
+                type_name: 'AI',
+                demo_url: 'https://ai-notes.lwin.dev',
+                description: 'Note app with smart semantic search support.',
+                short_description: 'AI note taker application which lets users take text,image notes with semantic cross search ability for both image and text.',
+                technologies: [
+                    'devicon-cloudflare-plain colored',
+                    'devicon-vercel-plain colored',
+                    'devicon-react-plain colored',
+                    'devicon-nestjs-plain colored',
+                    'devicon-postgresql-plain colored',
+                    'devicon-git-plain colored',
+                ],
+                features: [
+
+                ]
+            },
+            {
                 id: 'clouds-english',
                 memorable_title: 'a serverless go-powered education platform',
                 title: 'Clouds English Center',
